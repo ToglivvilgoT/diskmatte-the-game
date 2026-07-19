@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Diskmatte</title>
+</head>
+<body>
+    <h1>Hello world from Diskmatte</h1>
+    <p>Choose an app:</p>
+    <ul>
+        {% for app in apps %}
+            <li><a href="{{ app.url }}">{{ app.name }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
