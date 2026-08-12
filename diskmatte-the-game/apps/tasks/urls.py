@@ -1,9 +1,9 @@
 from django.urls import path
 
-from .views import index
+from .views import task_detail
 
 app_name = 'tasks'
 
 urlpatterns = [
-    path('', index, name='index'),
+    path('<slug:course_slug>/<slug:learning_set_slug>/<slug:chapter_slug>/<slug:slug>/', task_detail, name='task-detail'),
 ]

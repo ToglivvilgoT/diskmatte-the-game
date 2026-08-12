@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ chapter.title }}</title>
+</head>
+<body>
+    <h1>{{ chapter.title }}</h1>
+    <p>{{ chapter.description }}</p>
+
+    <h2>Tasks</h2>
+    <ul>
+        {% for task in tasks %}
+            <li>
+                <a href="{% url 'tasks:task-detail' course.slug learning_set.slug chapter.slug task.slug %}">{{ task.title }}</a>
+            </li>
+        {% empty %}
+            <li>No tasks yet.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

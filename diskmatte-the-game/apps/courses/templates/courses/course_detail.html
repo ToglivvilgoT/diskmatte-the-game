@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ course.name }}</title>
+</head>
+<body>
+    <h1>{{ course.name }}</h1>
+    <p>{{ course.description }}</p>
+
+    <h2>Learning sets</h2>
+    <ul>
+        {% for learning_set in learning_sets %}
+            <li>
+                <strong>{{ learning_set.name }}</strong>
+                <ul>
+                    {% for chapter in learning_set.chapters.all %}
+                        <li>
+                            <a href="{% url 'courses:chapter-detail' course.slug learning_set.slug chapter.slug %}">{{ chapter.title }}</a>
+                        </li>
+                    {% empty %}
+                        <li>No chapters yet.</li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% empty %}
+            <li>No learning sets yet.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

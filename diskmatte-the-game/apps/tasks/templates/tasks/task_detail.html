@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ task.title }}</title>
+</head>
+<body>
+    <h1>{{ task.title }}</h1>
+    <p>{{ task.prompt }}</p>
+
+    {% if task.instructions %}
+        <p><strong>Instructions:</strong> {{ task.instructions }}</p>
+    {% endif %}
+
+    {% if task.answer_type == "checkbox" %}
+        <label>
+            <input type="checkbox" disabled>
+            Mark task as done
+        </label>
+    {% elif task.answer_type == "multiple_choice" %}
+        <form>
+            {% for option in task.options.all %}
+                <label>
+                    <input type="radio" name="task-option" disabled>
+                    {{ option.label }}
+                </label>
+            {% empty %}
+                <p>No options have been configured for this task yet.</p>
+            {% endfor %}
+        </form>
+    {% else %}
+        <input type="text" disabled placeholder="Enter your answer">
+    {% endif %}
+
+    {% if task.hint %}
+        <p><strong>Hint:</strong> {{ task.hint }}</p>
+    {% endif %}
+</body>
+</html>
