@@ -1,7 +1,7 @@
 from django.test import TestCase
 from django.urls import reverse
 
-from apps.courses.models import Chapter, Course, LearningSet
+from apps.courses.models import Course, LearningSet, Topic
 from .models import Task, TaskOption
 
 
@@ -22,8 +22,8 @@ class TaskDetailTests(TestCase):
             order=1,
             is_active=True,
         )
-        self.chapter = Chapter.objects.create(
-            learning_set=self.learning_set,
+        self.topic = Topic.objects.create(
+            course=self.course,
             title="Functions",
             slug="functions",
             description="An introduction to functions.",
@@ -32,7 +32,7 @@ class TaskDetailTests(TestCase):
         )
         self.task = Task.objects.create(
             learning_set=self.learning_set,
-            chapter=self.chapter,
+            topic=self.topic,
             title="Solve for x",
             slug="solve-for-x",
             prompt="Solve 2x + 3 = 7.",
@@ -49,7 +49,7 @@ class TaskDetailTests(TestCase):
                 kwargs={
                     "course_slug": self.course.slug,
                     "learning_set_slug": self.learning_set.slug,
-                    "chapter_slug": self.chapter.slug,
+                    "topic_slug": self.topic.slug,
                     "slug": self.task.slug,
                 },
             )
@@ -102,8 +102,8 @@ class TaskModelTests(TestCase):
         self.assertEqual(list(task.options.values_list("label", flat=True)), ["x", "2x"])
 
     def test_task_detail_page_renders_multiple_choice_options(self):
-        chapter = Chapter.objects.create(
-            learning_set=self.learning_set,
+        topic = Topic.objects.create(
+            course=self.course,
             title="Derivatives",
             slug="derivatives",
             description="Derivative basics.",
@@ -112,7 +112,7 @@ class TaskModelTests(TestCase):
         )
         task = Task.objects.create(
             learning_set=self.learning_set,
-            chapter=chapter,
+            topic=topic,
             title="Pick the derivative",
             slug="pick-the-derivative",
             prompt="Which option is the derivative of x^2?",
@@ -128,7 +128,7 @@ class TaskModelTests(TestCase):
                 kwargs={
                     "course_slug": self.course.slug,
                     "learning_set_slug": self.learning_set.slug,
-                    "chapter_slug": chapter.slug,
+                    "topic_slug": topic.slug,
                     "slug": task.slug,
                 },
             )

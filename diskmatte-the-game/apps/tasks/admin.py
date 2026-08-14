@@ -11,7 +11,7 @@ class TaskOptionInline(admin.TabularInline):
 @admin.register(Task)
 class TaskAdmin(admin.ModelAdmin):
 	inlines = [TaskOptionInline]
-	list_display = ("title", "learning_set", "chapter", "answer_type", "order", "is_published")
+	list_display = ("title", "learning_set", "topic", "answer_type", "order", "is_published")
 	list_filter = ("answer_type", "is_published", "learning_set")
 	prepopulated_fields = {"slug": ("title",)}
 	search_fields = ("title", "prompt", "book_reference")

@@ -1,7 +1,7 @@
 from django.test import TestCase
 from django.urls import reverse
 
-from .models import Chapter, Course, LearningSet
+from .models import Course, LearningSet, Topic
 from apps.tasks.models import Task
 
 
@@ -22,8 +22,8 @@ class CourseBrowsingTests(TestCase):
             order=1,
             is_active=True,
         )
-        self.chapter = Chapter.objects.create(
-            learning_set=self.learning_set,
+        self.topic = Topic.objects.create(
+            course=self.course,
             title="Functions",
             slug="functions",
             description="An introduction to functions.",
@@ -32,7 +32,7 @@ class CourseBrowsingTests(TestCase):
         )
         self.task = Task.objects.create(
             learning_set=self.learning_set,
-            chapter=self.chapter,
+            topic=self.topic,
             title="Solve for x",
             slug="solve-for-x",
             prompt="Solve 2x + 3 = 7.",
@@ -48,7 +48,7 @@ class CourseBrowsingTests(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, "Algebra")
 
-    def test_course_detail_shows_learning_sets_and_chapters(self):
+    def test_course_detail_shows_learning_sets_and_topics(self):
         response = self.client.get(
             reverse("courses:course-detail", kwargs={"slug": self.course.slug})
         )
@@ -57,14 +57,14 @@ class CourseBrowsingTests(TestCase):
         self.assertContains(response, "Course Book")
         self.assertContains(response, "Functions")
 
-    def test_chapter_detail_shows_tasks(self):
+    def test_topic_detail_shows_tasks(self):
         response = self.client.get(
             reverse(
-                "courses:chapter-detail",
+                "courses:topic-detail",
                 kwargs={
                     "course_slug": self.course.slug,
                     "learning_set_slug": self.learning_set.slug,
-                    "slug": self.chapter.slug,
+                    "slug": self.topic.slug,
                 },
             )
         )

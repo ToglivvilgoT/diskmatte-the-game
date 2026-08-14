@@ -7,7 +7,7 @@ The tasks app is responsible for math problems and the task-solving experience.
 ## Responsibilities
 
 - define tasks and their content
-- organize tasks under a learning set and chapter
+- organize tasks under a learning set and topic
 - manage answer submission and validation
 - record attempts and outcomes
 - expose task pages for users
@@ -23,7 +23,7 @@ The tasks app is responsible for math problems and the task-solving experience.
 - task detail page
 - answer submission flow
 - feedback after solving
-- task navigation from chapter pages
+- task navigation from topic pages
 
 ## Answer formats
 
@@ -45,7 +45,7 @@ The tasks app should not handle:
 
 ## Dependencies
 
-- depends on the courses app for learning set, chapter, and course context
+- depends on the courses app for learning set, topic, and course context
 - may update progress information for the user after a completed attempt
 
 ## MVP note

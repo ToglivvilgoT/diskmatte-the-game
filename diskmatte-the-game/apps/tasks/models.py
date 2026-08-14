@@ -2,7 +2,7 @@ from typing import TYPE_CHECKING
 
 from django.db import models
 
-from apps.courses.models import Chapter, LearningSet
+from apps.courses.models import LearningSet, Topic
 
 
 class Task(models.Model):
@@ -16,7 +16,7 @@ class Task(models.Model):
         MULTIPLE_CHOICE = "multiple_choice", "Multiple choice"
 
     learning_set = models.ForeignKey(LearningSet, related_name="tasks", on_delete=models.CASCADE)
-    chapter = models.ForeignKey(Chapter, related_name="tasks", on_delete=models.CASCADE, null=True, blank=True)
+    topic = models.ForeignKey(Topic, related_name="tasks", on_delete=models.CASCADE, null=True, blank=True)
     title = models.CharField(max_length=200)
     slug = models.SlugField()
     prompt = models.TextField()

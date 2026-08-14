@@ -33,8 +33,8 @@ class LearningSet(models.Model):
         return f"{self.course.name}: {self.name}"
 
 
-class Chapter(models.Model):
-    learning_set = models.ForeignKey(LearningSet, related_name="chapters", on_delete=models.CASCADE)
+class Topic(models.Model):
+    course = models.ForeignKey(Course, related_name="topics", on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     slug = models.SlugField()
     description = models.TextField(blank=True)
@@ -44,7 +44,7 @@ class Chapter(models.Model):
 
     class Meta:
         ordering = ["order", "title"]
-        unique_together = ("learning_set", "slug")
+        unique_together = ("course", "slug")
 
     def __str__(self):
         return self.title

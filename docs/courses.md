@@ -8,23 +8,23 @@ The courses app is responsible for the curriculum structure of the math app.
 
 - represent courses
 - represent learning sets within a course, such as course book, daily task, or exam questions
-- represent chapters within a learning set
-- expose course, learning set, and chapter browsing pages
+- represent topics within a course, such as set theory or combinatorics
+- expose course, learning set, and topic browsing pages
 - provide the structure needed for task organization
 
 ## Main models
 
 - Course
 - LearningSet
-- Chapter
+- Topic
 
 ## Main views / features
 
 - course listing page
 - course detail page
 - learning set overview page
-- chapter listing page
-- chapter detail page
+- topic listing page
+- topic detail page
 
 ## Boundaries
 
@@ -36,9 +36,9 @@ The courses app should not handle:
 
 ## Dependencies
 
-- may be referenced by the tasks app for course, learning set, and chapter context
+- may be referenced by the tasks app for course, learning set, and topic context
 - may be used by the progress app for context on completed content
 
 ## MVP note
 
-For the first release, the app will support one course and one active learning set: the course book. Other learning-set types can be added later without changing the overall app structure.
+For the first release, the app will support one course and one active learning set: the course book. Topics belong to courses and are associated with learning sets through their tasks. Other learning-set types can be added later without changing the overall app structure.
