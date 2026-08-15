@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ learning_set.name }}</title>
+</head>
+<body>
+    <h1>{{ learning_set.name }}</h1>
+    <p>{{ learning_set.description }}</p>
+
+    <h2>Tasks</h2>
+    <ul>
+        {% for task in tasks %}
+            <li>
+                <a href="{% url 'tasks:task-detail' course.slug learning_set.slug task.topic.slug task.slug %}">{{ task.title }}</a>
+            </li>
+        {% empty %}
+            <li>No tasks yet.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

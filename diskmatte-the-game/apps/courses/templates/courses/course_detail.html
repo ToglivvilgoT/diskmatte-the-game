@@ -10,18 +10,9 @@
 
     <h2>Learning sets</h2>
     <ul>
-        {% for learning_set, topics in learning_set_topics %}
+        {% for learning_set in learning_sets %}
             <li>
-                <strong>{{ learning_set.name }}</strong>
-                <ul>
-                    {% for topic in topics %}
-                        <li>
-                            <a href="{% url 'courses:topic-detail' course.slug learning_set.slug topic.slug %}">{{ topic.title }}</a>
-                        </li>
-                    {% empty %}
-                        <li>No topics yet.</li>
-                    {% endfor %}
-                </ul>
+                <a href="{% url 'courses:learning-set-detail' course.slug learning_set.slug %}">{{ learning_set.name }}</a>
             </li>
         {% empty %}
             <li>No learning sets yet.</li>

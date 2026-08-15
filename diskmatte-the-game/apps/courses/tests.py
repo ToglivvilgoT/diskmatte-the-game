@@ -48,14 +48,43 @@ class CourseBrowsingTests(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, "Algebra")
 
-    def test_course_detail_shows_learning_sets_and_topics(self):
+    def test_course_detail_links_to_learning_sets(self):
         response = self.client.get(
             reverse("courses:course-detail", kwargs={"slug": self.course.slug})
         )
 
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, "Course Book")
-        self.assertContains(response, "Functions")
+        self.assertContains(
+            response,
+            reverse(
+                "courses:learning-set-detail",
+                kwargs={"course_slug": self.course.slug, "slug": self.learning_set.slug},
+            ),
+        )
+
+    def test_learning_set_detail_links_to_tasks(self):
+        response = self.client.get(
+            reverse(
+                "courses:learning-set-detail",
+                kwargs={"course_slug": self.course.slug, "slug": self.learning_set.slug},
+            )
+        )
+
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, "Solve for x")
+        self.assertContains(
+            response,
+            reverse(
+                "tasks:task-detail",
+                kwargs={
+                    "course_slug": self.course.slug,
+                    "learning_set_slug": self.learning_set.slug,
+                    "topic_slug": self.topic.slug,
+                    "slug": self.task.slug,
+                },
+            ),
+        )
 
     def test_topic_detail_shows_tasks(self):
         response = self.client.get(
@@ -64,7 +93,7 @@ class CourseBrowsingTests(TestCase):
                 kwargs={
                     "course_slug": self.course.slug,
                     "learning_set_slug": self.learning_set.slug,
-                    "slug": self.topic.slug,
+                    "topic_slug": self.topic.slug,
                 },
             )
         )
