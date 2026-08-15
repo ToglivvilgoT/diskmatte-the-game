@@ -42,6 +42,18 @@ class TaskDetailTests(TestCase):
             is_published=True,
         )
 
+    def task_url(self, task=None):
+        task = task or self.task
+        return reverse(
+            "tasks:task-detail",
+            kwargs={
+                "course_slug": self.course.slug,
+                "learning_set_slug": self.learning_set.slug,
+                "topic_slug": task.topic.slug,
+                "slug": task.slug,
+            },
+        )
+
     def test_task_detail_page_renders_task_content(self):
         response = self.client.get(
             reverse(
@@ -58,6 +70,46 @@ class TaskDetailTests(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, "Solve for x")
         self.assertContains(response, "Solve 2x + 3 = 7.")
+
+    def test_input_field_answer_is_validated(self):
+        response = self.client.post(self.task_url(), {"answer": "2"})
+        self.assertContains(response, "Congrats!")
+
+        response = self.client.post(self.task_url(), {"answer": "3"})
+        self.assertContains(response, "That answer was wrong. Try again.")
+
+    def test_checkbox_answer_is_validated(self):
+        task = Task.objects.create(
+            learning_set=self.learning_set,
+            topic=self.topic,
+            title="Confirm the proof",
+            slug="confirm-the-proof",
+            prompt="Have you checked the proof?",
+            answer_type=Task.AnswerType.CHECKBOX,
+            is_published=True,
+        )
+
+        response = self.client.post(self.task_url(task), {"answer": "on"})
+        self.assertContains(response, "Congrats!")
+
+    def test_multiple_choice_answer_is_validated(self):
+        task = Task.objects.create(
+            learning_set=self.learning_set,
+            topic=self.topic,
+            title="Pick the answer",
+            slug="pick-the-answer",
+            prompt="Which answer is correct?",
+            answer_type=Task.AnswerType.MULTIPLE_CHOICE,
+            is_published=True,
+        )
+        correct_option = TaskOption.objects.create(task=task, label="Correct", is_correct=True)
+        wrong_option = TaskOption.objects.create(task=task, label="Wrong", is_correct=False)
+
+        response = self.client.post(self.task_url(task), {"answer": wrong_option.pk})
+        self.assertContains(response, "That answer was wrong. Try again.")
+
+        response = self.client.post(self.task_url(task), {"answer": correct_option.pk})
+        self.assertContains(response, "Congrats!")
 
 
 class TaskModelTests(TestCase):

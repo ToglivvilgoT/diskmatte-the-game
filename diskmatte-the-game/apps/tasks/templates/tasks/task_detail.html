@@ -13,23 +13,47 @@
     {% endif %}
 
     {% if task.answer_type == "checkbox" %}
-        <label>
-            <input type="checkbox" disabled>
-            Mark task as done
-        </label>
+        <form method="post">
+            {% csrf_token %}
+            <label>
+                <input type="checkbox" name="answer" required>
+                Mark task as done
+            </label>
+            <button type="submit">Submit answer</button>
+        </form>
     {% elif task.answer_type == "multiple_choice" %}
-        <form>
+        <form method="post">
+            {% csrf_token %}
             {% for option in task.options.all %}
                 <label>
-                    <input type="radio" name="task-option" disabled>
+                    <input type="radio" name="answer" value="{{ option.pk }}" required>
                     {{ option.label }}
                 </label>
             {% empty %}
                 <p>No options have been configured for this task yet.</p>
             {% endfor %}
+            <button type="submit">Submit answer</button>
         </form>
     {% else %}
-        <input type="text" disabled placeholder="Enter your answer">
+        <form method="post">
+            {% csrf_token %}
+            <label for="answer">Your answer</label>
+            <input id="answer" type="text" name="answer" required>
+            <button type="submit">Submit answer</button>
+        </form>
+    {% endif %}
+
+    {% if is_correct == False %}
+        <p role="alert">That answer was wrong. Try again.</p>
+    {% elif is_correct %}
+        <dialog open>
+            <h2>Congrats!</h2>
+            <p>Your answer was correct.</p>
+            <a href="{% url 'courses:learning-set-detail' course.slug learning_set.slug %}">Back to learning set</a>
+            {% if next_task %}
+                <a href="{% url 'tasks:task-detail' course.slug learning_set.slug next_task.topic.slug next_task.slug %}">Next task</a>
+            {% endif %}
+        </dialog>
     {% endif %}
 
     {% if task.hint %}
