@@ -1,8 +1,12 @@
+from django.contrib.auth import get_user_model
 from django.test import TestCase
 from django.urls import reverse
 
+from apps.progress.models import TaskCompletion
 from .models import Course, LearningSet, Topic
 from apps.tasks.models import Task
+
+User = get_user_model()
 
 
 class CourseBrowsingTests(TestCase):
@@ -85,6 +89,21 @@ class CourseBrowsingTests(TestCase):
                 },
             ),
         )
+
+    def test_learning_set_detail_marks_completed_tasks_for_signed_in_user(self):
+        user = User.objects.create_user(username="student", password="test-password")
+        TaskCompletion.objects.create(user=user, task=self.task)
+        self.client.login(username="student", password="test-password")
+
+        response = self.client.get(
+            reverse(
+                "courses:learning-set-detail",
+                kwargs={"course_slug": self.course.slug, "slug": self.learning_set.slug},
+            )
+        )
+
+        self.assertContains(response, "Completed")
+        self.assertContains(response, "list-group-item-success")
 
     def test_topic_detail_shows_tasks(self):
         response = self.client.get(

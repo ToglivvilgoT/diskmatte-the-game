@@ -1,5 +1,7 @@
 from django.shortcuts import get_object_or_404, render
 
+from apps.progress.models import TaskCompletion
+
 from .models import Course, LearningSet, Topic
 
 
@@ -27,6 +29,17 @@ def learning_set_detail(request, course_slug, slug):
         is_active=True,
     )
     tasks = learning_set.tasks.filter(is_published=True).select_related("topic")
+    completed_task_ids = set()
+    if request.user.is_authenticated:
+        completed_task_ids = set(
+            TaskCompletion.objects.filter(
+                user=request.user,
+                task__learning_set=learning_set,
+            ).values_list("task_id", flat=True)
+        )
+    for task in tasks:
+        task.is_completed = task.pk in completed_task_ids
+
     return render(
         request,
         "courses/learning_set_detail.html",
