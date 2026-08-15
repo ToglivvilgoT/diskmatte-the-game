@@ -13,6 +13,20 @@ def course_list(request):
 def course_detail(request, slug):
     course = get_object_or_404(Course, slug=slug, is_active=True)
     learning_sets = course.learning_sets.filter(is_active=True)
+    for learning_set in learning_sets:
+        learning_set.total_tasks = learning_set.tasks.filter(is_published=True).count()
+        learning_set.solved_tasks = 0
+        if request.user.is_authenticated:
+            learning_set.solved_tasks = TaskCompletion.objects.filter(
+                user=request.user,
+                task__learning_set=learning_set,
+                task__is_published=True,
+            ).count()
+        learning_set.completion_percentage = (
+            round(learning_set.solved_tasks / learning_set.total_tasks * 100)
+            if learning_set.total_tasks
+            else 0
+        )
     return render(
         request,
         "courses/course_detail.html",
@@ -29,6 +43,7 @@ def learning_set_detail(request, course_slug, slug):
         is_active=True,
     )
     tasks = learning_set.tasks.filter(is_published=True).select_related("topic")
+    total_tasks = tasks.count()
     completed_task_ids = set()
     if request.user.is_authenticated:
         completed_task_ids = set(
@@ -37,13 +52,21 @@ def learning_set_detail(request, course_slug, slug):
                 task__learning_set=learning_set,
             ).values_list("task_id", flat=True)
         )
+    solved_tasks = len(completed_task_ids)
     for task in tasks:
         task.is_completed = task.pk in completed_task_ids
 
     return render(
         request,
         "courses/learning_set_detail.html",
-        {"course": course, "learning_set": learning_set, "tasks": tasks},
+        {
+            "course": course,
+            "learning_set": learning_set,
+            "tasks": tasks,
+            "total_tasks": total_tasks,
+            "solved_tasks": solved_tasks,
+            "completion_percentage": round(solved_tasks / total_tasks * 100) if total_tasks else 0,
+        },
     )
 
 

@@ -67,6 +67,29 @@ class CourseBrowsingTests(TestCase):
             ),
         )
 
+    def test_course_detail_shows_learning_set_completion_for_signed_in_user(self):
+        Task.objects.create(
+            learning_set=self.learning_set,
+            topic=self.topic,
+            title="Factor the expression",
+            slug="factor-the-expression",
+            prompt="Factor x squared minus one.",
+            answer_type="text",
+            expected_answer="(x - 1)(x + 1)",
+            order=2,
+            is_published=True,
+        )
+        user = User.objects.create_user(username="student", password="test-password")
+        TaskCompletion.objects.create(user=user, task=self.task)
+        self.client.login(username="student", password="test-password")
+
+        response = self.client.get(
+            reverse("courses:course-detail", kwargs={"slug": self.course.slug})
+        )
+
+        self.assertContains(response, "1 of 2 tasks solved")
+        self.assertContains(response, "50%")
+
     def test_learning_set_detail_links_to_tasks(self):
         response = self.client.get(
             reverse(
@@ -104,6 +127,33 @@ class CourseBrowsingTests(TestCase):
 
         self.assertContains(response, "Completed")
         self.assertContains(response, "list-group-item-success")
+
+    def test_learning_set_detail_shows_completion_summary(self):
+        second_task = Task.objects.create(
+            learning_set=self.learning_set,
+            topic=self.topic,
+            title="Factor the expression",
+            slug="factor-the-expression",
+            prompt="Factor x squared minus one.",
+            answer_type="text",
+            expected_answer="(x - 1)(x + 1)",
+            order=2,
+            is_published=True,
+        )
+        user = User.objects.create_user(username="student", password="test-password")
+        TaskCompletion.objects.create(user=user, task=self.task)
+        self.client.login(username="student", password="test-password")
+
+        response = self.client.get(
+            reverse(
+                "courses:learning-set-detail",
+                kwargs={"course_slug": self.course.slug, "slug": self.learning_set.slug},
+            )
+        )
+
+        self.assertContains(response, "1 of 2 tasks solved")
+        self.assertContains(response, "50%")
+        self.assertContains(response, second_task.title)
 
     def test_topic_detail_shows_tasks(self):
         response = self.client.get(

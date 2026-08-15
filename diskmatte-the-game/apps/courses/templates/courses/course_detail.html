@@ -16,6 +16,15 @@
                     <div class="card-body">
                         <h3 class="h5 text-dark mb-1">{{ learning_set.name }}</h3>
                         {% if learning_set.description %}<p class="text-secondary mb-0">{{ learning_set.description }}</p>{% endif %}
+                        <div class="mt-3">
+                            <div class="d-flex justify-content-between small text-secondary mb-1">
+                                <span>{{ learning_set.solved_tasks }} of {{ learning_set.total_tasks }} tasks solved</span>
+                                <span>{{ learning_set.completion_percentage }}%</span>
+                            </div>
+                            <div class="progress" role="progressbar" aria-label="{{ learning_set.name }} completion" aria-valuenow="{{ learning_set.completion_percentage }}" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar" style="width: {{ learning_set.completion_percentage }}%"></div>
+                            </div>
+                        </div>
                     </div>
                 </a>
             </div>

@@ -9,6 +9,21 @@
     <p>{{ learning_set.description }}</p>
 </div>
 
+<div class="card shadow-sm mb-4">
+    <div class="card-body">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+            <h2 class="h5 mb-0">Your progress</h2>
+            <span class="fw-semibold">{{ completion_percentage }}%</span>
+        </div>
+        <div class="d-flex justify-content-between small text-secondary mb-1">
+            <span>{{ solved_tasks }} of {{ total_tasks }} tasks solved</span>
+        </div>
+        <div class="progress" role="progressbar" aria-label="{{ learning_set.name }} completion" aria-valuenow="{{ completion_percentage }}" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" style="width: {{ completion_percentage }}%"></div>
+        </div>
+    </div>
+</div>
+
 <h2 class="h4 mb-3">Tasks</h2>
 <div class="list-group shadow-sm">
         {% for task in tasks %}
