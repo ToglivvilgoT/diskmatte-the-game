@@ -52,6 +52,16 @@ class CourseBrowsingTests(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, "Algebra")
 
+    def test_course_list_shows_course_completion_for_signed_in_user(self):
+        user = User.objects.create_user(username="student", password="test-password")
+        TaskCompletion.objects.create(user=user, task=self.task)
+        self.client.login(username="student", password="test-password")
+
+        response = self.client.get(reverse("courses:course-list"))
+
+        self.assertContains(response, "1 of 1 tasks solved")
+        self.assertContains(response, "100%")
+
     def test_course_detail_links_to_learning_sets(self):
         response = self.client.get(
             reverse("courses:course-detail", kwargs={"slug": self.course.slug})
@@ -89,6 +99,18 @@ class CourseBrowsingTests(TestCase):
 
         self.assertContains(response, "1 of 2 tasks solved")
         self.assertContains(response, "50%")
+
+    def test_course_detail_shows_course_completion(self):
+        user = User.objects.create_user(username="student", password="test-password")
+        TaskCompletion.objects.create(user=user, task=self.task)
+        self.client.login(username="student", password="test-password")
+
+        response = self.client.get(
+            reverse("courses:course-detail", kwargs={"slug": self.course.slug})
+        )
+
+        self.assertContains(response, "1 of 1 tasks solved")
+        self.assertContains(response, "100%")
 
     def test_learning_set_detail_links_to_tasks(self):
         response = self.client.get(
