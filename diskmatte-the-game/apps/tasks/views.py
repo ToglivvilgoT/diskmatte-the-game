@@ -1,10 +1,13 @@
 from django.shortcuts import get_object_or_404, render
+from django.contrib.auth.decorators import login_required
 
 from apps.courses.models import Course, LearningSet, Topic
+from apps.progress.models import TaskCompletion
 
 from .models import Task
 
 
+@login_required
 def task_detail(request, course_slug, learning_set_slug, topic_slug, slug):
     course = get_object_or_404(Course, slug=course_slug, is_active=True)
     learning_set = get_object_or_404(
@@ -28,6 +31,7 @@ def task_detail(request, course_slug, learning_set_slug, topic_slug, slug):
             is_correct = submitted_answer.casefold() == task.expected_answer.strip().casefold()
 
         if is_correct:
+            TaskCompletion.objects.get_or_create(user=request.user, task=task)
             task_list = list(
                 Task.objects.filter(learning_set=learning_set, is_published=True)
                 .select_related("topic")

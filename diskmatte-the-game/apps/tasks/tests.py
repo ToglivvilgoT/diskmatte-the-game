@@ -1,3 +1,4 @@
+from django.contrib.auth import get_user_model
 from django.test import TestCase
 from django.urls import reverse
 
@@ -7,6 +8,11 @@ from .models import Task, TaskOption
 
 class TaskDetailTests(TestCase):
     def setUp(self):
+        get_user_model().objects.create_user(
+            username="student",
+            password="test-password",
+        )
+        self.client.login(username="student", password="test-password")
         self.course = Course.objects.create(
             name="Algebra",
             slug="algebra",
@@ -71,6 +77,13 @@ class TaskDetailTests(TestCase):
         self.assertContains(response, "Solve for x")
         self.assertContains(response, "Solve 2x + 3 = 7.")
 
+    def test_task_detail_requires_login(self):
+        self.client.logout()
+
+        response = self.client.get(self.task_url())
+
+        self.assertRedirects(response, f"/accounts/login/?next={self.task_url()}")
+
     def test_input_field_answer_is_validated(self):
         response = self.client.post(self.task_url(), {"answer": "2"})
         self.assertContains(response, "Congrats!")
@@ -114,6 +127,11 @@ class TaskDetailTests(TestCase):
 
 class TaskModelTests(TestCase):
     def setUp(self):
+        get_user_model().objects.create_user(
+            username="student",
+            password="test-password",
+        )
+        self.client.login(username="student", password="test-password")
         self.course = Course.objects.create(
             name="Algebra",
             slug="algebra",

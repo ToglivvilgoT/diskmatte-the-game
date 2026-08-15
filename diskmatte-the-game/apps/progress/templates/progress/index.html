@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Progress</title>
+</head>
+<body>
+    <h1>Your progress</h1>
+    <p>You have solved {{ solved_task_count }} task{{ solved_task_count|pluralize }}.</p>
+
+    <h2>Solved tasks</h2>
+    <ul>
+        {% for completion in completions %}
+            <li>{{ completion.task.title }}</li>
+        {% empty %}
+            <li>You have not solved any tasks yet.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
