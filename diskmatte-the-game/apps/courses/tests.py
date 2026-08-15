@@ -51,6 +51,7 @@ class CourseBrowsingTests(TestCase):
 
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, "Algebra")
+        self.assertContains(response, reverse("courses:course-detail", args=[self.course.slug]))
 
     def test_course_list_shows_course_completion_for_signed_in_user(self):
         user = User.objects.create_user(username="student", password="test-password")
