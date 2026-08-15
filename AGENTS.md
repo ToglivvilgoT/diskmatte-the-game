@@ -12,6 +12,7 @@ This repository is a Django-based math learning app called Diskmatte. The initia
 ## Working rules for AI coding agents
 
 - Keep changes small and focused.
+- The app's user-facing language is Swedish. All text visible to users, including UI labels, messages, help text, validation errors, and other rendered content, must be in Swedish. Keep code, code comments, developer-only documentation, and other content intended only for developers or exposed through tools such as the browser inspector in English.
 - Prefer Django app separation by domain
 - Keep business logic in services or helper modules rather than putting everything in views.
 - Never hand-write Django migration files. Change models first, then generate migrations with `python manage.py makemigrations`.
