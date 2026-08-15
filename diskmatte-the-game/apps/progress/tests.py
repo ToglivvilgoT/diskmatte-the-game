@@ -52,6 +52,7 @@ class TaskCompletionTests(TestCase):
 		response = self.client.get(reverse("progress:index"))
 
 		self.assertEqual(response.status_code, 200)
+		self.assertContains(response, "100 disks")
 		self.assertContains(response, "Antal lösta uppgifter: 1.")
 		self.assertContains(response, "Solve for x")
 
