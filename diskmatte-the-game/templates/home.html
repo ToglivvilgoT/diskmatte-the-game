@@ -1,16 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Diskmatte</title>
-</head>
-<body>
-    <h1>Hello world from Diskmatte</h1>
-    <p>Choose an app:</p>
-    <ul>
+{% extends "base.html" %}
+
+{% block title %}Home | Diskmatte{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Learn mathematics with Diskmatte</h1>
+    <p>Choose a course and work through focused tasks at your own pace.</p>
+</div>
+<div class="row g-3">
         {% for app in apps %}
-            <li><a href="{{ app.url }}">{{ app.name }}</a></li>
+            <div class="col-sm-6 col-lg-4">
+                <a class="card h-100 text-decoration-none shadow-sm" href="{{ app.url }}">
+                    <div class="card-body">
+                        <h2 class="h5 text-dark mb-0">{{ app.name }}</h2>
+                    </div>
+                </a>
+            </div>
         {% endfor %}
-    </ul>
-</body>
-</html>
+</div>
+{% endblock %}

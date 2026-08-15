@@ -1,17 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Courses</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block title %}Courses | Diskmatte{% endblock %}
+
+{% block content %}
+<div class="page-header">
     <h1>Courses</h1>
-    <ul>
+    <p>Choose a course to begin learning.</p>
+</div>
+<div class="row g-3">
         {% for course in courses %}
-            <li><a href="{% url 'courses:course-detail' course.slug %}">{{ course.name }}</a></li>
+            <div class="col-md-6 col-lg-4">
+                <a class="card h-100 text-decoration-none shadow-sm" href="{% url 'courses:course-detail' course.slug %}">
+                    <div class="card-body">
+                        <h2 class="h5 text-dark">{{ course.name }}</h2>
+                        {% if course.description %}<p class="card-text text-secondary mb-0">{{ course.description }}</p>{% endif %}
+                    </div>
+                </a>
+            </div>
         {% empty %}
-            <li>No courses available yet.</li>
+            <p class="text-secondary">No courses available yet.</p>
         {% endfor %}
-    </ul>
-</body>
-</html>
+</div>
+{% endblock %}

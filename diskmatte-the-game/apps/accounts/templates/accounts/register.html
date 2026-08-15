@@ -1,16 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Register</title>
-</head>
-<body>
-    <h1>Create an account</h1>
+{% extends "base.html" %}
+
+{% block title %}Register | Diskmatte{% endblock %}
+
+{% block content %}
+<div class="content-narrow">
+    <div class="page-header">
+        <h1>Create an account</h1>
+        <p>Sign up to track your progress.</p>
+    </div>
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Register</button>
+        <button class="btn btn-primary" type="submit">Register</button>
     </form>
-    <p><a href="{% url 'accounts:index' %}">Back</a></p>
-</body>
-</html>
+    <a class="btn btn-link px-0 mt-3" href="{% url 'accounts:index' %}">Back</a>
+</div>
+{% endblock %}

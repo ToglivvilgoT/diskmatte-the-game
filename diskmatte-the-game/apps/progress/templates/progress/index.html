@@ -1,20 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Progress</title>
-</head>
-<body>
-    <h1>Your progress</h1>
-    <p>You have solved {{ solved_task_count }} task{{ solved_task_count|pluralize }}.</p>
+{% extends "base.html" %}
 
-    <h2>Solved tasks</h2>
-    <ul>
+{% block title %}Progress | Diskmatte{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Your progress</h1>
+    <p>Keep track of the tasks you have solved.</p>
+</div>
+<div class="card shadow-sm mb-4">
+    <div class="card-body">
+        <div class="display-6 fw-semibold">{{ solved_task_count }}</div>
+        <div class="text-secondary">You have solved {{ solved_task_count }} task{{ solved_task_count|pluralize }}.</div>
+    </div>
+</div>
+
+<h2 class="h4 mb-3">Solved tasks</h2>
+<div class="list-group shadow-sm">
         {% for completion in completions %}
-            <li>{{ completion.task.title }}</li>
+            <div class="list-group-item">{{ completion.task.title }}</div>
         {% empty %}
-            <li>You have not solved any tasks yet.</li>
+            <div class="list-group-item text-secondary">You have not solved any tasks yet.</div>
         {% endfor %}
-    </ul>
-</body>
-</html>
+</div>
+{% endblock %}

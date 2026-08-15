@@ -1,63 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ task.title }}</title>
-</head>
-<body>
-    <h1>{{ task.title }}</h1>
-    <p>{{ task.prompt }}</p>
+{% extends "base.html" %}
+
+{% block title %}{{ task.title }} | Diskmatte{% endblock %}
+
+{% block content %}
+<div class="content-narrow">
+    <div class="page-header">
+        <a class="text-decoration-none" href="{% url 'courses:learning-set-detail' course.slug learning_set.slug %}">{{ learning_set.name }}</a>
+        <h1>{{ task.title }}</h1>
+        <p>{{ task.prompt }}</p>
+    </div>
 
     {% if task.instructions %}
-        <p><strong>Instructions:</strong> {{ task.instructions }}</p>
+        <div class="alert alert-info"><strong>Instructions:</strong> {{ task.instructions }}</div>
     {% endif %}
 
     {% if task.answer_type == "checkbox" %}
-        <form method="post">
+        <form class="card card-body shadow-sm" method="post">
             {% csrf_token %}
-            <label>
-                <input type="checkbox" name="answer" required>
-                Mark task as done
+            <label class="form-check">
+                <input class="form-check-input" type="checkbox" name="answer" required>
+                <span class="form-check-label">Mark task as done</span>
             </label>
-            <button type="submit">Submit answer</button>
+            <button class="btn btn-primary mt-3 align-self-start" type="submit">Submit answer</button>
         </form>
     {% elif task.answer_type == "multiple_choice" %}
-        <form method="post">
+        <form class="card card-body shadow-sm" method="post">
             {% csrf_token %}
             {% for option in task.options.all %}
-                <label>
-                    <input type="radio" name="answer" value="{{ option.pk }}" required>
-                    {{ option.label }}
+                <label class="task-option form-check border rounded p-3 mb-2">
+                    <input class="form-check-input" type="radio" name="answer" value="{{ option.pk }}" required>
+                    <span class="form-check-label">{{ option.label }}</span>
                 </label>
             {% empty %}
-                <p>No options have been configured for this task yet.</p>
+                <p class="text-secondary mb-0">No options have been configured for this task yet.</p>
             {% endfor %}
-            <button type="submit">Submit answer</button>
+            <button class="btn btn-primary mt-2 align-self-start" type="submit">Submit answer</button>
         </form>
     {% else %}
-        <form method="post">
+        <form class="card card-body shadow-sm" method="post">
             {% csrf_token %}
-            <label for="answer">Your answer</label>
-            <input id="answer" type="text" name="answer" required>
-            <button type="submit">Submit answer</button>
+            <label class="form-label" for="answer">Your answer</label>
+            <input class="form-control" id="answer" type="text" name="answer" required>
+            <button class="btn btn-primary mt-3 align-self-start" type="submit">Submit answer</button>
         </form>
     {% endif %}
 
     {% if is_correct == False %}
-        <p role="alert">That answer was wrong. Try again.</p>
+        <div class="alert alert-danger mt-4" role="alert">That answer was wrong. Try again.</div>
     {% elif is_correct %}
-        <dialog open>
-            <h2>Congrats!</h2>
+        <dialog class="card border-success shadow mt-4 p-4 w-100" open>
+            <h2 class="h4 text-success">Congrats!</h2>
             <p>Your answer was correct.</p>
-            <a href="{% url 'courses:learning-set-detail' course.slug learning_set.slug %}">Back to learning set</a>
+            <div class="d-flex flex-wrap gap-2">
+                <a class="btn btn-outline-primary" href="{% url 'courses:learning-set-detail' course.slug learning_set.slug %}">Back to learning set</a>
             {% if next_task %}
-                <a href="{% url 'tasks:task-detail' course.slug learning_set.slug next_task.topic.slug next_task.slug %}">Next task</a>
+                <a class="btn btn-success" href="{% url 'tasks:task-detail' course.slug learning_set.slug next_task.topic.slug next_task.slug %}">Next task</a>
             {% endif %}
+            </div>
         </dialog>
     {% endif %}
 
     {% if task.hint %}
-        <p><strong>Hint:</strong> {{ task.hint }}</p>
+        <div class="alert alert-secondary mt-4"><strong>Hint:</strong> {{ task.hint }}</div>
     {% endif %}
-</body>
-</html>
+</div>
+{% endblock %}

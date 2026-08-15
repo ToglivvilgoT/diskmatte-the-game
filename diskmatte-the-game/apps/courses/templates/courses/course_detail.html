@@ -1,22 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ course.name }}</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block title %}{{ course.name }} | Diskmatte{% endblock %}
+
+{% block content %}
+<div class="page-header">
     <h1>{{ course.name }}</h1>
     <p>{{ course.description }}</p>
+</div>
 
-    <h2>Learning sets</h2>
-    <ul>
+<h2 class="h4 mb-3">Learning sets</h2>
+<div class="row g-3">
         {% for learning_set in learning_sets %}
-            <li>
-                <a href="{% url 'courses:learning-set-detail' course.slug learning_set.slug %}">{{ learning_set.name }}</a>
-            </li>
+            <div class="col-md-6">
+                <a class="card h-100 text-decoration-none shadow-sm" href="{% url 'courses:learning-set-detail' course.slug learning_set.slug %}">
+                    <div class="card-body">
+                        <h3 class="h5 text-dark mb-1">{{ learning_set.name }}</h3>
+                        {% if learning_set.description %}<p class="text-secondary mb-0">{{ learning_set.description }}</p>{% endif %}
+                    </div>
+                </a>
+            </div>
         {% empty %}
-            <li>No learning sets yet.</li>
+            <p class="text-secondary">No learning sets yet.</p>
         {% endfor %}
-    </ul>
-</body>
-</html>
+</div>
+{% endblock %}

@@ -1,22 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ topic.title }}</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block title %}{{ topic.title }} | Diskmatte{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <a class="text-decoration-none" href="{% url 'courses:learning-set-detail' course.slug learning_set.slug %}">{{ learning_set.name }}</a>
     <h1>{{ topic.title }}</h1>
     <p>{{ topic.description }}</p>
+</div>
 
-    <h2>Tasks</h2>
-    <ul>
+<h2 class="h4 mb-3">Tasks</h2>
+<div class="list-group shadow-sm">
         {% for task in tasks %}
-            <li>
-                <a href="{% url 'tasks:task-detail' course.slug learning_set.slug topic.slug task.slug %}">{{ task.title }}</a>
-            </li>
+            <a class="list-group-item list-group-item-action" href="{% url 'tasks:task-detail' course.slug learning_set.slug topic.slug task.slug %}">{{ task.title }}</a>
         {% empty %}
-            <li>No tasks yet.</li>
+            <div class="list-group-item text-secondary">No tasks yet.</div>
         {% endfor %}
-    </ul>
-</body>
-</html>
+</div>
+{% endblock %}

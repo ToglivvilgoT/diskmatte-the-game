@@ -1,16 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Log in</title>
-</head>
-<body>
-    <h1>Log in</h1>
+{% extends "base.html" %}
+
+{% block title %}Log in | Diskmatte{% endblock %}
+
+{% block content %}
+<div class="content-narrow">
+    <div class="page-header">
+        <h1>Log in</h1>
+        <p>Continue where you left off.</p>
+    </div>
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Log in</button>
+        <button class="btn btn-primary" type="submit">Log in</button>
     </form>
-    <p><a href="{% url 'accounts:index' %}">Back</a></p>
-</body>
-</html>
+    <a class="btn btn-link px-0 mt-3" href="{% url 'accounts:index' %}">Back</a>
+</div>
+{% endblock %}
