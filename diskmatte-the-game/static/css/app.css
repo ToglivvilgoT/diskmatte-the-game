@@ -17,6 +17,67 @@ body {
     max-width: 46rem;
 }
 
+.home-hero {
+    background: linear-gradient(135deg, #e7f0ff 0%, #f8fbff 68%, #fff4df 100%);
+    border: 1px solid #d9e5f7;
+    border-radius: 0.75rem;
+}
+
+.home-hero .lead {
+    max-width: 42rem;
+}
+
+.home-kicker {
+    color: var(--diskmatte-primary);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.home-action-card {
+    display: block;
+    padding: 1.5rem;
+    color: var(--diskmatte-ink);
+    background: #ffffff;
+    border: 1px solid #dfe5ed;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.35rem 1rem rgba(23, 36, 58, 0.07);
+    text-decoration: none;
+    transition: transform 150ms ease, box-shadow 150ms ease, border-color 150ms ease;
+}
+
+.home-action-card:hover {
+    color: var(--diskmatte-ink);
+    border-color: var(--diskmatte-primary);
+    box-shadow: 0 0.6rem 1.4rem rgba(23, 36, 58, 0.12);
+    transform: translateY(-0.2rem);
+}
+
+.home-action-card p {
+    color: var(--diskmatte-muted);
+}
+
+.home-action-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    margin-bottom: 1.25rem;
+    color: #ffffff;
+    background: var(--diskmatte-primary);
+    border-radius: 50%;
+    font-size: 1.3rem;
+}
+
+.home-signin {
+    max-width: 42rem;
+    background: #ffffff;
+    border-left: 0.35rem solid var(--diskmatte-primary);
+    box-shadow: 0 0.35rem 1rem rgba(23, 36, 58, 0.07);
+}
+
 .content-narrow {
     max-width: 42rem;
     margin-inline: auto;

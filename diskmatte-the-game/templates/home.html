@@ -1,21 +1,45 @@
 {% extends "base.html" %}
 
-{% block title %}Home | Diskmatte{% endblock %}
+{% block title %}Hem | Diskmatte{% endblock %}
 
 {% block content %}
-<div class="page-header">
-    <h1>Diskmatte the Game</h1>
-    <p>Det roliga sättet att läsa TATA65.</p>
-</div>
-<div class="row g-3">
-        {% for app in apps %}
-            <div class="col-sm-6 col-lg-4">
-                <a class="card h-100 text-decoration-none shadow-sm" href="{{ app.url }}">
-                    <div class="card-body">
-                        <h2 class="h5 text-dark mb-0">{{ app.name }}</h2>
-                    </div>
-                </a>
-            </div>
-        {% endfor %}
-</div>
+<section class="home-hero p-4 p-md-5 mb-4">
+    <p class="home-kicker mb-2">TATA65 på ett roligare sätt</p>
+    <h1 class="display-5 fw-bold mb-3">Diskmatte the Game</h1>
+    <p class="lead mb-0">En interaktiv app där du tränar diskret matematik, följer dina framsteg och samlar erfarenhet längs vägen.</p>
+</section>
+
+{% if user.is_authenticated %}
+    <section class="mb-4">
+        <p class="home-kicker mb-2">Välkommen tillbaka</p>
+        <h2 class="h3 mb-2">Hej {{ user.username }}!</h2>
+        <p class="text-secondary mb-0">Fortsätt där du slutade eller se hur dina resultat utvecklas.</p>
+    </section>
+    <div class="row g-4">
+        <div class="col-md-6">
+            <a class="home-action-card h-100" href="{% url 'courses:course-list' %}">
+                <span class="home-action-icon" aria-hidden="true">&#8594;</span>
+                <h3 class="h4">Kurser</h3>
+                <p class="mb-0">Utforska kursens kapitel och välj nästa område att träna på.</p>
+            </a>
+        </div>
+        <div class="col-md-6">
+            <a class="home-action-card h-100" href="{% url 'progress:index' %}">
+                <span class="home-action-icon" aria-hidden="true">&#8599;</span>
+                <h3 class="h4">Resultat</h3>
+                <p class="mb-0">Följ dina framsteg och se vilka områden du redan behärskar.</p>
+            </a>
+        </div>
+    </div>
+{% else %}
+    <section class="home-signin p-4 p-md-5">
+        <p class="home-kicker mb-2">Redo att börja?</p>
+        <h2 class="h3 mb-2">Logga in för att spela</h2>
+        <p class="text-secondary mb-4">Logga in för att komma åt kurserna och spara dina resultat.</p>
+        <div class="d-flex flex-wrap gap-2">
+            <a class="btn btn-primary" href="{% url 'accounts:login' %}">Logga in</a>
+            <a class="btn btn-outline-primary" href="{% url 'accounts:register' %}">Skapa konto</a>
+        </div>
+    </section>
+{% endif %}
 {% endblock %}
