@@ -32,6 +32,7 @@ class Task(models.Model):
     image_url = models.URLField(blank=True)
     external_link = models.URLField(blank=True)
     book_reference = models.CharField(max_length=255, blank=True)
+    disk_reward = models.PositiveIntegerField(default=100)
     order = models.PositiveIntegerField(default=1)
     is_published = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)

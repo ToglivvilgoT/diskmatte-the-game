@@ -86,10 +86,10 @@ class TaskDetailTests(TestCase):
 
     def test_input_field_answer_is_validated(self):
         response = self.client.post(self.task_url(), {"answer": "2"})
-        self.assertContains(response, "Congrats!")
+        self.assertContains(response, "Rätt svar!")
 
         response = self.client.post(self.task_url(), {"answer": "3"})
-        self.assertContains(response, "That answer was wrong. Try again.")
+        self.assertContains(response, "Det svaret blev fel. Försök igen.")
 
     def test_checkbox_answer_is_validated(self):
         task = Task.objects.create(
@@ -103,7 +103,7 @@ class TaskDetailTests(TestCase):
         )
 
         response = self.client.post(self.task_url(task), {"answer": "on"})
-        self.assertContains(response, "Congrats!")
+        self.assertContains(response, "Rätt svar!")
 
     def test_multiple_choice_answer_is_validated(self):
         task = Task.objects.create(
@@ -119,10 +119,10 @@ class TaskDetailTests(TestCase):
         wrong_option = TaskOption.objects.create(task=task, label="Wrong", is_correct=False)
 
         response = self.client.post(self.task_url(task), {"answer": wrong_option.pk})
-        self.assertContains(response, "That answer was wrong. Try again.")
+        self.assertContains(response, "Det svaret blev fel. Försök igen.")
 
         response = self.client.post(self.task_url(task), {"answer": correct_option.pk})
-        self.assertContains(response, "Congrats!")
+        self.assertContains(response, "Rätt svar!")
 
 
 class TaskModelTests(TestCase):

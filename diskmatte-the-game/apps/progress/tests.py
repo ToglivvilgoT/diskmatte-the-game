@@ -5,7 +5,7 @@ from django.urls import reverse
 from apps.courses.models import Course, LearningSet, Topic
 from apps.tasks.models import Task
 
-from .models import TaskCompletion
+from .models import DiskTransaction, TaskCompletion, UserWallet
 
 
 class TaskCompletionTests(TestCase):
@@ -27,6 +27,7 @@ class TaskCompletionTests(TestCase):
 			title="Solve for x",
 			slug="solve-for-x",
 			prompt="Solve 2x + 3 = 7.",
+			expected_answer="4",
 		)
 
 	def test_completion_is_unique_per_user_and_task(self):
@@ -44,13 +45,42 @@ class TaskCompletionTests(TestCase):
 		self.assertRedirects(response, f"/accounts/login/?next={reverse('progress:index')}")
 
 	def test_progress_dashboard_shows_solved_task_count(self):
+		UserWallet.objects.create(user=self.user, balance=100)
 		TaskCompletion.objects.create(user=self.user, task=self.task)
 		self.client.login(username="student", password="test-password")
 
 		response = self.client.get(reverse("progress:index"))
 
 		self.assertEqual(response.status_code, 200)
-		self.assertContains(response, "You have solved 1 task.")
+		self.assertContains(response, "Antal lösta uppgifter: 1.")
 		self.assertContains(response, "Solve for x")
+
+	def test_completing_task_awards_configured_disks_once(self):
+		self.client.login(username="student", password="test-password")
+		self.task.disk_reward = 150
+		self.task.save(update_fields=["disk_reward"])
+
+		result = self.client.post(
+			reverse(
+				"tasks:task-detail",
+				args=("algebra", "course-book", "functions", "solve-for-x"),
+			),
+			{"answer": "4"},
+		)
+
+		self.assertEqual(result.status_code, 200)
+		self.assertEqual(UserWallet.objects.get(user=self.user).balance, 150)
+		self.assertEqual(DiskTransaction.objects.filter(user=self.user).count(), 1)
+
+		self.client.post(
+			reverse(
+				"tasks:task-detail",
+				args=("algebra", "course-book", "functions", "solve-for-x"),
+			),
+			{"answer": "4"},
+		)
+
+		self.assertEqual(UserWallet.objects.get(user=self.user).balance, 150)
+		self.assertEqual(DiskTransaction.objects.filter(user=self.user).count(), 1)
 
 # Create your tests here.

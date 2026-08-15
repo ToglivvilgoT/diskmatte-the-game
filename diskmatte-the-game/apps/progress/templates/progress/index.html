@@ -1,25 +1,25 @@
 {% extends "base.html" %}
 
-{% block title %}Progress | Diskmatte{% endblock %}
+{% block title %}Framsteg | Diskmatte{% endblock %}
 
 {% block content %}
 <div class="page-header">
-    <h1>Your progress</h1>
-    <p>Keep track of the tasks you have solved.</p>
+    <h1>Dina framsteg</h1>
+    <p>Följ dina lösta uppgifter och dina intjänade disks.</p>
 </div>
 <div class="card shadow-sm mb-4">
     <div class="card-body">
-        <div class="display-6 fw-semibold">{{ solved_task_count }}</div>
-        <div class="text-secondary">You have solved {{ solved_task_count }} task{{ solved_task_count|pluralize }}.</div>
+        <div class="display-6 fw-semibold">{{ wallet.balance }} disks</div>
+        <div class="text-secondary">Antal lösta uppgifter: {{ solved_task_count }}.</div>
     </div>
 </div>
 
-<h2 class="h4 mb-3">Solved tasks</h2>
+<h2 class="h4 mb-3">Lösta uppgifter</h2>
 <div class="list-group shadow-sm">
         {% for completion in completions %}
             <div class="list-group-item">{{ completion.task.title }}</div>
         {% empty %}
-            <div class="list-group-item text-secondary">You have not solved any tasks yet.</div>
+            <div class="list-group-item text-secondary">Du har inte löst några uppgifter än.</div>
         {% endfor %}
 </div>
 {% endblock %}
