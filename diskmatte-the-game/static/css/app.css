@@ -78,6 +78,60 @@ body {
     box-shadow: 0 0.35rem 1rem rgba(23, 36, 58, 0.07);
 }
 
+.disk-balance {
+    padding: 0.6rem 0.9rem;
+    color: var(--diskmatte-primary);
+    background: #ffffff;
+    border: 1px solid #d9e5f7;
+    border-radius: 0.5rem;
+    font-weight: 700;
+}
+
+.avatar-preview {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #f8fbff, #ffffff);
+    border: 1px solid #dfe5ed;
+    border-left: 0.35rem solid var(--skin-color);
+    border-radius: 0.75rem;
+}
+
+.avatar-orb,
+.skin-swatch {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    background: var(--skin-color);
+    border-radius: 50%;
+    font-weight: 700;
+}
+
+.avatar-orb {
+    width: 5rem;
+    height: 5rem;
+    font-size: 2rem;
+}
+
+.skin-card {
+    display: flex;
+    gap: 1rem;
+    padding: 1.25rem;
+    background: #ffffff;
+    border: 1px solid #dfe5ed;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.35rem 1rem rgba(23, 36, 58, 0.06);
+}
+
+.skin-swatch {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.25rem;
+}
+
 .content-narrow {
     max-width: 42rem;
     margin-inline: auto;

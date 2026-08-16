@@ -29,6 +29,7 @@
                     </li>
                     {% if user.is_authenticated %}
                         <li class="nav-item"><a class="nav-link" href="{% url 'progress:index' %}">Progress</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'cosmetics:avatar' %}">Avatar</a></li>
                     {% endif %}
                 </ul>
                 <div class="d-flex align-items-center gap-2">

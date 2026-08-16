@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Skin-shop | Diskmatte{% endblock %}
+
+{% block content %}
+<div class="page-header d-flex flex-wrap justify-content-between align-items-end gap-3">
+    <div>
+        <p class="home-kicker mb-2">Cosmetics</p>
+        <h1>Skin-shop</h1>
+        <p>Spendera dina disks på en avatar med mer personlighet än en standardknapp.</p>
+    </div>
+    <div class="disk-balance">{{ wallet.balance }} disks</div>
+</div>
+
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-{{ message.tags|default:'info' }}" role="alert">{{ message }}</div>
+    {% endfor %}
+{% endif %}
+
+<div class="row g-4">
+    {% for skin in skins %}
+        <div class="col-md-6 col-lg-4">
+            <article class="skin-card h-100" style="--skin-color: {{ skin.color }};">
+                <div class="skin-swatch" aria-hidden="true">{{ skin.name|first }}</div>
+                <div class="flex-grow-1">
+                    <h2 class="h5 mb-1">{{ skin.name }}</h2>
+                    <p class="text-secondary mb-3">{{ skin.description }}</p>
+                    {% if skin.id in owned_skin_ids %}
+                        <span class="badge text-bg-success">Redan ägt</span>
+                    {% else %}
+                        <form method="post" action="{% url 'cosmetics:buy-skin' skin.slug %}">
+                            {% csrf_token %}
+                            <button class="btn btn-primary btn-sm" type="submit">Köp för {{ skin.price }} disks</button>
+                        </form>
+                    {% endif %}
+                </div>
+            </article>
+        </div>
+    {% empty %}
+        <div class="col-12">
+            <div class="alert alert-secondary">Shoppen är tom just nu.</div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

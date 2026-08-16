@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'apps.tasks',
     'apps.progress',
     'apps.leaderboard',
+    'apps.cosmetics',
 ]
 
 MIDDLEWARE = [
