@@ -3,6 +3,7 @@ from django.test import TestCase
 from django.urls import reverse
 
 from apps.courses.models import Course, LearningSet, Topic
+from apps.progress.models import TaskCompletion
 from .models import Task, TaskOption
 
 
@@ -83,6 +84,15 @@ class TaskDetailTests(TestCase):
         response = self.client.get(self.task_url())
 
         self.assertRedirects(response, f"/accounts/login/?next={self.task_url()}")
+
+    def test_task_detail_page_marks_previous_solutions(self):
+        response = self.client.get(self.task_url())
+        self.assertContains(response, "Ej löst ännu")
+
+        user = get_user_model().objects.get(username="student")
+        TaskCompletion.objects.create(user=user, task=self.task)
+        response = self.client.get(self.task_url())
+        self.assertContains(response, "Redan löst")
 
     def test_input_field_answer_is_validated(self):
         response = self.client.post(self.task_url(), {"answer": "2"})

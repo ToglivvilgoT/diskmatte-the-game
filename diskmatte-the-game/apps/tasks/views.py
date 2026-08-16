@@ -2,6 +2,7 @@ from django.shortcuts import get_object_or_404, render
 from django.contrib.auth.decorators import login_required
 
 from apps.courses.models import Course, LearningSet, Topic
+from apps.progress.models import TaskCompletion
 from apps.progress.services import complete_task
 
 from .models import Task
@@ -21,6 +22,10 @@ def task_detail(request, course_slug, learning_set_slug, topic_slug, slug):
     is_correct = None
     next_task = None
     reward_result = None
+    is_completed = False
+    if request.user.is_authenticated:
+        is_completed = TaskCompletion.objects.filter(user=request.user, task=task).exists()
+
     if request.method == "POST":
         if task.answer_type == Task.AnswerType.CHECKBOX:
             is_correct = request.POST.get("answer") == "on"
@@ -33,6 +38,7 @@ def task_detail(request, course_slug, learning_set_slug, topic_slug, slug):
 
         if is_correct:
             reward_result = complete_task(request.user, task)
+            is_completed = True
             task_list = list(
                 Task.objects.filter(learning_set=learning_set, is_published=True)
                 .select_related("topic")
@@ -52,6 +58,7 @@ def task_detail(request, course_slug, learning_set_slug, topic_slug, slug):
             "topic": topic,
             "task": task,
             "is_correct": is_correct,
+            "is_completed": is_completed,
             "next_task": next_task,
             "reward_result": reward_result,
         },

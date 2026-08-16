@@ -6,7 +6,12 @@
 <div class="content-narrow">
     <div class="page-header">
         <a class="text-decoration-none" href="{% url 'courses:learning-set-detail' course.slug learning_set.slug %}">{{ learning_set.name }}</a>
-        <h1>{{ task.title }}</h1>
+        <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-2 mt-2">
+            <h1 class="mb-0">{{ task.title }}</h1>
+            <span class="badge {% if is_completed %}bg-success{% else %}bg-secondary{% endif %} fs-6 align-self-start">
+                {% if is_completed %}Redan löst{% else %}Ej löst ännu{% endif %}
+            </span>
+        </div>
         {% if task.instructions %}
             <p> {{ task.instructions }}</p>
         {% endif %}
