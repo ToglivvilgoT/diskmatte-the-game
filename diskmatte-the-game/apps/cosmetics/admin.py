@@ -8,6 +8,16 @@ class SkinAdmin(admin.ModelAdmin):
     list_display = ("name", "kind", "price", "is_available", "created_at")
     list_filter = ("kind", "is_available")
     prepopulated_fields = {"slug": ("name",)}
+    fields = (
+        "name",
+        "slug",
+        "description",
+        "price",
+        "kind",
+        "color",
+        "image",
+        "is_available",
+    )
 
 
 @admin.register(UserSkin)

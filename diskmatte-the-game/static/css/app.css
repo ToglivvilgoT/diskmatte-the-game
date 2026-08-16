@@ -244,6 +244,7 @@ body {
     background: var(--skin-color);
     border-radius: 50%;
     font-weight: 700;
+    object-fit: cover;
 }
 
 .avatar-orb {

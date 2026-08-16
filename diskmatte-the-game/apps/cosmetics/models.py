@@ -14,6 +14,11 @@ class Skin(models.Model):
     price = models.PositiveIntegerField()
     kind = models.CharField(max_length=20, choices=Kind.choices, default=Kind.COLOR)
     color = models.CharField(max_length=7, default="#de2a2a")
+    image = models.CharField(
+        max_length=255,
+        blank=True,
+        help_text="Sökväg relativt static/, t.ex. cosmetics/skins/lava.png",
+    )
     is_available = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
 

@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}Min avatar | Diskmatte{% endblock %}
 
@@ -10,7 +11,11 @@
 </div>
 
 <div class="avatar-preview mb-4" style="--skin-color: {{ avatar.equipped_skin.color|default:'#2457a6' }};">
-    <div class="avatar-orb" aria-hidden="true">{{ avatar.equipped_skin.name|first|default:'D' }}</div>
+    {% if avatar.equipped_skin.kind == "image" %}
+        <img class="avatar-orb" src="{% static avatar.equipped_skin.image %}" alt="">
+    {% else %}
+        <div class="avatar-orb" aria-hidden="true">{{ avatar.equipped_skin.name|first|default:'D' }}</div>
+    {% endif %}
     <div>
         <p class="home-kicker mb-1">Utrustat skin</p>
         <h2 class="h4 mb-1">{{ avatar.equipped_skin.name|default:'Grundavatar' }}</h2>
@@ -26,7 +31,11 @@
     {% for owned_skin in owned_skins %}
         <div class="col-md-6">
             <div class="skin-card h-100" style="--skin-color: {{ owned_skin.skin.color }};">
-                <div class="skin-swatch" aria-hidden="true">{{ owned_skin.skin.name|first }}</div>
+                {% if owned_skin.skin.kind == "image" %}
+                    <img class="skin-swatch" src="{% static owned_skin.skin.image %}" alt="">
+                {% else %}
+                    <div class="skin-swatch" aria-hidden="true">{{ owned_skin.skin.name|first }}</div>
+                {% endif %}
                 <div class="flex-grow-1">
                     <h3 class="h5 mb-1">{{ owned_skin.skin.name }}</h3>
                     <p class="text-secondary mb-3">{{ owned_skin.skin.description }}</p>
