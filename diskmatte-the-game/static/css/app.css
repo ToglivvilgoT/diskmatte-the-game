@@ -1,3 +1,9 @@
+:root {
+    --diskmatte-primary: #de2a2a;
+    --diskmatte-ink: #17243a;
+    --diskmatte-muted: #68758a;
+}
+
 .hint-disclosure[open] > summary {
     display: none;
 }
@@ -48,11 +54,6 @@
 
 .leaderboard-chart__label {
     overflow-wrap: anywhere;
-}
-:root {
-    --diskmatte-primary: #2457a6;
-    --diskmatte-ink: #17243a;
-    --diskmatte-muted: #68758a;
 }
 
 body {
