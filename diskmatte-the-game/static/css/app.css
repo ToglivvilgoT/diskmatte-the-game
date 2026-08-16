@@ -1,3 +1,14 @@
+.hint-disclosure[open] > summary {
+    display: none;
+}
+
+.hint-content {
+    border: 1px solid transparent;
+}
+
+.hint-content:hover {
+    border-color: var(--bs-secondary-border-subtle);
+}
 :root {
     --diskmatte-primary: #2457a6;
     --diskmatte-ink: #17243a;

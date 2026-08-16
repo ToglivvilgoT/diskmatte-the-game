@@ -6,30 +6,6 @@ from apps.tasks.models import Task
 from .models import Course, LearningSet, Topic
 
 
-def course_list(request):
-    courses = Course.objects.filter(is_active=True)
-    for course in courses:
-        course.total_tasks = Task.objects.filter(
-            learning_set__course=course,
-            learning_set__is_active=True,
-            is_published=True,
-        ).count()
-        course.solved_tasks = 0
-        if request.user.is_authenticated:
-            course.solved_tasks = TaskCompletion.objects.filter(
-                user=request.user,
-                task__learning_set__course=course,
-                task__learning_set__is_active=True,
-                task__is_published=True,
-            ).count()
-        course.completion_percentage = (
-            round(course.solved_tasks / course.total_tasks * 100)
-            if course.total_tasks
-            else 0
-        )
-    return render(request, "courses/course_list.html", {"courses": courses})
-
-
 def course_detail(request, slug):
     course = get_object_or_404(Course, slug=slug, is_active=True)
     learning_sets = course.learning_sets.filter(is_active=True)

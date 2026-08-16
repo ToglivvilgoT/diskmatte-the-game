@@ -46,19 +46,27 @@ class CourseBrowsingTests(TestCase):
             is_published=True,
         )
 
-    def test_course_list_displays_active_courses(self):
-        response = self.client.get(reverse("courses:course-list"))
+    def test_navigation_links_to_the_active_course(self):
+        response = self.client.get(
+            reverse("courses:course-detail", kwargs={"slug": self.course.slug})
+        )
 
         self.assertEqual(response.status_code, 200)
-        self.assertContains(response, "Algebra")
         self.assertContains(response, reverse("courses:course-detail", args=[self.course.slug]))
 
-    def test_course_list_shows_course_completion_for_signed_in_user(self):
+    def test_course_list_page_is_removed(self):
+        response = self.client.get("/courses/")
+
+        self.assertEqual(response.status_code, 404)
+
+    def test_course_detail_shows_course_completion_for_signed_in_user(self):
         user = User.objects.create_user(username="student", password="test-password")
         TaskCompletion.objects.create(user=user, task=self.task)
         self.client.login(username="student", password="test-password")
 
-        response = self.client.get(reverse("courses:course-list"))
+        response = self.client.get(
+            reverse("courses:course-detail", kwargs={"slug": self.course.slug})
+        )
 
         self.assertContains(response, "1 of 1 tasks solved")
         self.assertContains(response, "100%")

@@ -7,12 +7,12 @@
     <div class="page-header">
         <a class="text-decoration-none" href="{% url 'courses:learning-set-detail' course.slug learning_set.slug %}">{{ learning_set.name }}</a>
         <h1>{{ task.title }}</h1>
-        <p>{{ task.prompt }}</p>
+        {% if task.instructions %}
+            <p> {{ task.instructions }}</p>
+        {% endif %}
     </div>
 
-    {% if task.instructions %}
-        <div class="alert alert-info"><strong>Instructions:</strong> {{ task.instructions }}</div>
-    {% endif %}
+        <div class="alert alert-info">{{ task.prompt }}</div>
 
     {% if task.answer_type == "checkbox" %}
         <form class="card card-body shadow-sm" method="post">
@@ -45,15 +45,22 @@
         </form>
     {% endif %}
 
+    {% if task.hint %}
+        <details class="hint-disclosure mt-4">
+            <summary class="btn btn-outline-secondary" data-hint-toggle data-closed-label="Visa ledtråd" data-open-label="Dölj ledtråd">Visa ledtråd</summary>
+            <button class="hint-content alert alert-secondary mt-2 mb-0 w-100 text-start" type="button" data-hint-content aria-label="Dölj ledtråd"><strong>Ledtråd:</strong> {{ task.hint }}</button>
+        </details>
+    {% endif %}
+
     {% if is_correct == False %}
         <div class="alert alert-danger mt-4" role="alert">Det svaret blev fel. Försök igen.</div>
     {% elif is_correct %}
         <dialog class="card border-success shadow mt-4 p-4 w-100" open>
             <h2 class="h4 text-success">Rätt svar!</h2>
             {% if reward_result.awarded %}
-                <p>Du fick <strong>{{ reward_result.disks_earned }} disks</strong>. Totalt har du {{ reward_result.balance }} disks.</p>
+                <p>Du fick <strong>{{ reward_result.disks_earned }} diskar</strong>. Totalt har du {{ reward_result.balance }} diskar.</p>
             {% else %}
-                <p>Uppgiften var redan klar och gav inga nya disks.</p>
+                <p>Uppgiften var redan klar och gav inga nya diskar.</p>
             {% endif %}
             <div class="d-flex flex-wrap gap-2">
                 <a class="btn btn-outline-primary" href="{% url 'courses:learning-set-detail' course.slug learning_set.slug %}">Tillbaka till uppgifterna</a>
@@ -62,10 +69,6 @@
             {% endif %}
             </div>
         </dialog>
-    {% endif %}
-
-    {% if task.hint %}
-        <div class="alert alert-secondary mt-4"><strong>Ledtråd:</strong> {{ task.hint }}</div>
     {% endif %}
 </div>
 {% endblock %}

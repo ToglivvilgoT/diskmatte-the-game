@@ -16,13 +16,15 @@
         <p class="text-secondary mb-0">Fortsätt där du slutade eller se hur dina resultat utvecklas.</p>
     </section>
     <div class="row g-4">
-        <div class="col-md-6">
-            <a class="home-action-card h-100" href="{% url 'courses:course-list' %}">
-                <span class="home-action-icon" aria-hidden="true">&#8594;</span>
-                <h3 class="h4">Kurser</h3>
-                <p class="mb-0">Utforska kursens kapitel och välj nästa område att träna på.</p>
-            </a>
-        </div>
+        {% if navigation_course %}
+            <div class="col-md-6">
+                <a class="home-action-card h-100" href="{% url 'courses:course-detail' navigation_course.slug %}">
+                    <span class="home-action-icon" aria-hidden="true">&#8594;</span>
+                    <h3 class="h4">Uppgifter</h3>
+                    <p class="mb-0">Fortsätt med {{ navigation_course.name }} och välj nästa område att träna på.</p>
+                </a>
+            </div>
+        {% endif %}
         <div class="col-md-6">
             <a class="home-action-card h-100" href="{% url 'progress:index' %}">
                 <span class="home-action-icon" aria-hidden="true">&#8599;</span>

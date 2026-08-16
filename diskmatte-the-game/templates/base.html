@@ -17,19 +17,12 @@
             </button>
             <div class="collapse navbar-collapse" id="mainNavigation">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item dropdown hover-dropdown">
-                        <a class="nav-link dropdown-toggle" href="{% url 'courses:course-list' %}">Courses</a>
-                        <ul class="dropdown-menu">
-                            {% for course in navigation_courses %}
-                                <li><a class="dropdown-item" href="{% url 'courses:course-detail' course.slug %}">{{ course.name }}</a></li>
-                            {% empty %}
-                                <li><span class="dropdown-item-text text-secondary">No courses available</span></li>
-                            {% endfor %}
-                        </ul>
-                    </li>
+                    {% if navigation_course %}
+                        <li class="nav-item"><a class="nav-link" href="{% url 'courses:course-detail' navigation_course.slug %}">Uppgifter</a></li>
+                    {% endif %}
                     {% if user.is_authenticated %}
-                        <li class="nav-item"><a class="nav-link" href="{% url 'progress:index' %}">Progress</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'cosmetics:avatar' %}">Avatar</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'progress:index' %}">Leaderboard</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'cosmetics:avatar' %}">Profil</a></li>
                     {% endif %}
                 </ul>
                 <div class="d-flex align-items-center gap-2">

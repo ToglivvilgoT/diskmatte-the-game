@@ -1,4 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll("[data-hint-toggle]").forEach((toggle) => {
+        const hint = toggle.closest("details");
+        const content = hint?.querySelector("[data-hint-content]");
+
+        if (!hint || !content) {
+            return;
+        }
+
+        hint.addEventListener("toggle", () => {
+            toggle.textContent = hint.open
+                ? toggle.dataset.openLabel
+                : toggle.dataset.closedLabel;
+        });
+
+        content.addEventListener("click", () => {
+            hint.open = false;
+        });
+    });
+
     const desktopQuery = window.matchMedia("(min-width: 992px)");
 
     document.querySelectorAll(".hover-dropdown").forEach((dropdown) => {
