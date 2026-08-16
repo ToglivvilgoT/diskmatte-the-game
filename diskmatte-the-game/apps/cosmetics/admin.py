@@ -5,8 +5,8 @@ from .models import Skin, UserAvatar, UserSkin
 
 @admin.register(Skin)
 class SkinAdmin(admin.ModelAdmin):
-    list_display = ("name", "price", "is_available", "created_at")
-    list_filter = ("is_available",)
+    list_display = ("name", "kind", "price", "is_available", "created_at")
+    list_filter = ("kind", "is_available")
     prepopulated_fields = {"slug": ("name",)}
 
 

@@ -3,11 +3,17 @@ from django.db import models
 
 
 class Skin(models.Model):
+    class Kind(models.TextChoices):
+        COLOR = "color", "Färg"
+        IMAGE = "image", "Bild"
+        CSS_CLASS = "css_class", "CSS-klass"
+
     name = models.CharField(max_length=100)
     slug = models.SlugField(unique=True)
     description = models.TextField(blank=True)
     price = models.PositiveIntegerField()
-    color = models.CharField(max_length=7, default="#2457a6")
+    kind = models.CharField(max_length=20, choices=Kind.choices, default=Kind.COLOR)
+    color = models.CharField(max_length=7, default="#de2a2a")
     is_available = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
