@@ -9,6 +9,46 @@
 .hint-content:hover {
     border-color: var(--bs-secondary-border-subtle);
 }
+
+.leaderboard-chart {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(4.5rem, 6rem));
+    align-items: start;
+    justify-content: start;
+    gap: 1rem;
+}
+
+.leaderboard-chart__entry {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    min-width: 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.leaderboard-chart__value {
+    font-weight: 600;
+}
+
+.leaderboard-chart__bar-track {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    width: min(100%, 2rem);
+    height: 12rem;
+}
+
+.leaderboard-chart__bar {
+    width: 100%;
+    background-color: var(--bs-primary);
+}
+
+.leaderboard-chart__label {
+    overflow-wrap: anywhere;
+}
 :root {
     --diskmatte-primary: #2457a6;
     --diskmatte-ink: #17243a;

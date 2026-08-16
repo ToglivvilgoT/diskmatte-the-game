@@ -2,6 +2,9 @@
 
 ## Planned
 
+- Register page cooked
+- Register user should sign them in
+
 - Create course and chapter browsing pages
   - Define MVP screens: course selection, course overview, chapter list, chapter detail, and task detail
   - Define minimal models for a single-course MVP: Course, LearningSet, Chapter, and Task

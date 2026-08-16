@@ -25,6 +25,7 @@ class TaskCompletion(models.Model):
 class UserWallet(models.Model):
 	user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
 	balance = models.PositiveIntegerField(default=0)
+	total = models.PositiveIntegerField(default=0)
 	updated_at = models.DateTimeField(auto_now=True)
 
 	def __str__(self):

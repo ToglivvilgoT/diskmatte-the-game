@@ -3,13 +3,32 @@
 {% block title %}Framsteg | Diskmatte{% endblock %}
 
 {% block content %}
+<h1>Topplista</h1>
+<section class="mb-4" aria-labelledby="leaderboard-heading">
+    <div>
+        <ol class="leaderboard-chart list-unstyled mb-0 p-3">
+            {% for player in leaderboard %}
+                <li class="leaderboard-chart__entry">
+                    <div class="leaderboard-chart__bar-track" role="progressbar" aria-label="{{ player.username }} har tjänat {{ player.total_disks_earned }} diskar" aria-valuemin="0" aria-valuemax="{{ leaderboard.0.total_disks_earned }}" aria-valuenow="{{ player.total_disks_earned }}">
+                        <div class="leaderboard-chart__value">{{ player.total_disks_earned }}</div>
+                        <div class="leaderboard-chart__bar" style="height: max(1px, {{ player.earned_disk_percentage }}%)"></div>
+                    </div>
+                    <div class="leaderboard-chart__label">{{ player.username }}</div>
+                </li>
+            {% empty %}
+                <li class="text-secondary">Det finns inga spelare ännu.</li>
+            {% endfor %}
+        </ol>
+    </div>
+</section>
+
 <div class="page-header">
     <h1>Dina framsteg</h1>
     <p>Följ dina lösta uppgifter och dina intjänade disks.</p>
 </div>
 <div class="card shadow-sm mb-4">
     <div class="card-body">
-        <div class="display-6 fw-semibold">{{ wallet.balance }} disks</div>
+        <div class="display-6 fw-semibold">{{ wallet.total }} disks totalt</div>
         <div class="text-secondary">Antal lösta uppgifter: {{ solved_task_count }}.</div>
     </div>
 </div>

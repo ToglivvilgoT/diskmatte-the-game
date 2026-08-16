@@ -45,7 +45,7 @@ class TaskCompletionTests(TestCase):
 		self.assertRedirects(response, f"/accounts/login/?next={reverse('progress:index')}")
 
 	def test_progress_dashboard_shows_solved_task_count(self):
-		UserWallet.objects.create(user=self.user, balance=100)
+		UserWallet.objects.create(user=self.user, balance=100, total=100)
 		TaskCompletion.objects.create(user=self.user, task=self.task)
 		self.client.login(username="student", password="test-password")
 
@@ -55,6 +55,45 @@ class TaskCompletionTests(TestCase):
 		self.assertContains(response, "100 disks")
 		self.assertContains(response, "Antal lösta uppgifter: 1.")
 		self.assertContains(response, "Solve for x")
+
+	def test_progress_dashboard_leaderboard_ranks_wallet_totals(self):
+		leader = get_user_model().objects.create_user(
+			username="leader",
+			password="test-password",
+		)
+		second_place = get_user_model().objects.create_user(
+			username="second-place",
+			password="test-password",
+		)
+		UserWallet.objects.create(user=leader, balance=10, total=200)
+		UserWallet.objects.create(user=second_place, balance=150, total=150)
+		DiskTransaction.objects.create(
+			user=leader,
+			amount=200,
+			transaction_type=DiskTransaction.TransactionType.TASK_REWARD,
+			description="Task reward",
+		)
+		DiskTransaction.objects.create(
+			user=leader,
+			amount=-190,
+			transaction_type=DiskTransaction.TransactionType.SKIN_PURCHASE,
+			description="Skin purchase",
+		)
+		DiskTransaction.objects.create(
+			user=second_place,
+			amount=150,
+			transaction_type=DiskTransaction.TransactionType.TASK_REWARD,
+			description="Task reward",
+		)
+		self.client.login(username="student", password="test-password")
+
+		response = self.client.get(reverse("progress:index"))
+
+		self.assertEqual(response.status_code, 200)
+		self.assertContains(response, "Topplista")
+		self.assertContains(response, "leader")
+		self.assertContains(response, "second-place")
+		self.assertLess(response.content.index(b"leader"), response.content.index(b"second-place"))
 
 	def test_completing_task_awards_configured_disks_once(self):
 		self.client.login(username="student", password="test-password")

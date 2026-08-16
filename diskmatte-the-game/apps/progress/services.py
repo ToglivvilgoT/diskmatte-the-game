@@ -31,7 +31,8 @@ def complete_task(user, task: Task) -> TaskRewardResult:
             return TaskRewardResult(False, 0, wallet.balance)
 
         wallet.balance += task.disk_reward
-        wallet.save(update_fields=["balance", "updated_at"])
+        wallet.total += task.disk_reward
+        wallet.save(update_fields=["balance", "total", "updated_at"])
         DiskTransaction.objects.create(
             user=locked_user,
             amount=task.disk_reward,
