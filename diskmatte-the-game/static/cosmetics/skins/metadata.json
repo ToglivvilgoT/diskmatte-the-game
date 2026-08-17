@@ -1,0 +1,10 @@
+[
+    {
+        "name": "Grammofån",
+        "slug": "gramophone",
+        "description": "Gillar du musik? Hatar du Spotify? Då har vi produkten för dig! Med Grammofån TM kan du spela upp musik på ett enklare sätt än någonsin förr med en riktig retro vibe. (Batterier säljs separat)",
+        "price": 1000,
+        "kind": "IMAGE", 
+        "image": "/cosmetics/skins/gramophone.png"
+    }
+]
