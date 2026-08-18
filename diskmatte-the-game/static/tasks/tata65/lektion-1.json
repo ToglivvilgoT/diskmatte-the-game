@@ -1,0 +1,20 @@
+[
+  {"slug":"uppgift-2-1-a","title":"Uppgift 2.1 a)","prompt":"Lös uppgift 2.1. a) på sida 16 i boken"},
+  {"slug":"uppgift-2-1-b","title":"Uppgift 2.1 b)","prompt":"Lös uppgift 2.1. b) på sida 16 i boken"},
+  {"slug":"uppgift-2-1-c","title":"Uppgift 2.1 c)","prompt":"Lös uppgift 2.1. c) på sida 16 i boken"},
+  {"slug":"uppgift-2-1-d","title":"Uppgift 2.1 d)","prompt":"Lös uppgift 2.1. d) på sida 16 i boken"},
+
+  {"slug":"uppgift-2-2-a","title":"Uppgift 2.2 a)","prompt":"Lös uppgift 2.2. a) på sida x i boken","option":[{"label": "Sant", ""}]},
+  {"slug":"uppgift-2-4","title":"Uppgift 2.4","prompt":"Lös uppgift 2.4. på sida x i boken"},
+  {"slug":"uppgift-2-6","title":"Uppgift 2.6","prompt":"Lös uppgift 2.6. på sida x i boken"},
+  {"slug":"uppgift-2-8a","title":"Uppgift 2.8a","prompt":"Lös uppgift 2.8a. på sida x i boken"},
+  {"slug":"uppgift-2-9","title":"Uppgift 2.9","prompt":"Lös uppgift 2.9. på sida x i boken"},
+  {"slug":"uppgift-2-11","title":"Uppgift 2.11","prompt":"Lös uppgift 2.11. på sida x i boken"},
+  {"slug":"uppgift-2-13","title":"Uppgift 2.13","prompt":"Lös uppgift 2.13. på sida x i boken"},
+  {"slug":"uppgift-2-14","title":"Uppgift 2.14","prompt":"Lös uppgift 2.14. på sida x i boken"},
+  {"slug":"uppgift-2-17a","title":"Uppgift 2.17a","prompt":"Lös uppgift 2.17a. på sida x i boken"},
+  {"slug":"uppgift-2-20","title":"Uppgift 2.20","prompt":"Lös uppgift 2.20. på sida x i boken"},
+  {"slug":"uppgift-2-21","title":"Uppgift 2.21","prompt":"Lös uppgift 2.21. på sida x i boken"},
+  {"slug":"uppgift-2-22a","title":"Uppgift 2.22a","prompt":"Lös uppgift 2.22a. på sida x i boken"},
+  {"slug":"uppgift-2-22b","title":"Uppgift 2.22b","prompt":"Lös uppgift 2.22b. på sida x i boken"}
+]
