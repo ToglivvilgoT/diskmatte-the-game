@@ -103,7 +103,7 @@ class TaskCompletionTests(TestCase):
 		result = self.client.post(
 			reverse(
 				"tasks:task-detail",
-				args=("algebra", "course-book", "functions", "solve-for-x"),
+				args=("algebra", "course-book", "solve-for-x"),
 			),
 			{"answer": "4"},
 		)
@@ -115,7 +115,7 @@ class TaskCompletionTests(TestCase):
 		self.client.post(
 			reverse(
 				"tasks:task-detail",
-				args=("algebra", "course-book", "functions", "solve-for-x"),
+				args=("algebra", "course-book", "solve-for-x"),
 			),
 			{"answer": "4"},
 		)

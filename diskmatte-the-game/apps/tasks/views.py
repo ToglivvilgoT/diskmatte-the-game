@@ -1,7 +1,7 @@
 from django.shortcuts import get_object_or_404, render
 from django.contrib.auth.decorators import login_required
 
-from apps.courses.models import Course, LearningSet, Topic
+from apps.courses.models import Course, LearningSet
 from apps.progress.models import TaskCompletion
 from apps.progress.services import complete_task
 
@@ -9,7 +9,7 @@ from .models import Task
 
 
 @login_required
-def task_detail(request, course_slug, learning_set_slug, topic_slug, slug):
+def task_detail(request, course_slug, learning_set_slug, slug):
     course = get_object_or_404(Course, slug=course_slug, is_active=True)
     learning_set = get_object_or_404(
         LearningSet,
@@ -17,8 +17,7 @@ def task_detail(request, course_slug, learning_set_slug, topic_slug, slug):
         slug=learning_set_slug,
         is_active=True,
     )
-    topic = get_object_or_404(Topic, course=course, slug=topic_slug, is_active=True)
-    task = get_object_or_404(Task, learning_set=learning_set, topic=topic, slug=slug, is_published=True)
+    task = get_object_or_404(Task, learning_set=learning_set, slug=slug, is_published=True)
     is_correct = None
     next_task = None
     reward_result = None
@@ -55,7 +54,6 @@ def task_detail(request, course_slug, learning_set_slug, topic_slug, slug):
         {
             "course": course,
             "learning_set": learning_set,
-            "topic": topic,
             "task": task,
             "is_correct": is_correct,
             "is_completed": is_completed,

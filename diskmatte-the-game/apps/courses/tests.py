@@ -138,7 +138,6 @@ class CourseBrowsingTests(TestCase):
                 kwargs={
                     "course_slug": self.course.slug,
                     "learning_set_slug": self.learning_set.slug,
-                    "topic_slug": self.topic.slug,
                     "slug": self.task.slug,
                 },
             ),

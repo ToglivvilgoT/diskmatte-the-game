@@ -70,7 +70,7 @@
             <div class="d-flex flex-wrap gap-2">
                 <a class="btn btn-outline-primary" href="{% url 'courses:learning-set-detail' course.slug learning_set.slug %}">Tillbaka till uppgifterna</a>
             {% if next_task %}
-                <a class="btn btn-success" href="{% url 'tasks:task-detail' course.slug learning_set.slug next_task.topic.slug next_task.slug %}">Nästa uppgift</a>
+                <a class="btn btn-success" href="{% url 'tasks:task-detail' course.slug learning_set.slug next_task.slug %}">Nästa uppgift</a>
             {% endif %}
             </div>
         </dialog>
