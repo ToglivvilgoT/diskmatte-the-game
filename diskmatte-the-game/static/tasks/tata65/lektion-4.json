@@ -1,0 +1,12 @@
+// unused
+[
+  {"slug":"uppgift-5-1","title":"Uppgift 5.1","prompt":"Lös uppgift 5.1.","book_reference":"5.1"},
+  {"slug":"uppgift-5-3","title":"Uppgift 5.3","prompt":"Lös uppgift 5.3.","book_reference":"5.3"},
+  {"slug":"uppgift-5-4","title":"Uppgift 5.4","prompt":"Lös uppgift 5.4.","book_reference":"5.4"},
+  {"slug":"uppgift-5-5","title":"Uppgift 5.5","prompt":"Lös uppgift 5.5.","book_reference":"5.5"},
+  {"slug":"uppgift-5-7","title":"Uppgift 5.7","prompt":"Lös uppgift 5.7.","book_reference":"5.7"},
+  {"slug":"uppgift-5-9","title":"Uppgift 5.9","prompt":"Lös uppgift 5.9.","book_reference":"5.9"},
+  {"slug":"uppgift-5-10","title":"Uppgift 5.10","prompt":"Lös uppgift 5.10.","book_reference":"5.10"},
+  {"slug":"uppgift-5-30","title":"Uppgift 5.30","prompt":"Lös uppgift 5.30.","book_reference":"5.30"},
+  {"slug":"uppgift-5-32","title":"Uppgift 5.32","prompt":"Lös uppgift 5.32.","book_reference":"5.32"}
+]

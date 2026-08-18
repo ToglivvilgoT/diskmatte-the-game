@@ -3,12 +3,148 @@
   "description": "TATA65 Diskret Matematik",
   "learning_sets": [
     {
-      "name": "Chapter 1",
-      "slug": "chapter-1"
+      "name": "Lektion 1",
+      "slug": "lektion-1"
     },
     {
-      "name": "Chapter 2",
-      "slug": "chapter-2"
+      "name": "Lektion 1 - öva mer",
+      "slug": "lektion-1-ova-mer"
+    },
+    {
+      "name": "Lektion 2",
+      "slug": "lektion-2"
+    },
+    {
+      "name": "Lektion 2 - öva mer",
+      "slug": "lektion-2-ova-mer"
+    },
+    {
+      "name": "Lektion 3",
+      "slug": "lektion-3"
+    },
+    {
+      "name": "Lektion 3 - öva mer",
+      "slug": "lektion-3-ova-mer"
+    },
+    {
+      "name": "Lektion 4",
+      "slug": "lektion-4"
+    },
+    {
+      "name": "Lektion 4 - öva mer",
+      "slug": "lektion-4-ova-mer"
+    },
+    {
+      "name": "Lektion 5",
+      "slug": "lektion-5"
+    },
+    {
+      "name": "Lektion 5 - öva mer",
+      "slug": "lektion-5-ova-mer"
+    },
+    {
+      "name": "Lektion 6",
+      "slug": "lektion-6"
+    },
+    {
+      "name": "Lektion 6 - öva mer",
+      "slug": "lektion-6-ova-mer"
+    },
+    {
+      "name": "Lektion 7",
+      "slug": "lektion-7"
+    },
+    {
+      "name": "Lektion 7 - öva mer",
+      "slug": "lektion-7-ova-mer"
+    },
+    {
+      "name": "Lektion 8",
+      "slug": "lektion-8"
+    },
+    {
+      "name": "Lektion 8 - öva mer",
+      "slug": "lektion-8-ova-mer"
+    },
+    {
+      "name": "Lektion 9",
+      "slug": "lektion-9"
+    },
+    {
+      "name": "Lektion 9 - öva mer",
+      "slug": "lektion-9-ova-mer"
+    },
+    {
+      "name": "Lektion 10",
+      "slug": "lektion-10"
+    },
+    {
+      "name": "Lektion 10 - öva mer",
+      "slug": "lektion-10-ova-mer"
+    },
+    {
+      "name": "Lektion 11",
+      "slug": "lektion-11"
+    },
+    {
+      "name": "Lektion 11 - öva mer",
+      "slug": "lektion-11-ova-mer"
+    },
+    {
+      "name": "Lektion 12",
+      "slug": "lektion-12"
+    },
+    {
+      "name": "Lektion 12 - öva mer",
+      "slug": "lektion-12-ova-mer"
+    },
+    {
+      "name": "Lektion 13",
+      "slug": "lektion-13"
+    },
+    {
+      "name": "Lektion 13 - öva mer",
+      "slug": "lektion-13-ova-mer"
+    },
+    {
+      "name": "Lektion 14",
+      "slug": "lektion-14"
+    },
+    {
+      "name": "Lektion 14 - öva mer",
+      "slug": "lektion-14-ova-mer"
+    },
+    {
+      "name": "Lektion 15",
+      "slug": "lektion-15"
+    },
+    {
+      "name": "Lektion 15 - öva mer",
+      "slug": "lektion-15-ova-mer"
+    },
+    {
+      "name": "Lektion 16",
+      "slug": "lektion-16"
+    },
+    {
+      "name": "Lektion 16 - öva mer",
+      "slug": "lektion-16-ova-mer"
+    },
+    {
+      "name": "Lektion 17",
+      "slug": "lektion-17"
+    },
+    {
+      "name": "Lektion 17 - öva mer",
+      "slug": "lektion-17-ova-mer"
+    },
+    {
+      "name": "Lektion 18",
+      "slug": "lektion-18"
+    },
+    {
+      "name": "Lektion 18 - öva mer",
+      "slug": "lektion-18-ova-mer"
     }
   ],
   "topics": [

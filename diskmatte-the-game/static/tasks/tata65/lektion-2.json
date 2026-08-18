@@ -1,0 +1,11 @@
+// unused
+[
+  {"slug":"uppgift-4-1","title":"Uppgift 4.1","prompt":"Lös uppgift 4.1.","book_reference":"4.1"},
+  {"slug":"uppgift-4-2","title":"Uppgift 4.2","prompt":"Lös uppgift 4.2.","book_reference":"4.2"},
+  {"slug":"uppgift-4-9a","title":"Uppgift 4.9a","prompt":"Lös uppgift 4.9a.","book_reference":"4.9a"},
+  {"slug":"uppgift-4-9b","title":"Uppgift 4.9b","prompt":"Lös uppgift 4.9b.","book_reference":"4.9b"},
+  {"slug":"uppgift-4-9c","title":"Uppgift 4.9c","prompt":"Lös uppgift 4.9c.","book_reference":"4.9c"},
+  {"slug":"uppgift-4-9d","title":"Uppgift 4.9d","prompt":"Lös uppgift 4.9d.","book_reference":"4.9d"},
+  {"slug":"uppgift-4-10","title":"Uppgift 4.10","prompt":"Lös uppgift 4.10.","book_reference":"4.10"},
+  {"slug":"uppgift-4-14","title":"Uppgift 4.14","prompt":"Lös uppgift 4.14.","book_reference":"4.14"}
+]
