@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'apps.courses',
     'apps.tasks',
     'apps.progress',
-    'apps.leaderboard',
     'apps.cosmetics',
 ]
 
