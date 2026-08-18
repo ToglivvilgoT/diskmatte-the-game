@@ -1,0 +1,20 @@
+{
+  "name": "TATA65 Diskret Matematik",
+  "description": "TATA65 Diskret Matematik",
+  "learning_sets": [
+    {
+      "name": "Chapter 1",
+      "slug": "chapter-1"
+    },
+    {
+      "name": "Chapter 2",
+      "slug": "chapter-2"
+    }
+  ],
+  "topics": [
+    {
+      "title": "Mängdlära",
+      "slug": "mangdlara"
+    }
+  ]
+}
