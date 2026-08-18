@@ -17,6 +17,7 @@ def index(request):
         .objects.annotate(
             total_disks_earned=Coalesce(F("userwallet__total"), Value(0))
         )
+        .select_related("useravatar__equipped_skin")
         .order_by("-total_disks_earned", "username")[:10]
     )
     highest_earned_disks = leaderboard[0].total_disks_earned if leaderboard else 0

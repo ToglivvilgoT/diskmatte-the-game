@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}Framsteg | Diskmatte{% endblock %}
 
@@ -12,6 +13,13 @@
                     <div class="leaderboard-chart__bar-track" role="progressbar" aria-label="{{ player.username }} har tjänat {{ player.total_disks_earned }} diskar" aria-valuemin="0" aria-valuemax="{{ leaderboard.0.total_disks_earned }}" aria-valuenow="{{ player.total_disks_earned }}">
                         <div class="leaderboard-chart__value">{{ player.total_disks_earned }}</div>
                         <div class="leaderboard-chart__bar" style="height: max(1px, {{ player.earned_disk_percentage }}%)"></div>
+                    </div>
+                    <div class="leaderboard-chart__avatar" aria-hidden="true" style="--skin-color: {{ player.useravatar.equipped_skin.color|default:'#2457a6' }};">
+                        {% if player.useravatar.equipped_skin.kind == "image" %}
+                            <img class="avatar-orb__leaderboard" src="{% static player.useravatar.equipped_skin.image %}" alt="">
+                        {% else %}
+                            <div class="avatar-orb__leaderboard">{{ player.username|first|upper }}</div>
+                        {% endif %}
                     </div>
                     <div class="leaderboard-chart__label">{{ player.username }}</div>
                 </li>
