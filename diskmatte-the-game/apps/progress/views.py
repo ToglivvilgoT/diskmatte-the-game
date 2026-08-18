@@ -32,10 +32,14 @@ def index(request):
     chapter = Course.objects.first()
     chapter_progress = None
     if chapter:
-        total_tasks = Task.objects.filter(learning_set__course=chapter).count()
+        total_tasks = Task.objects.filter(
+            learning_set__course=chapter,
+            is_published=True,
+        ).count()
         completed_tasks = TaskCompletion.objects.filter(
             user=request.user,
-            task__learning_set__course=chapter
+            task__learning_set__course=chapter,
+            task__is_published=True,
         ).count()
         chapter_progress = {
             "name": chapter.name,
