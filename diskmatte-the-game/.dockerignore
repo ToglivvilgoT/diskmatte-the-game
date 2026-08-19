@@ -1,2 +1,3 @@
 db.sqlite
 .mypy_cache
+.env
