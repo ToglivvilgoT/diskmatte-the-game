@@ -8,6 +8,14 @@
         "image": "/cosmetics/skins/gramophone.png"
     },
     {
+        "name": "Diskarn",
+        "slug": "diskarn",
+        "description": "Glöm inte DISKen i DISKmatte!",
+        "price": 1000,
+        "kind": "IMAGE", 
+        "image": "/cosmetics/skins/disk.jpg"
+    },
+    {
         "name": "Galaxy",
         "slug": "galaxy",
         "description": "Res ut i rymden och utforska denna fräscha look",
@@ -22,6 +30,22 @@
         "price": 1000,
         "kind": "IMAGE", 
         "image": "/cosmetics/skins/books.jpg"
+    },
+    {
+        "name": "Hacker",
+        "slug": "hacker",
+        "description": "Du är hackare",
+        "price": 1000,
+        "kind": "IMAGE", 
+        "image": "/cosmetics/skins/hacker.gif"
+    },
+    {
+        "name": "Diskret matte geniuz",
+        "slug": "genuiz",
+        "description": "Efter intensiv träning har du blivit den bästa diskret matte användaren i världen.",
+        "price": 1000,
+        "kind": "CSS_CLASS",
+        "css_class": "skin-matte-geniuz"
     },
     {
         "name": "ThreeD",
