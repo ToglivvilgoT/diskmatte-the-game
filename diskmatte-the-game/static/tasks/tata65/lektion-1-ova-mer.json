@@ -1,9 +1,262 @@
 [
-  {"slug":"uppgift-2-3","title":"Uppgift 2.3","prompt":"Lös uppgift 2.3.","book_reference":"2.3"},
-  {"slug":"uppgift-2-5","title":"Uppgift 2.5","prompt":"Lös uppgift 2.5.","book_reference":"2.5"},
-  {"slug":"uppgift-2-7","title":"Uppgift 2.7","prompt":"Lös uppgift 2.7.","book_reference":"2.7"},
-  {"slug":"uppgift-2-8b","title":"Uppgift 2.8b","prompt":"Lös uppgift 2.8b.","book_reference":"2.8b"},
-  {"slug":"uppgift-2-17b","title":"Uppgift 2.17b","prompt":"Lös uppgift 2.17b.","book_reference":"2.17b"},
-  {"slug":"uppgift-2-32","title":"Uppgift 2.32","prompt":"Lös uppgift 2.32.","book_reference":"2.32"},
-  {"slug":"uppgift-2-33","title":"Uppgift 2.33","prompt":"Lös uppgift 2.33.","book_reference":"2.33"}
+  {
+    "slug": "uppgift-2-3-a",
+    "title": "Uppgift 2.3 a) - s.17",
+    "prompt": "Är påståendet sant?",
+    "disk_reward": 10,
+    "options": [
+      {
+        "label": "Sant",
+        "is_correct": false
+      },
+      {
+        "label": "Falskt",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-2-3-b",
+    "title": "Uppgift 2.3 b) - s.17",
+    "prompt": "Är påståendet sant?",
+    "disk_reward": 10,
+    "options": [
+      {
+        "label": "Sant",
+        "is_correct": true
+      },
+      {
+        "label": "Falskt",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-2-3-c",
+    "title": "Uppgift 2.3 c) - s.17",
+    "prompt": "Är påståendet sant?",
+    "disk_reward": 10,
+    "options": [
+      {
+        "label": "Sant",
+        "is_correct": false
+      },
+      {
+        "label": "Falskt",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-2-3-d",
+    "title": "Uppgift 2.3 d) - s.17",
+    "prompt": "Är påståendet sant?",
+    "disk_reward": 10,
+    "options": [
+      {
+        "label": "Sant",
+        "is_correct": true
+      },
+      {
+        "label": "Falskt",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-2-3-e",
+    "title": "Uppgift 2.3 e) - s.17",
+    "prompt": "Är påståendet sant?",
+    "disk_reward": 10,
+    "options": [
+      {
+        "label": "Sant",
+        "is_correct": true
+      },
+      {
+        "label": "Falskt",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-2-3-f",
+    "title": "Uppgift 2.3 f) - s.17",
+    "prompt": "Är påståendet sant?",
+    "disk_reward": 10,
+    "options": [
+      {
+        "label": "Sant",
+        "is_correct": true
+      },
+      {
+        "label": "Falskt",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-2-3-g",
+    "title": "Uppgift 2.3 g) - s.17",
+    "prompt": "Är påståendet sant?",
+    "disk_reward": 10,
+    "options": [
+      {
+        "label": "Sant",
+        "is_correct": false
+      },
+      {
+        "label": "Falskt",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-2-3-h",
+    "title": "Uppgift 2.3 h) - s.17",
+    "prompt": "Är påståendet sant?",
+    "disk_reward": 10,
+    "options": [
+      {
+        "label": "Sant",
+        "is_correct": true
+      },
+      {
+        "label": "Falskt",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-2-3-i",
+    "title": "Uppgift 2.3 i) - s.17",
+    "prompt": "Är påståendet sant?",
+    "disk_reward": 10,
+    "options": [
+      {
+        "label": "Sant",
+        "is_correct": false
+      },
+      {
+        "label": "Falskt",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-2-5-a",
+    "title": "Uppgift 2.5 a) - s.18",
+    "prompt": "Lös uppgift 2.5. a)"
+  },
+  {
+    "slug": "uppgift-2-5-b",
+    "title": "Uppgift 2.5 b) - s.18",
+    "prompt": "Lös uppgift 2.5. b)"
+  },
+  {
+    "slug": "uppgift-2-7-a",
+    "title": "Uppgift 2.7 a) - s.22",
+    "prompt": "Är påståendet sant?",
+    "options": [
+      {
+        "label": "Sant",
+        "is_correct": true
+      },
+      {
+        "label": "Falskt",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-2-7-b",
+    "title": "Uppgift 2.7 b) - s.22",
+    "prompt": "Är påståendet sant?",
+    "options": [
+      {
+        "label": "Sant",
+        "is_correct": false
+      },
+      {
+        "label": "Falskt",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-2-8-b",
+    "title": "Uppgift 2.8 b) - s.22",
+    "prompt": "Vad blir det förenklade uttrycket?",
+    "options": [
+      {
+        "label": "⦰",
+        "is_correct": false
+      },
+      {
+        "label": "A ∪ B",
+        "is_correct": true
+      },
+      {
+        "label": "𝒰",
+        "is_correct": false
+      },
+      {
+        "label": "C",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-2-17-b",
+    "title": "Uppgift 2.17 b) - s.31",
+    "prompt": "Lös uppgift 2.17 b)",
+    "options": [
+      {
+        "label": "Sant",
+        "is_correct": false
+      },
+      {
+        "label": "Falskt",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-2-32",
+    "title": "Uppgift 2.32 - s.33",
+    "prompt": "Lös uppgift 2.32.",
+    "expected_answer": 7
+  },
+  {
+    "slug": "uppgift-2-33-a",
+    "title": "Uppgift 2.33 a) - s.33",
+    "prompt": "Lös uppgift 2.33. a)",
+    "disk_reward": 50,
+    "hint": "Rita en bild!",
+    "expected_answer": 3
+  },
+  {
+    "slug": "uppgift-2-33-b",
+    "title": "Uppgift 2.33 b) - s.33",
+    "prompt": "Lös uppgift 2.33. b)",
+    "disk_reward": 50,
+    "hint": "Rita en bild!",
+    "expected_answer": 6
+  },
+  {
+    "slug": "uppgift-2-33-c",
+    "title": "Uppgift 2.33 c) - s.33",
+    "prompt": "Lös uppgift 2.33. c)",
+    "disk_reward": 50,
+    "hint": "Rita en bild!",
+    "expected_answer": 3
+  },
+  {
+    "slug": "uppgift-2-33-d",
+    "title": "Uppgift 2.33 d) - s.33",
+    "prompt": "Lös uppgift 2.33. d)",
+    "disk_reward": 50,
+    "hint": "Rita en bild!",
+    "expected_answer": 11
+  }
 ]
