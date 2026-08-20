@@ -154,9 +154,7 @@ body {
 }
 
 .home-hero {
-    background: linear-gradient(135deg, var(--color-bg-hero-light) 0%, var(--color-bg-hero-lighter) 60%, var(--color-bg-accent-tan) 100%);
-    border: 1px solid var(--bs-primary-border-subtle);
-    border-radius: 0.75rem;
+    background: linear-gradient(180deg, var(--color-bg-hero-light) 0%, var(--color-bg-hero-lighter) 90%);
 }
 
 .home-hero .lead {
