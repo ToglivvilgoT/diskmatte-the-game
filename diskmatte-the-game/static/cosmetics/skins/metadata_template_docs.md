@@ -28,3 +28,9 @@ it can be inserted and marked as available.
 If some or all fields are missing, populate the database
 with placeholder or default values and mark the skin as not available.
 An admin will then have to later manually add the missing fields.
+
+## Missing metadata
+
+If an existing skin is missing from `metadata.json`, keep the skin in the
+database but mark it as not available (`is_available = false`). Skins should
+not be deleted during synchronization.

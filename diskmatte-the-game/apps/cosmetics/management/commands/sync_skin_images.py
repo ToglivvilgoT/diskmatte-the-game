@@ -14,7 +14,8 @@ class Command(BaseCommand):
     help = (
         "Load skins from metadata.json file. Creates new Skin entries from metadata "
         "with all available fields. Skins with missing required fields are created "
-        "as unavailable (is_available=False) for admin review."
+        "as unavailable (is_available=False) for admin review. Skins missing from "
+        "metadata are marked unavailable instead of being deleted."
     )
 
     def handle(self, *args, **options):
@@ -37,12 +38,14 @@ class Command(BaseCommand):
         created = []
         updated = []
         skipped = []
+        seen_skin_slugs = set()
 
         for item in metadata_list:
             slug = item.get("slug")
             if not slug:
                 self.stderr.write("Skipping item without slug field")
                 continue
+            seen_skin_slugs.add(slug)
 
             # Check if all required fields are present
             required_fields = {"name", "slug", "description", "price", "kind"}
@@ -107,6 +110,16 @@ class Command(BaseCommand):
                 else:
                     skipped.append(slug)
                     self.stdout.write(f"No changes for skin: {slug}")
+
+        missing = Skin.objects.exclude(slug__in=seen_skin_slugs).filter(is_available=True)
+        for skin in missing:
+            skin.is_available = False
+            skin.save(update_fields=["is_available"])
+            self.stdout.write(
+                self.style.WARNING(
+                    f"Skin '{skin.slug}' missing from metadata, marking unavailable"
+                )
+            )
 
         self.stdout.write(
             self.style.SUCCESS(

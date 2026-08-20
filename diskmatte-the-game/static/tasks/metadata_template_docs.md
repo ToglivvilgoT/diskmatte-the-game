@@ -78,7 +78,8 @@ if the topic_slug is missing from DB an error message should be printed.
 ## Missing metadata
 
 If metadata is missing for an existing task in the database,
-mark it as is_published = false and print a warning.
+keep the task in the database, mark it as is_published = false, and print a
+warning. Tasks should not be deleted during synchronization.
 
 ## Errors
 
