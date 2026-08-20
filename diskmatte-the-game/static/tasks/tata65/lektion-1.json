@@ -1,31 +1,31 @@
 [
   {
     "slug": "uppgift-2-1-a",
-    "title": "Uppgift 2.1 a)",
-    "prompt": "Lös uppgift 2.1. a) på sida 16 i boken",
+    "title": "Uppgift 2.1 a) - s.16",
+    "prompt": "Lös uppgift 2.1. a) ",
     "disk_reward": 30
   },
   {
     "slug": "uppgift-2-1-b",
-    "title": "Uppgift 2.1 b)",
-    "prompt": "Lös uppgift 2.1. b) på sida 16 i boken",
+    "title": "Uppgift 2.1 b) - s.16",
+    "prompt": "Lös uppgift 2.1. b)",
     "disk_reward": 30
   },
   {
     "slug": "uppgift-2-1-c",
-    "title": "Uppgift 2.1 c)",
-    "prompt": "Lös uppgift 2.1. c) på sida 16 i boken",
+    "title": "Uppgift 2.1 c) - s.16",
+    "prompt": "Lös uppgift 2.1. c)",
     "disk_reward": 30
   },
   {
     "slug": "uppgift-2-1-d",
-    "title": "Uppgift 2.1 d)",
-    "prompt": "Lös uppgift 2.1. d) på sida 16 i boken",
+    "title": "Uppgift 2.1 d) - s.16",
+    "prompt": "Lös uppgift 2.1. d)",
     "disk_reward": 30
   },
   {
     "slug": "uppgift-2-2-a",
-    "title": "Uppgift 2.2 a)",
+    "title": "Uppgift 2.2 a) - s.16",
     "prompt": "Är påståendet sant eller falskt?",
     "disk_reward": 10,
     "options": [
@@ -41,7 +41,7 @@
   },
   {
     "slug": "uppgift-2-2-b",
-    "title": "Uppgift 2.2 b)",
+    "title": "Uppgift 2.2 b) - s.16",
     "prompt": "Är påståendet sant eller falskt?",
     "disk_reward": 10,
     "options": [
@@ -57,7 +57,7 @@
   },
   {
     "slug": "uppgift-2-2-c",
-    "title": "Uppgift 2.2 c)",
+    "title": "Uppgift 2.2 c) - s.16",
     "prompt": "Är påståendet sant eller falskt?",
     "disk_reward": 10,
     "options": [
@@ -73,7 +73,7 @@
   },
   {
     "slug": "uppgift-2-2-d",
-    "title": "Uppgift 2.2 d)",
+    "title": "Uppgift 2.2 d) - s.16",
     "prompt": "Är påståendet sant eller falskt?",
     "disk_reward": 10,
     "options": [
@@ -89,7 +89,7 @@
   },
   {
     "slug": "uppgift-2-2-e",
-    "title": "Uppgift 2.2 e)",
+    "title": "Uppgift 2.2 e) - s.16",
     "prompt": "Är påståendet sant eller falskt?",
     "disk_reward": 10,
     "options": [
@@ -105,7 +105,7 @@
   },
   {
     "slug": "uppgift-2-2-f",
-    "title": "Uppgift 2.2 f)",
+    "title": "Uppgift 2.2 f) - s.16",
     "prompt": "Är påståendet sant eller falskt?",
     "disk_reward": 10,
     "options": [
@@ -121,7 +121,7 @@
   },
   {
     "slug": "uppgift-2-2-g",
-    "title": "Uppgift 2.2 g)",
+    "title": "Uppgift 2.2 g) - s.16",
     "prompt": "Är påståendet sant eller falskt?",
     "disk_reward": 10,
     "options": [
@@ -137,28 +137,32 @@
   },
   {
     "slug": "uppgift-2-4",
-    "title": "Uppgift 2.4",
-    "prompt": "Lös uppgift 2.4. på sida x i boken"
+    "title": "Uppgift 2.4 - s.18",
+    "prompt": "Lös uppgift 2.4"
   },
   {
     "slug": "uppgift-2-6-a",
-    "title": "Uppgift 2.6 a)",
-    "prompt": "Lös uppgift 2.6. a) på sida 22 i boken"
+    "title": "Uppgift 2.6 a) - s.22",
+    "disk_reward": 30,
+    "prompt": "Lös uppgift 2.6. a)"
   },
   {
     "slug": "uppgift-2-6-b",
-    "title": "Uppgift 2.6 b)",
-    "prompt": "Lös uppgift 2.6. b) på sida 22 i boken"
+    "title": "Uppgift 2.6 b) - s.22",
+    "disk_reward": 30,
+    "prompt": "Lös uppgift 2.6. b)"
   },
   {
     "slug": "uppgift-2-6-c",
-    "title": "Uppgift 2.6 c)",
-    "prompt": "Lös uppgift 2.6. c) på sida 22 i boken"
+    "title": "Uppgift 2.6 c) - s.22",
+    "disk_reward": 30,
+    "prompt": "Lös uppgift 2.6. c)"
   },
   {
     "slug": "uppgift-2-6-d",
-    "title": "Uppgift 2.6 d)",
-    "prompt": "Lös uppgift 2.6. d) på sida 22 i boken"
+    "title": "Uppgift 2.6 d) - s.22",
+    "disk_reward": 30,
+    "prompt": "Lös uppgift 2.6. d)"
   },
   {
     "slug": "uppgift-2-8a",
@@ -247,13 +251,13 @@
   },
   {
     "slug": "uppgift-2-13",
-    "title": "Uppgift 2.13",
-    "prompt": "Lös uppgift 2.13. på sida 28 i boken"
+    "title": "Uppgift 2.13 - s.28",
+    "prompt": "Lös uppgift 2.13."
   },
   {
     "slug": "uppgift-2-14",
-    "title": "Uppgift 2.14",
-    "prompt": "Lös uppgift 2.14. på sida 28 i boken",
+    "title": "Uppgift 2.14 - s.28",
+    "prompt": "Lös uppgift 2.14.",
     "expected_answer": "4",
     "hint": "Testa att räkna ut potensmängden för några små mängder, t.ex. för {a}, {a, b}, {a, b, c} o.s.v. Ser du ett mönster?"
   },
@@ -307,8 +311,8 @@
   },
   {
     "slug": "uppgift-2-20",
-    "title": "Uppgift 2.20",
-    "prompt": "Lös uppgift 2.20. på sida 32 i boken"
+    "title": "Uppgift 2.20 - s.32",
+    "prompt": "Lös uppgift 2.20."
   },
   {
     "slug": "uppgift-2-21-a-1",
@@ -720,12 +724,12 @@
   },
   {
     "slug": "uppgift-2-22-a",
-    "title": "Uppgift 2.22 a)",
-    "prompt": "Lös uppgift 2.22 a) på sida 32 i boken"
+    "title": "Uppgift 2.22 a) - s.32",
+    "prompt": "Lös uppgift 2.22 a)"
   },
   {
     "slug": "uppgift-2-22-b",
-    "title": "Uppgift 2.22 b)",
-    "prompt": "Lös uppgift 2.22 b) på sida 32 i boken"
+    "title": "Uppgift 2.22 b) - s.32",
+    "prompt": "Lös uppgift 2.22 b)"
   }
 ]

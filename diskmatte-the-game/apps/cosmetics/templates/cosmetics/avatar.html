@@ -11,7 +11,7 @@
     <p>Välj vilket skin som ska representera dig i Diskmatte.</p>
 </div>
 
-<div class="avatar-preview mb-4" style="--skin-color: {{ avatar.equipped_skin.color|default:'#2457a6' }};">
+<div class="avatar-preview mb-4" style="--skin-color: {{ avatar.equipped_skin.color|default:'var(--bs-primary)' }};">
     {% skin_orb avatar.equipped_skin "avatar-orb" avatar.equipped_skin.name|first|default:'D' %}
     <div>
         <p class="home-kicker mb-1">Utrustat skin</p>
