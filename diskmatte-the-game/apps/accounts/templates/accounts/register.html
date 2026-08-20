@@ -1,18 +1,37 @@
 {% extends "base.html" %}
 
-{% block title %}Register | Diskmatte{% endblock %}
+{% block title %}Registrera | Diskmatte{% endblock %}
 
 {% block content %}
 <div class="content-narrow">
     <div class="page-header">
-        <h1>Create an account</h1>
-        <p>Sign up to track your progress.</p>
+        <h1>Skapa ett konto</h1>
+        <p>Registrera dig för att spara dina framsteg.</p>
     </div>
+    {% if form.non_field_errors %}
+        <div class="alert alert-danger">{{ form.non_field_errors }}</div>
+    {% endif %}
     <form method="post">
         {% csrf_token %}
-        {{ form.as_p }}
-        <button class="btn btn-primary" type="submit">Register</button>
+        {% for field in form %}
+            <div class="mb-3">
+                <label class="form-label" for="{{ field.id_for_label }}">
+                    {{ field.label }}
+                    {% if field.help_text %}
+                        <details class="hint-disclosure d-inline-block align-middle ms-1">
+                            <summary class="hint-icon" data-hint-toggle data-closed-label="ⓘ" data-open-label="ⓘ" aria-label="Visa information om {{ field.label|lower }}">ⓘ</summary>
+                            <div class="hint-content alert alert-secondary small mt-2 mb-0" data-hint-content>{{ field.help_text }}</div>
+                        </details>
+                    {% endif %}
+                </label>
+                {{ field }}
+                {% if field.errors %}
+                    <div class="text-danger small mt-1">{{ field.errors }}</div>
+                {% endif %}
+            </div>
+        {% endfor %}
+        <button class="btn btn-primary" type="submit">Registrera</button>
     </form>
-    <a class="btn btn-link px-0 mt-3" href="{% url 'accounts:index' %}">Back</a>
+    <a class="btn btn-link px-0 mt-3" href="{% url 'accounts:index' %}">Tillbaka</a>
 </div>
 {% endblock %}

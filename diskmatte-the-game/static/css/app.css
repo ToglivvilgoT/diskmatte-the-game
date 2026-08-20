@@ -38,6 +38,14 @@
     --bs-progress-bar-bg: var(--diskmatte-primary);
 }
 
+/* Bootstrap hardcodes a blue focus ring; match the site's red theme instead. */
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus {
+    border-color: rgba(var(--bs-primary-rgb), 0.50);
+    box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.20);
+}
+
 .alert-info {
     --bs-alert-color: var(--bs-primary-text-emphasis);
     --bs-alert-bg: var(--bs-primary-bg-subtle);
@@ -89,6 +97,24 @@ a {
 /* ================================== */
 
 .hint-disclosure[open] > summary {
+    display: none;
+}
+
+.hint-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    background-color: var(--bs-secondary-bg);
+    color: var(--bs-secondary-color);
+    font-size: 0.75rem;
+    cursor: pointer;
+    list-style: none;
+}
+
+.hint-icon::-webkit-details-marker {
     display: none;
 }
 

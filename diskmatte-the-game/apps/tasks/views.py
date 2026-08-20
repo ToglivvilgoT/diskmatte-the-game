@@ -22,14 +22,19 @@ def task_detail(request, course_slug, learning_set_slug, slug):
     next_task = None
     reward_result = None
     is_completed = False
+    submitted_answer = ""
+    submitted_option_id = None
+    submitted_checked = False
     if request.user.is_authenticated:
         is_completed = TaskCompletion.objects.filter(user=request.user, task=task).exists()
 
     if request.method == "POST":
         if task.answer_type == Task.AnswerType.CHECKBOX:
-            is_correct = request.POST.get("answer") == "on"
+            submitted_checked = request.POST.get("answer") == "on"
+            is_correct = submitted_checked
         elif task.answer_type == Task.AnswerType.MULTIPLE_CHOICE:
-            selected_option = task.options.filter(pk=request.POST.get("answer")).first()
+            submitted_option_id = request.POST.get("answer")
+            selected_option = task.options.filter(pk=submitted_option_id).first()
             is_correct = selected_option is not None and selected_option.is_correct
         else:
             submitted_answer = request.POST.get("answer", "").strip()
@@ -59,5 +64,8 @@ def task_detail(request, course_slug, learning_set_slug, slug):
             "is_completed": is_completed,
             "next_task": next_task,
             "reward_result": reward_result,
+            "submitted_answer": submitted_answer,
+            "submitted_option_id": submitted_option_id,
+            "submitted_checked": submitted_checked,
         },
     )

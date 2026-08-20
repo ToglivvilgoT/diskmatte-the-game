@@ -23,7 +23,7 @@
         <form class="card card-body shadow-sm" method="post">
             {% csrf_token %}
             <label class="form-check">
-                <input class="form-check-input" type="checkbox" name="answer" required>
+                <input class="form-check-input" type="checkbox" name="answer" required {% if submitted_checked %}checked{% endif %}>
                 <span class="form-check-label">Markera uppgiften som klar</span>
             </label>
             <button class="btn btn-primary mt-3 align-self-start" type="submit">Skicka svar</button>
@@ -33,7 +33,7 @@
             {% csrf_token %}
             {% for option in task.options.all %}
                 <label class="task-option form-check border rounded p-3 mb-2">
-                    <input class="form-check-input" type="radio" name="answer" value="{{ option.pk }}" required>
+                    <input class="form-check-input" type="radio" name="answer" value="{{ option.pk }}" required {% if submitted_option_id == option.pk|stringformat:"s" %}checked{% endif %}>
                     <span class="form-check-label">{{ option.label }}</span>
                 </label>
             {% empty %}
@@ -45,7 +45,7 @@
         <form class="card card-body shadow-sm" method="post">
             {% csrf_token %}
             <label class="form-label" for="answer">Ditt svar</label>
-            <input class="form-control" id="answer" type="text" name="answer" required>
+            <input class="form-control" id="answer" type="text" name="answer" required value="{{ submitted_answer }}">
             <button class="btn btn-primary mt-3 align-self-start" type="submit">Skicka svar</button>
         </form>
     {% endif %}
