@@ -17,3 +17,12 @@
 .skin-sunset {
     background: linear-gradient(160deg, #ff9a3c, #ff3caa 60%, #7d2ae8);
 }
+
+.skin-spinner {
+  @keyframes spin{
+    0%{transform: rotate(0deg)};
+    100%{transform: rotate(3600deg)};
+  }
+  animation: spin 1s linear infinite;
+  background: linear-gradient(black, white);
+}

@@ -14,5 +14,13 @@
         "price": 50,
         "kind": "CSS_CLASS",
         "css_class": "skin-galaxy"
+    },
+    {
+        "name": "Spinner",
+        "slug": "spinner",
+        "description": "Oj oj oj, försök att inte bli åksjuk...",
+        "price": 5000,
+        "kind": "CSS_CLASS",
+        "css_class": "skin-spinner"
     }
 ]
