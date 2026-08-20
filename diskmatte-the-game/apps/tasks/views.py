@@ -19,12 +19,21 @@ def task_detail(request, course_slug, learning_set_slug, slug):
     )
     task = get_object_or_404(Task, learning_set=learning_set, slug=slug, is_published=True)
     is_correct = None
-    next_task = None
     reward_result = None
     is_completed = False
     submitted_answer = ""
     submitted_option_id = None
     submitted_checked = False
+    task_list = list(
+        Task.objects.filter(learning_set=learning_set, is_published=True)
+        .select_related("topic")
+        .order_by("order", "title", "id")
+    )
+    current_index = next(
+        index for index, candidate in enumerate(task_list) if candidate.pk == task.pk
+    )
+    previous_task = task_list[current_index - 1] if current_index else None
+    next_task = task_list[current_index + 1] if current_index + 1 < len(task_list) else None
     if request.user.is_authenticated:
         is_completed = TaskCompletion.objects.filter(user=request.user, task=task).exists()
 
@@ -43,15 +52,6 @@ def task_detail(request, course_slug, learning_set_slug, slug):
         if is_correct:
             reward_result = complete_task(request.user, task)
             is_completed = True
-            task_list = list(
-                Task.objects.filter(learning_set=learning_set, is_published=True)
-                .select_related("topic")
-                .order_by("order", "title", "id")
-            )
-            current_index = next(
-                index for index, candidate in enumerate(task_list) if candidate.pk == task.pk
-            )
-            next_task = task_list[current_index + 1] if current_index + 1 < len(task_list) else None
 
     return render(
         request,
@@ -62,6 +62,7 @@ def task_detail(request, course_slug, learning_set_slug, slug):
             "task": task,
             "is_correct": is_correct,
             "is_completed": is_completed,
+            "previous_task": previous_task,
             "next_task": next_task,
             "reward_result": reward_result,
             "submitted_answer": submitted_answer,

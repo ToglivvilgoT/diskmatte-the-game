@@ -50,6 +50,21 @@
         </form>
     {% endif %}
 
+    {% if previous_task or next_task %}
+        <nav class="d-flex justify-content-between gap-2 mt-4" aria-label="Uppgiftsnavigering">
+            <div>
+                {% if previous_task %}
+                    <a class="btn btn-outline-secondary" href="{% url 'tasks:task-detail' course.slug learning_set.slug previous_task.slug %}">Föregående uppgift</a>
+                {% endif %}
+            </div>
+            <div>
+                {% if next_task %}
+                    <a class="btn btn-outline-secondary" href="{% url 'tasks:task-detail' course.slug learning_set.slug next_task.slug %}">Hoppa över uppgift</a>
+                {% endif %}
+            </div>
+        </nav>
+    {% endif %}
+
     {% if task.hint %}
         <details class="hint-disclosure mt-4">
             <summary class="btn btn-outline-secondary" data-hint-toggle data-closed-label="Visa ledtråd" data-open-label="Dölj ledtråd">Visa ledtråd</summary>

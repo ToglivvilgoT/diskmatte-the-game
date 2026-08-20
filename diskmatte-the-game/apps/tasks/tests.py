@@ -92,6 +92,43 @@ class TaskDetailTests(TestCase):
         response = self.client.get(self.task_url())
         self.assertContains(response, "Redan löst")
 
+    def test_task_detail_provides_navigation_between_published_tasks(self):
+        second_task = Task.objects.create(
+            learning_set=self.learning_set,
+            topic=self.topic,
+            title="Second task",
+            slug="second-task",
+            prompt="Solve the next equation.",
+            order=2,
+            is_published=True,
+        )
+        third_task = Task.objects.create(
+            learning_set=self.learning_set,
+            topic=self.topic,
+            title="Third task",
+            slug="third-task",
+            prompt="Solve the final equation.",
+            order=3,
+            is_published=True,
+        )
+
+        first_response = self.client.get(self.task_url())
+        self.assertIsNone(first_response.context["previous_task"])
+        self.assertEqual(first_response.context["next_task"], second_task)
+        self.assertNotContains(first_response, "Föregående uppgift")
+        self.assertContains(first_response, self.task_url(second_task))
+
+        middle_response = self.client.get(self.task_url(second_task))
+        self.assertEqual(middle_response.context["previous_task"], self.task)
+        self.assertEqual(middle_response.context["next_task"], third_task)
+        self.assertContains(middle_response, self.task_url())
+        self.assertContains(middle_response, self.task_url(third_task))
+
+        last_response = self.client.get(self.task_url(third_task))
+        self.assertEqual(last_response.context["previous_task"], second_task)
+        self.assertIsNone(last_response.context["next_task"])
+        self.assertNotContains(last_response, "Nästa uppgift")
+
     def test_input_field_answer_is_validated(self):
         response = self.client.post(self.task_url(), {"answer": "2"})
         self.assertContains(response, "Rätt svar!")
