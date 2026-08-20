@@ -1,0 +1,14 @@
+asgiref==3.12.1
+ast_serialize==0.8.0
+Django==5.2.16
+django-stubs==6.1.0
+django-stubs-ext==6.1.0
+gunicorn==26.1.0
+librt==0.15.0
+mypy==1.18.2
+mypy_extensions==1.1.0
+pathspec==1.1.1
+sqlparse==0.5.5
+types-PyYAML==6.0.12.20260724
+typing_extensions==4.16.0
+tzdata==2026.3
