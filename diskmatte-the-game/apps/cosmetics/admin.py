@@ -16,6 +16,7 @@ class SkinAdmin(admin.ModelAdmin):
         "kind",
         "color",
         "image",
+        "css_class",
         "is_available",
     )
 

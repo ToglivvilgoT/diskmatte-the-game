@@ -1,0 +1,8 @@
+{% load static %}
+{% if skin.kind == "image" %}
+    <img class="{{ size_class }}" src="{% static skin.image %}" alt="">
+{% elif skin.kind == "css_class" %}
+    <div class="{{ size_class }} {{ skin.css_class }}" aria-hidden="true"></div>
+{% else %}
+    <div class="{{ size_class }}" style="--skin-color: {{ skin.color|default:'var(--bs-primary)' }};" aria-hidden="true">{{ fallback }}</div>
+{% endif %}

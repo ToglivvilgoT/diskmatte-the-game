@@ -54,6 +54,8 @@ class Command(BaseCommand):
                 has_all_required = False
             elif kind == "image" and "image" not in item:
                 has_all_required = False
+            elif kind == "css_class" and "css_class" not in item:
+                has_all_required = False
 
             # Build defaults dict, only including optional fields if present in metadata
             defaults = {
@@ -62,6 +64,7 @@ class Command(BaseCommand):
                 "price": item.get("price", 0),
                 "kind": kind or Skin.Kind.IMAGE,
                 "image": item.get("image", ""),
+                "css_class": item.get("css_class", ""),
                 "is_available": has_all_required,
             }
             # Only set color if provided; otherwise use model's default
@@ -82,7 +85,7 @@ class Command(BaseCommand):
             else:
                 # Update existing skin if metadata has changed
                 updated_fields = {}
-                for key in ["name", "description", "price", "kind", "color", "image"]:
+                for key in ["name", "description", "price", "kind", "color", "image", "css_class"]:
                     # Only update color if it's explicitly in metadata
                     if key == "color":
                         if "color" in item:

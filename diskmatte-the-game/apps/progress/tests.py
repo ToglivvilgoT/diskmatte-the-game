@@ -123,4 +123,21 @@ class TaskCompletionTests(TestCase):
 		self.assertEqual(UserWallet.objects.get(user=self.user).balance, 150)
 		self.assertEqual(DiskTransaction.objects.filter(user=self.user).count(), 1)
 
+	def test_progress_dashboard_leaderboard_renders_css_class_skin(self):
+		from apps.cosmetics.models import Skin, UserAvatar
+
+		skin = Skin.objects.create(
+			name="Galax",
+			slug="galax",
+			price=0,
+			kind=Skin.Kind.CSS_CLASS,
+			css_class="skin-galaxy",
+		)
+		UserAvatar.objects.create(user=self.user, equipped_skin=skin)
+		self.client.login(username="student", password="test-password")
+
+		response = self.client.get(reverse("progress:index"))
+
+		self.assertContains(response, "skin-galaxy")
+
 # Create your tests here.

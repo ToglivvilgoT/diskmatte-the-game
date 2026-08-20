@@ -12,13 +12,15 @@ Each skin representing object will have the following format:
     "price": "PositiveInteger",
     "kind": "COLOR" | "IMAGE" | "CSS_CLASS",
     "color": "#ffffff" | "#fff" | "rgb(123, 123, 123)",
-    "image": "FilePath"
+    "image": "FilePath",
+    "css_class": "String"
 }
 ```
 
 `name`, `slug`, `description`, `price` and `kind` are always required.
 `color` is required when `kind = "COLOR"`
 `image` is required when `kind = "IMAGE"`
+`css_class` is required when `kind = "CSS_CLASS"`, and must match a class defined in `static/css/skins.css`
 
 When loading the skins into database:
 if all metadata fields are correctly present for a skin,

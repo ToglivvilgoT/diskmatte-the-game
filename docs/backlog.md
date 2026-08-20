@@ -19,6 +19,14 @@
 - Implement a simple leaderboard based on solved tasks or score
 - Add tests for authentication and core learning flow
 - Plan how to uniformly style the entire app (what framework / raw css to use)
+- Add support for CSS-based skins (kind = css_class)
+  - Add `css_class` field to `Skin` model and generate migration
+  - Add model validation requiring `color`/`image`/`css_class` depending on `kind`
+  - Update cosmetics admin to expose `css_class`
+  - Update `sync_skin_images` and `metadata_template_docs.md` to handle `css_class` as a required field for that kind
+  - Define reusable CSS skin classes (gradients/patterns/animations) in the stylesheet
+  - Update avatar/shop templates to render css_class skins alongside color and image skins
+  - Add tests covering validation and rendering for css_class skins
 
 ## In progress
 

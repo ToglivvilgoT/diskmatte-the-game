@@ -1,4 +1,5 @@
 from django.conf import settings
+from django.core.exceptions import ValidationError
 from django.db import models
 
 
@@ -19,6 +20,11 @@ class Skin(models.Model):
         blank=True,
         help_text="Sökväg relativt static/, t.ex. cosmetics/skins/lava.png",
     )
+    css_class = models.CharField(
+        max_length=100,
+        blank=True,
+        help_text="CSS-klass definierad i skins.css, t.ex. skin-galax",
+    )
     is_available = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
@@ -27,6 +33,13 @@ class Skin(models.Model):
 
     def __str__(self):
         return self.name
+
+    def clean(self):
+        super().clean()
+        if self.kind == self.Kind.IMAGE and not self.image:
+            raise ValidationError({"image": "Bild krävs för skin av typen Bild."})
+        if self.kind == self.Kind.CSS_CLASS and not self.css_class:
+            raise ValidationError({"css_class": "CSS-klass krävs för skin av typen CSS-klass."})
 
 
 class UserSkin(models.Model):

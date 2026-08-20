@@ -6,5 +6,13 @@
         "price": 1000,
         "kind": "IMAGE", 
         "image": "/cosmetics/skins/gramophone.png"
+    },
+    {
+        "name": "Galaxy",
+        "slug": "galaxy",
+        "description": "Res ut i rymden och utforska denna fräscha look",
+        "price": 50,
+        "kind": "CSS_CLASS",
+        "css_class": "skin-galaxy"
     }
 ]

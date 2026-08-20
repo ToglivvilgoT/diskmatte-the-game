@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load cosmetics_tags %}
 
 {% block title %}Skin-shop | Diskmatte{% endblock %}
 
@@ -23,11 +24,7 @@
     {% for skin in skins %}
         <div class="col-md-6 col-lg-4">
             <article class="skin-card h-100" style="--skin-color: {{ skin.color }};">
-                {% if skin.kind == "image" %}
-                    <img class="skin-swatch" src="{% static skin.image %}" alt="">
-                {% else %}
-                    <div class="skin-swatch" aria-hidden="true">{{ skin.name|first }}</div>
-                {% endif %}
+                {% skin_orb skin "skin-swatch" skin.name|first %}
                 <div class="flex-grow-1">
                     <h2 class="h5 mb-1">{{ skin.name }}</h2>
                     <p class="text-secondary mb-3">{{ skin.description }}</p>

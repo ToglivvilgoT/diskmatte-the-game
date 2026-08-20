@@ -1,0 +1,19 @@
+/*
+ * CSS-based skins.
+ * Each class below implements a "css_class" kind Skin (see apps/cosmetics/models.py).
+ * The class name must match the Skin.css_class field exactly and is applied
+ * directly on the skin's orb/swatch element (see cosmetics/_skin_orb.html).
+ */
+
+.skin-galaxy {
+    background: radial-gradient(circle at 30% 30%, #6a3de8, #1b0f3d 70%);
+}
+
+.skin-neon {
+    background: linear-gradient(135deg, #00f5d4, #00bbf9);
+    box-shadow: 0 0 0.75rem #00f5d4;
+}
+
+.skin-sunset {
+    background: linear-gradient(160deg, #ff9a3c, #ff3caa 60%, #7d2ae8);
+}
