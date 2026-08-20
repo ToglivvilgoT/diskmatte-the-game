@@ -149,7 +149,7 @@ class SkinRenderingTests(TestCase):
         self.assertContains(response, "skin-galaxy")
 
 
-class SyncSkinImagesCommandTests(TestCase):
+class SyncSkinsCommandTests(TestCase):
     def test_marks_skins_missing_from_metadata_unavailable(self):
         missing_skin = Skin.objects.create(
             name="Solhjälten",
@@ -169,7 +169,7 @@ class SyncSkinImagesCommandTests(TestCase):
 
             with override_settings(BASE_DIR=Path(tmp_dir)):
                 out = StringIO()
-                call_command("sync_skin_images", stdout=out)
+                call_command("sync_skins", stdout=out)
 
         missing_skin.refresh_from_db()
         self.assertFalse(missing_skin.is_available)
@@ -199,7 +199,7 @@ class SyncSkinImagesCommandTests(TestCase):
 
             with override_settings(BASE_DIR=Path(tmp_dir)):
                 out = StringIO()
-                call_command("sync_skin_images", stdout=out)
+                call_command("sync_skins", stdout=out)
 
         self.assertFalse(
             Skin.objects.get(slug="ice-king").is_available,

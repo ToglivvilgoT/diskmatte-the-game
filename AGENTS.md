@@ -17,11 +17,24 @@ This repository is a Django-based math learning app called Diskmatte. The initia
 - Keep business logic in services or helper modules rather than putting everything in views.
 - Never hand-write Django migration files. Change models first, then generate migrations with `python manage.py makemigrations`.
 - Treat `apps/*/migrations/*.py` as generated artifacts. Only edit an existing migration manually if the user explicitly asks for that and the reason is documented in the task.
-- If Python code changes, run mypy for the affected scope before finishing. When in doubt, run `venv\Scripts\python -m mypy diskmatte-the-game`.
+- If Python code changes, run mypy for the affected scope before finishing. When in doubt, run `..\venv\Scripts\python.exe -m mypy .` from the Django project directory.
 - Add tests for new features whenever possible.
 - Update the planning documents in docs/ before implementing larger features.
 - Preserve a clear separation between presentation, business logic, and data models.
 - Do not commit secrets. Use environment variables for configuration.
+
+## Repository layout and validation
+
+- The workspace root contains the `venv` virtual environment. The Django project
+    root is the nested `diskmatte-the-game/` directory containing `manage.py`.
+- From the workspace root, run Django commands with
+    `Push-Location diskmatte-the-game; ..\venv\Scripts\python.exe manage.py <command>; Pop-Location`.
+- From the workspace root, run mypy with
+    `Push-Location diskmatte-the-game; ..\venv\Scripts\python.exe -m mypy .; Pop-Location`.
+- Skin metadata format and synchronization behavior are documented in
+    `diskmatte-the-game/static/cosmetics/skins/metadata_template_docs.md`.
+- Task metadata format and synchronization behavior are documented in
+    `diskmatte-the-game/static/tasks/metadata_template_docs.md`.
 
 ## Recommended workflow
 
