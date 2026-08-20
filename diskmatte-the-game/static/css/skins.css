@@ -36,7 +36,7 @@
 .skin-threeD {
   transform-style: preserve-3d;
   transform: perspective(100px) rotateX(45deg);
-  animation: spin3d 1s linear infinite;
+  animation: spin3d 2s linear infinite;
 
 }
 .skin-threeD::before {
@@ -66,9 +66,30 @@
   animation: rainbow 2s linear infinite;
 }
 
+.skin-matte-geniuz{
+  background-image: url("/static/cosmetics/skins/genius.jpg");
+  background-size: 120% 120%;
+  background-position: 10px 0px; 
+
+}
+.skin-matte-geniuz::before{
+  font-size:8px;
+  animation: wobble 1s infinite;
+  color: red;
+  content:"Diskret matte Geniuz";
+}
+
+
 @keyframes rainbow{
   0%{filter: hue-rotate(0deg)}
   100%{filter: hue-rotate(360deg)}
+}
+
+@keyframes wobble{
+  0%{transform: rotate(-10deg)}
+  50%{transform: rotate(10deg)}
+  100%{transform: rotate(-10deg)}
+  
 }
 
 @keyframes spin3d{
