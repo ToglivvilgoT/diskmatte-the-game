@@ -9,7 +9,9 @@
     {
       "name": "Lektion 1 - öva mer",
       "slug": "lektion-1-ova-mer"
-    },
+    }
+  ],
+  "future_lessons_not_added_yet": [
     {
       "name": "Lektion 2",
       "slug": "lektion-2"
@@ -145,12 +147,6 @@
     {
       "name": "Lektion 18 - öva mer",
       "slug": "lektion-18-ova-mer"
-    }
-  ],
-  "topics": [
-    {
-      "title": "Mängdlära",
-      "slug": "mangdlara"
     }
   ]
 }
