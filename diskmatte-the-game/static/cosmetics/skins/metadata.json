@@ -16,11 +16,43 @@
         "css_class": "skin-galaxy"
     },
     {
+        "name": "Bokhylla",
+        "slug": "bokhylla",
+        "description":"Nu kan du äntligen äga Rainers 12 olika deckare och 11 identiska diktsamlingar.",
+        "price": 1000,
+        "kind": "IMAGE", 
+        "image": "/cosmetics/skins/books.jpg"
+    },
+    {
+        "name": "ThreeD",
+        "slug": "threed",
+        "description": "Den tredje dimensionen kallar till dig...",
+        "price": 5000,
+        "kind": "CSS_CLASS",
+        "css_class": "skin-threeD"
+    },
+    {
         "name": "Spinner",
         "slug": "spinner",
-        "description": "Oj oj oj, försök att inte bli åksjuk...",
+        "description": "Ojojoj, försök att inte bli åksjuk!",
         "price": 5000,
         "kind": "CSS_CLASS",
         "css_class": "skin-spinner"
+    },
+    {
+        "name": "Vinylskiva",
+        "slug": "vinylskiva",
+        "description": "Skivan snurrar och snurrar, men vad är det som spelas? Det är en diskmatte föreläsning.",
+        "price": 5000,
+        "kind": "CSS_CLASS",
+        "css_class": "skin-record"
+    },
+    {
+        "name": "Regnbåge",
+        "slug": "regnbage",
+        "description": "RGB gamer skin++ EXTRA SUPREME",
+        "price": 5000,
+        "kind": "CSS_CLASS",
+        "css_class": "skin-regnbage"
     }
 ]
