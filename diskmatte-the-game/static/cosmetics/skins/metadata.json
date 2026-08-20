@@ -19,7 +19,7 @@
         "name": "Galaxy",
         "slug": "galaxy",
         "description": "Res ut i rymden och utforska denna fräscha look",
-        "price": 50,
+        "price": 500,
         "kind": "CSS_CLASS",
         "css_class": "skin-galaxy"
     },
@@ -35,7 +35,7 @@
         "name": "Hacker",
         "slug": "hacker",
         "description": "Du är hackare",
-        "price": 1000,
+        "price": 2500,
         "kind": "IMAGE", 
         "image": "/cosmetics/skins/hacker.gif"
     },
@@ -43,7 +43,7 @@
         "name": "Diskret matte geniuz",
         "slug": "genuiz",
         "description": "Efter intensiv träning har du blivit den bästa diskret matte användaren i världen.",
-        "price": 1000,
+        "price": 10000,
         "kind": "CSS_CLASS",
         "css_class": "skin-matte-geniuz"
     },
@@ -51,7 +51,7 @@
         "name": "ThreeD",
         "slug": "threed",
         "description": "Den tredje dimensionen kallar till dig...",
-        "price": 5000,
+        "price": 7500,
         "kind": "CSS_CLASS",
         "css_class": "skin-threeD"
     },
@@ -75,7 +75,7 @@
         "name": "Regnbåge",
         "slug": "regnbage",
         "description": "RGB gamer skin++ EXTRA SUPREME",
-        "price": 5000,
+        "price": 2500,
         "kind": "CSS_CLASS",
         "css_class": "skin-regnbage"
     }
