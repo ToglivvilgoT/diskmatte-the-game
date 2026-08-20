@@ -19,10 +19,11 @@
 }
 
 .skin-spinner {
-  @keyframes spin{
-    0%{transform: rotate(0deg)};
-    100%{transform: rotate(3600deg)};
-  }
   animation: spin 1s linear infinite;
   background: linear-gradient(black, white);
+}
+
+@keyframes spin{
+  0%{transform: rotate(0deg)};
+  100%{transform: rotate(3600deg)};
 }
