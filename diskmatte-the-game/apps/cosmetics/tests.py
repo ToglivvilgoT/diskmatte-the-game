@@ -139,6 +139,14 @@ class SkinRenderingTests(TestCase):
 
         self.assertContains(response, "skin-galaxy")
 
+    def test_shop_links_back_to_avatar_profile(self):
+        self.client.login(username="student", password="test-password")
+
+        response = self.client.get(reverse("cosmetics:shop"))
+
+        self.assertContains(response, 'href="/avatar/"')
+        self.assertContains(response, "Till profilen")
+
     def test_avatar_renders_equipped_css_class_skin(self):
         UserSkin.objects.create(user=self.user, skin=self.css_skin)
         UserAvatar.objects.create(user=self.user, equipped_skin=self.css_skin)
