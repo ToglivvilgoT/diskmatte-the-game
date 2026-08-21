@@ -27,6 +27,25 @@ SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+
+# Always log request errors (with traceback) to console, even when DEBUG is False.
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'django.request': {
+            'handlers': ['console'],
+            'level': 'ERROR',
+            'propagate': False,
+        },
+    },
+}
+
 ALLOWED_HOSTS: list[str] = ["shinobu.lysator.liu.se", "diskmatte-the-game.lisam.nu"]
 
 # Required in addition to ALLOWED_HOSTS for CSRF checks on cross-origin POSTs (e.g. HTTPS behind a proxy).
@@ -54,6 +73,7 @@ INSTALLED_APPS = [
     'apps.courses',
     'apps.tasks',
     'apps.progress',
+    'apps.leaderboard',
     'apps.cosmetics',
 ]
 

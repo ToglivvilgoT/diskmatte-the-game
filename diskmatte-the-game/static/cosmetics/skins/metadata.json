@@ -5,7 +5,7 @@
         "description": "Gillar du musik? Hatar du Spotify? Då har vi produkten för dig! Med Grammofån TM kan du spela upp musik på ett enklare sätt än någonsin förr med en riktig retro vibe. (Batterier säljs separat)",
         "price": 1000,
         "kind": "IMAGE", 
-        "image": "/cosmetics/skins/gramophone.png"
+        "image": "cosmetics/skins/gramophone.png"
     },
     {
         "name": "Diskarn",
@@ -13,7 +13,7 @@
         "description": "Glöm inte DISKen i DISKmatte!",
         "price": 1000,
         "kind": "IMAGE", 
-        "image": "/cosmetics/skins/disk.jpg"
+        "image": "cosmetics/skins/disk.jpg"
     },
     {
         "name": "Galaxy",
@@ -29,7 +29,7 @@
         "description":"Nu kan du äntligen äga Rainers 12 olika deckare och 11 identiska diktsamlingar!",
         "price": 1000,
         "kind": "IMAGE", 
-        "image": "/cosmetics/skins/books.jpg"
+        "image": "cosmetics/skins/books.jpg"
     },
     {
         "name": "Hacker",
@@ -37,7 +37,7 @@
         "description": "Du är hackare",
         "price": 2500,
         "kind": "IMAGE", 
-        "image": "/cosmetics/skins/hacker.gif"
+        "image": "cosmetics/skins/hacker.gif"
     },
     {
         "name": "Diskret matte geniuz",
