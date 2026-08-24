@@ -79,9 +79,9 @@ For multiple_choice question:
 ## Updating
 
 - If the metadata differs from the existing entry in the database,
-update the existing entry with the new values.
+  update the existing entry with the new values.
 - If metadata fields are missing that the database object has,
-the database object should be updated and those fields removed.
+  the database object should be updated and those fields removed.
 - For the options list, if it differs, replace it in its entirety.
 
 If this makes the object invalid (since it's missing required fields)

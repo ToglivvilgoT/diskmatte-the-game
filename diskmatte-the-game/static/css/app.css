@@ -324,6 +324,16 @@ body {
     font-weight: 600;
 }
 
+.equation-keypad {
+    display: grid;
+    grid-template-columns: repeat(4, min(3rem, 25%));
+    gap: 0.35rem;
+}
+
+.equation-keypad button {
+    width: 100%;
+}
+
 form p {
     margin-bottom: 1rem;
 }

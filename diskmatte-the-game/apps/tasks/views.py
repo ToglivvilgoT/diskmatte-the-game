@@ -22,6 +22,7 @@ def task_detail(request, course_slug, learning_set_slug, slug):
     reward_result = None
     is_completed = False
     submitted_answer = ""
+    submitted_expression = ""
     submitted_option_id = None
     submitted_checked = False
     task_list = list(
@@ -46,6 +47,7 @@ def task_detail(request, course_slug, learning_set_slug, slug):
             selected_option = task.options.filter(pk=submitted_option_id).first()
             is_correct = selected_option is not None and selected_option.is_correct
         elif task.answer_type == Task.AnswerType.EQUATION:
+            submitted_expression = request.POST.get("expression", "").strip()
             submitted_answer = request.POST.get("answer", "").strip()
             # The client evaluates the expression to an int; the server only compares integers.
             try:
@@ -73,6 +75,7 @@ def task_detail(request, course_slug, learning_set_slug, slug):
             "next_task": next_task,
             "reward_result": reward_result,
             "submitted_answer": submitted_answer,
+            "submitted_expression": submitted_expression,
             "submitted_option_id": submitted_option_id,
             "submitted_checked": submitted_checked,
         },
