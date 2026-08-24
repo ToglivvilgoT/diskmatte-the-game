@@ -1,7 +1,26 @@
-// unused
 [
-  {"slug":"uppgift-4-7","title":"Uppgift 4.7","prompt":"Lös uppgift 4.7.","book_reference":"4.7"},
-  {"slug":"uppgift-4-13","title":"Uppgift 4.13","prompt":"Lös uppgift 4.13.","book_reference":"4.13"},
-  {"slug":"uppgift-4-21","title":"Uppgift 4.21","prompt":"Lös uppgift 4.21.","book_reference":"4.21"},
-  {"slug":"uppgift-4-22","title":"Uppgift 4.22","prompt":"Lös uppgift 4.22.","book_reference":"4.22"}
+  {
+    "slug": "uppgift-4-7",
+    "title": "Uppgift 4.7 - s.67",
+    "prompt": "Lös uppgift 4.7.",
+    "disk_reward": 200
+  },
+  {
+    "slug": "uppgift-4-13",
+    "title": "Uppgift 4.13 - s.68",
+    "prompt": "Lös uppgift 4.13.",
+    "disk_reward": 300
+  },
+  {
+    "slug": "uppgift-4-21",
+    "title": "Uppgift 4.21 - s.68",
+    "prompt": "Lös uppgift 4.21.",
+    "disk_reward": 500
+  },
+  {
+    "slug": "uppgift-4-22",
+    "title": "Uppgift 4.22 - s.69",
+    "prompt": "Lös uppgift 4.22.",
+    "disk_reward": 500
+  }
 ]
