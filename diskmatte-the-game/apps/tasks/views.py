@@ -45,6 +45,13 @@ def task_detail(request, course_slug, learning_set_slug, slug):
             submitted_option_id = request.POST.get("answer")
             selected_option = task.options.filter(pk=submitted_option_id).first()
             is_correct = selected_option is not None and selected_option.is_correct
+        elif task.answer_type == Task.AnswerType.EQUATION:
+            submitted_answer = request.POST.get("answer", "").strip()
+            # The client evaluates the expression to an int; the server only compares integers.
+            try:
+                is_correct = int(submitted_answer) == int(task.expected_answer)
+            except (ValueError, TypeError):
+                is_correct = False
         else:
             submitted_answer = request.POST.get("answer", "").strip()
             is_correct = submitted_answer.casefold() == task.expected_answer.strip().casefold()

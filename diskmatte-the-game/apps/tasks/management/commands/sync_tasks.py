@@ -5,6 +5,7 @@ from django.conf import settings
 from django.core.management.base import BaseCommand
 
 from apps.courses.models import Course, LearningSet, Topic
+from apps.tasks.expressions import ExpressionError, evaluate_to_int
 from apps.tasks.models import Task, TaskOption
 
 TASKS_DIR = Path("tasks")
@@ -106,6 +107,13 @@ class Command(BaseCommand):
         ):
             errors.append("options (at least one is_correct=true required)")
 
+        expected_answer = item.get("expected_answer", "")
+        if answer_type == Task.AnswerType.EQUATION and not answer_type_error:
+            try:
+                expected_answer = str(evaluate_to_int(expected_answer))
+            except ExpressionError as e:
+                errors.append(f"expected_answer (invalid equation: {e})")
+
         is_published = not errors
         if errors:
             self.stderr.write(
@@ -119,7 +127,7 @@ class Command(BaseCommand):
             "prompt": item.get("prompt", ""),
             "instructions": item.get("instructions", ""),
             "answer_type": answer_type,
-            "expected_answer": item.get("expected_answer", ""),
+            "expected_answer": expected_answer,
             "hint": item.get("hint", ""),
             "solution": item.get("solution", ""),
             "image_url": item.get("image_url", ""),
@@ -139,14 +147,20 @@ class Command(BaseCommand):
         return task
 
     def _resolve_answer_type(self, item):
-        """Derive answer_type from options/expected_answer per the metadata rules."""
+        """Derive answer_type from options/expected_answer/answer_format per the metadata rules."""
         has_options = bool(item.get("options"))
         has_expected_answer = bool(item.get("expected_answer"))
+        is_equation = item.get("answer_format") == "equation"
 
+        if is_equation and (not has_expected_answer or has_options):
+            return (
+                Task.AnswerType.INPUT_FIELD,
+                "answer_format 'equation' requires expected_answer and no options",
+            )
         if not has_options and not has_expected_answer:
             return Task.AnswerType.CHECKBOX, None
         if not has_options and has_expected_answer:
-            return Task.AnswerType.INPUT_FIELD, None
+            return (Task.AnswerType.EQUATION if is_equation else Task.AnswerType.INPUT_FIELD), None
         if has_options and not has_expected_answer:
             return Task.AnswerType.MULTIPLE_CHOICE, None
         return Task.AnswerType.INPUT_FIELD, "invalid combination of options and expected_answer"

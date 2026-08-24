@@ -4,6 +4,7 @@ from django.urls import reverse
 
 from apps.courses.models import Course, LearningSet, Topic
 from apps.progress.models import TaskCompletion
+from .expressions import ExpressionError, evaluate_to_int
 from .models import Task, TaskOption
 
 
@@ -169,6 +170,39 @@ class TaskDetailTests(TestCase):
         response = self.client.post(self.task_url(task), {"answer": correct_option.pk})
         self.assertContains(response, "Rätt svar!")
 
+    def test_equation_answer_is_validated(self):
+        task = Task.objects.create(
+            learning_set=self.learning_set,
+            topic=self.topic,
+            title="How many ways to arrange 3 out of 6",
+            slug="arrange-3-of-6",
+            prompt="How many ways can you arrange 3 out of 6 people?",
+            answer_type=Task.AnswerType.EQUATION,
+            expected_answer="120",
+            is_published=True,
+        )
+
+        response = self.client.post(self.task_url(task), {"answer": "119"})
+        self.assertContains(response, "Det svaret blev fel. Försök igen.")
+
+        response = self.client.post(self.task_url(task), {"answer": "120"})
+        self.assertContains(response, "Rätt svar!")
+
+    def test_equation_answer_rejects_non_integer_submission(self):
+        task = Task.objects.create(
+            learning_set=self.learning_set,
+            topic=self.topic,
+            title="How many ways to arrange 3 out of 6",
+            slug="arrange-3-of-6-bad",
+            prompt="How many ways can you arrange 3 out of 6 people?",
+            answer_type=Task.AnswerType.EQUATION,
+            expected_answer="120",
+            is_published=True,
+        )
+
+        response = self.client.post(self.task_url(task), {"answer": "not-a-number"})
+        self.assertContains(response, "Det svaret blev fel. Försök igen.")
+
 
 class TaskModelTests(TestCase):
     def setUp(self):
@@ -252,3 +286,38 @@ class TaskModelTests(TestCase):
         self.assertContains(response, "Pick the derivative")
         self.assertContains(response, "x")
         self.assertContains(response, "2x")
+
+
+class EquationEvaluationTests(TestCase):
+    def test_evaluates_factorials_and_arithmetic(self):
+        self.assertEqual(evaluate_to_int("6!"), 720)
+        self.assertEqual(evaluate_to_int("6!/3!"), 120)
+        self.assertEqual(evaluate_to_int("29 * 28 * 27"), 21924)
+        self.assertEqual(evaluate_to_int("31^4"), 923521)
+        self.assertEqual(evaluate_to_int("4 + 6*7 + 8^5"), 32814)
+        self.assertEqual(evaluate_to_int("-3 + 5"), 2)
+
+    def test_evaluates_binomial_coefficient(self):
+        self.assertEqual(evaluate_to_int("C(29, 6)"), 475020)
+        self.assertEqual(evaluate_to_int("C(5,5)"), 1)
+        self.assertEqual(evaluate_to_int("C(5,0)"), 1)
+
+    def test_rejects_non_integer_result(self):
+        with self.assertRaises(ExpressionError):
+            evaluate_to_int("1/3")
+
+    def test_rejects_division_by_zero(self):
+        with self.assertRaises(ExpressionError):
+            evaluate_to_int("1/0")
+
+    def test_rejects_factorial_above_cap(self):
+        with self.assertRaises(ExpressionError):
+            evaluate_to_int("1001!")
+
+    def test_rejects_negative_factorial(self):
+        with self.assertRaises(ExpressionError):
+            evaluate_to_int("(-3)!")
+
+    def test_rejects_invalid_syntax(self):
+        with self.assertRaises(ExpressionError):
+            evaluate_to_int("6!/")

@@ -18,7 +18,8 @@ Each task object has the following format:
   "title": "String",
   "prompt": "String",
   "instructions": "optional String",
-  "expected_answer": "String (used for input_field, optional for others)",
+  "expected_answer": "String (used for input_field/equation, optional for others)",
+  "answer_format": "optional, set to \"equation\" to make an expected_answer task an equation task",
   "hint": "optional String",
   "solution": "optional String",
   "image_url": "optional URL",
@@ -47,10 +48,26 @@ answer type should automatically get set based on how many options (if any) are 
 
 - 0 options, expected_answer not set = checkbox
 - 0 option, expected_answer set = input_field
+- 0 options, expected_answer set, answer_format = "equation" = equation
 - non zero options, expected_answer not set = multiple_choice
 
 any other combination of options and expected_answers are invalid and
 a debug message should be printed.
+
+#### equation answer type
+
+For an equation task, `expected_answer` is written as a math expression
+instead of a plain number, e.g. `"6!/3!"`, `"29*28*27"`, `"31^4"`, `"C(29, 6)"`
+(binomial coefficient, "n choose k"). Supported operators: `+ - * / ^ ! ( )`
+and the `C(n, k)` function.
+
+During sync, the expression is evaluated to an integer and that integer
+(as a plain number string) is what gets stored in the database - the
+original expression is not kept. If the expression is invalid or does not
+evaluate to a whole number (e.g. division that doesn't come out even, or a
+factorial argument above 1000), the task is treated as invalid: an error is
+printed and the task is marked `is_published = false`, same as any other
+missing/invalid field.
 
 #### Extra validation for multiple_choice
 

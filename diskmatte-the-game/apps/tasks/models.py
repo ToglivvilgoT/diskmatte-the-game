@@ -14,6 +14,7 @@ class Task(models.Model):
         CHECKBOX = "checkbox", "Checkbox"
         INPUT_FIELD = "input_field", "Input field"
         MULTIPLE_CHOICE = "multiple_choice", "Multiple choice"
+        EQUATION = "equation", "Equation"
 
     learning_set = models.ForeignKey(LearningSet, related_name="tasks", on_delete=models.CASCADE)
     topic = models.ForeignKey(Topic, related_name="tasks", on_delete=models.CASCADE, null=True, blank=True)

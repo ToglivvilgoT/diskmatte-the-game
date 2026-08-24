@@ -41,6 +41,40 @@
             {% endfor %}
             {% include "tasks/_task_form_actions.html" %}
         </form>
+    {% elif task.answer_type == "equation" %}
+        <form class="card card-body shadow-sm" method="post" id="equation-form" data-equation-form>
+            {% csrf_token %}
+            <input type="hidden" name="answer" id="equation-answer" data-equation-result value="{{ submitted_answer }}">
+            <label class="form-label" for="equation-input">Ditt uttryck</label>
+            <input class="form-control" id="equation-input" type="text" inputmode="none" autocomplete="off" data-equation-input value="{{ submitted_answer }}" {% if is_correct %}readonly{% endif %}>
+            <div class="mt-2" data-equation-preview aria-live="polite"></div>
+            {% if not is_correct %}
+                <div class="d-flex flex-wrap gap-1 mt-3" data-equation-keypad>
+                    <button class="btn btn-outline-secondary" type="button" data-key="7">7</button>
+                    <button class="btn btn-outline-secondary" type="button" data-key="8">8</button>
+                    <button class="btn btn-outline-secondary" type="button" data-key="9">9</button>
+                    <button class="btn btn-outline-primary" type="button" data-key="/">÷</button>
+                    <button class="btn btn-outline-secondary" type="button" data-key="4">4</button>
+                    <button class="btn btn-outline-secondary" type="button" data-key="5">5</button>
+                    <button class="btn btn-outline-secondary" type="button" data-key="6">6</button>
+                    <button class="btn btn-outline-primary" type="button" data-key="*">×</button>
+                    <button class="btn btn-outline-secondary" type="button" data-key="1">1</button>
+                    <button class="btn btn-outline-secondary" type="button" data-key="2">2</button>
+                    <button class="btn btn-outline-secondary" type="button" data-key="3">3</button>
+                    <button class="btn btn-outline-primary" type="button" data-key="-">−</button>
+                    <button class="btn btn-outline-secondary" type="button" data-key="0">0</button>
+                    <button class="btn btn-outline-primary" type="button" data-key="(">(</button>
+                    <button class="btn btn-outline-primary" type="button" data-key=")">)</button>
+                    <button class="btn btn-outline-primary" type="button" data-key="+">+</button>
+                    <button class="btn btn-outline-primary" type="button" data-key="^">^</button>
+                    <button class="btn btn-outline-primary" type="button" data-key="!">!</button>
+                    <button class="btn btn-outline-primary" type="button" data-choose>(n k)</button>
+                    <button class="btn btn-outline-warning" type="button" data-backspace>⌫</button>
+                    <button class="btn btn-outline-danger" type="button" data-clear>C</button>
+                </div>
+            {% endif %}
+            {% include "tasks/_task_form_actions.html" %}
+        </form>
     {% else %}
         <form class="card card-body shadow-sm" method="post">
             {% csrf_token %}
@@ -76,4 +110,11 @@
         <div class="alert alert-danger mt-4" role="alert">Det svaret blev fel. Försök igen.</div>
     {% endif %}
 </div>
+{% endblock %}
+
+{% block extra_js %}
+    {% if task.answer_type == "equation" %}
+        {% load static %}
+        <script src="{% static 'js/equation_calculator.js' %}"></script>
+    {% endif %}
 {% endblock %}
