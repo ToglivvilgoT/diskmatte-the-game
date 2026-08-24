@@ -1,9 +1,38 @@
-// unused
 [
-  {"slug":"uppgift-4-9e","title":"Uppgift 4.9e","prompt":"Lös uppgift 4.9e.","book_reference":"4.9e"},
-  {"slug":"uppgift-4-9f","title":"Uppgift 4.9f","prompt":"Lös uppgift 4.9f.","book_reference":"4.9f"},
-  {"slug":"uppgift-4-9g","title":"Uppgift 4.9g","prompt":"Lös uppgift 4.9g.","book_reference":"4.9g"},
-  {"slug":"uppgift-4-9h","title":"Uppgift 4.9h","prompt":"Lös uppgift 4.9h.","book_reference":"4.9h"},
-  {"slug":"uppgift-4-12","title":"Uppgift 4.12","prompt":"Lös uppgift 4.12.","book_reference":"4.12"},
-  {"slug":"uppgift-4-17","title":"Uppgift 4.17","prompt":"Lös uppgift 4.17.","book_reference":"4.17"}
+  {
+    "slug": "uppgift-4-9-e",
+    "title": "Uppgift 4.9 e) - s.67",
+    "prompt": "Lös uppgift 4.9 e)",
+    "disk_reward": 200
+  },
+  {
+    "slug": "uppgift-4-9-f",
+    "title": "Uppgift 4.9 f) - s.67",
+    "prompt": "Lös uppgift 4.9 f)",
+    "disk_reward": 200
+  },
+  {
+    "slug": "uppgift-4-9-g",
+    "title": "Uppgift 4.9 g) - s.67",
+    "prompt": "Lös uppgift 4.9 g)",
+    "disk_reward": 200
+  },
+  {
+    "slug": "uppgift-4-9-h",
+    "title": "Uppgift 4.9 h) - s.67",
+    "prompt": "Lös uppgift 4.9 h)",
+    "disk_reward": 200
+  },
+  {
+    "slug": "uppgift-4-12",
+    "title": "Uppgift 4.12 - s.68",
+    "prompt": "Lös uppgift 4.12.",
+    "disk_reward": 300
+  },
+  {
+    "slug": "uppgift-4-17",
+    "title": "Uppgift 4.17 - s.68",
+    "prompt": "Lös uppgift 4.17.",
+    "disk_reward": 500
+  }
 ]

@@ -1,11 +1,74 @@
-// unused
 [
-  {"slug":"uppgift-4-1","title":"Uppgift 4.1","prompt":"Lös uppgift 4.1.","book_reference":"4.1"},
-  {"slug":"uppgift-4-2","title":"Uppgift 4.2","prompt":"Lös uppgift 4.2.","book_reference":"4.2"},
-  {"slug":"uppgift-4-9a","title":"Uppgift 4.9a","prompt":"Lös uppgift 4.9a.","book_reference":"4.9a"},
-  {"slug":"uppgift-4-9b","title":"Uppgift 4.9b","prompt":"Lös uppgift 4.9b.","book_reference":"4.9b"},
-  {"slug":"uppgift-4-9c","title":"Uppgift 4.9c","prompt":"Lös uppgift 4.9c.","book_reference":"4.9c"},
-  {"slug":"uppgift-4-9d","title":"Uppgift 4.9d","prompt":"Lös uppgift 4.9d.","book_reference":"4.9d"},
-  {"slug":"uppgift-4-10","title":"Uppgift 4.10","prompt":"Lös uppgift 4.10.","book_reference":"4.10"},
-  {"slug":"uppgift-4-14","title":"Uppgift 4.14","prompt":"Lös uppgift 4.14.","book_reference":"4.14"}
+  {
+    "slug": "uppgift-4-1",
+    "title": "Uppgift 4.1 - s.60",
+    "prompt": "Lös uppgift 4.1.",
+    "disk_reward": 200
+  },
+  {
+    "slug": "uppgift-4-2-1",
+    "title": "Uppgift 4.2 1) - s.60",
+    "prompt": "Vad ska talen a och b vara?",
+    "disk_reward": 100,
+    "options": [
+      {
+        "label": "a = 2, b = 1",
+        "is_correct": false
+      },
+      {
+        "label": "a = 1, b = 2",
+        "is_correct": false
+      },
+      {
+        "label": "a = 1, b = 1",
+        "is_correct": true
+      },
+      {
+        "label": "a = 2, b = -1",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-4-2-2",
+    "title": "Uppgift 4.2 2) - s.60",
+    "prompt": "Bevisa att formeln med dessa val av a och b är sann för varje positivt heltal n.",
+    "disk_reward": 200
+  },
+  {
+    "slug": "uppgift-4-9-a",
+    "title": "Uppgift 4.9 a) - s.67",
+    "prompt": "Lös uppgift 4.9 a)",
+    "disk_reward": 200
+  },
+  {
+    "slug": "uppgift-4-9-b",
+    "title": "Uppgift 4.9 b) - s.67",
+    "prompt": "Lös uppgift 4.9 b)",
+    "disk_reward": 200
+  },
+  {
+    "slug": "uppgift-4-9-c",
+    "title": "Uppgift 4.9 c) - s.67",
+    "prompt": "Lös uppgift 4.9 c)",
+    "disk_reward": 200
+  },
+  {
+    "slug": "uppgift-4-9-d",
+    "title": "Uppgift 4.9 d) - s.67",
+    "prompt": "Lös uppgift 4.9 d)",
+    "disk_reward": 200
+  },
+  {
+    "slug": "uppgift-4-10",
+    "title": "Uppgift 4.10 - s.67",
+    "prompt": "Lös uppgift 4.10.",
+    "disk_reward": 300
+  },
+  {
+    "slug": "uppgift-4-14",
+    "title": "Uppgift 4.14 - s.68",
+    "prompt": "Lös uppgift 4.14.",
+    "disk_reward": 500
+  }
 ]
