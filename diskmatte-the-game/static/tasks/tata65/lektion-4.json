@@ -18,6 +18,7 @@
     "title": "Uppgift 5.3 a) - s.74",
     "prompt": "Lös uppgift 5.3 a)",
     "disk_reward": 50,
+    "answer_format": "equation",
     "expected_answer": "29^3"
   },
   {

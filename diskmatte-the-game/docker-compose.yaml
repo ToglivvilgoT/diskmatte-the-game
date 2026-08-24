@@ -3,6 +3,8 @@ services:
     build: .
     env_file:
       - ".env"
+    environment:
+      - DJANGO_SETTINGS_MODULE=diskmatte.settings.production
     ports:
       - "8000:8000"
     volumes:
