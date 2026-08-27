@@ -1,5 +1,16 @@
-// unused
 [
-  {"slug":"uppgift-5-16","title":"Uppgift 5.16","prompt":"Lös uppgift 5.16.","book_reference":"5.16"},
-  {"slug":"uppgift-5-22","title":"Uppgift 5.22","prompt":"Lös uppgift 5.22.","book_reference":"5.22"}
+  {
+    "slug": "uppgift-5-16",
+    "title": "Uppgift 5.16 - s.85",
+    "prompt": "Lös uppgift 5.16.",
+    "disk_reward": 300
+  },
+  {
+    "slug": "uppgift-5-22",
+    "title": "Uppgift 5.22 - s.91",
+    "prompt": "Lös uppgift 5.22.",
+    "answer_format": "equation",
+    "disk_reward": 200,
+    "expected_answer": "15"
+  }
 ]

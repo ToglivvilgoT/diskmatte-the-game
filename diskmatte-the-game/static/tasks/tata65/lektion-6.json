@@ -1,11 +1,73 @@
-// unused
 [
-  {"slug":"uppgift-5-17a","title":"Uppgift 5.17a","prompt":"Lös uppgift 5.17a.","book_reference":"5.17a"},
-  {"slug":"uppgift-5-18","title":"Uppgift 5.18","prompt":"Lös uppgift 5.18.","book_reference":"5.18"},
-  {"slug":"uppgift-5-19","title":"Uppgift 5.19","prompt":"Lös uppgift 5.19.","book_reference":"5.19"},
-  {"slug":"uppgift-5-20","title":"Uppgift 5.20","prompt":"Lös uppgift 5.20.","book_reference":"5.20"},
-  {"slug":"uppgift-5-25","title":"Uppgift 5.25","prompt":"Lös uppgift 5.25.","book_reference":"5.25"},
-  {"slug":"uppgift-5-26","title":"Uppgift 5.26","prompt":"Lös uppgift 5.26.","book_reference":"5.26"},
-  {"slug":"uppgift-5-29","title":"Uppgift 5.29","prompt":"Lös uppgift 5.29.","book_reference":"5.29"},
-  {"slug":"uppgift-5-45","title":"Uppgift 5.45","prompt":"Lös uppgift 5.45.","book_reference":"5.45"}
+  {
+    "slug": "uppgift-5-17-a",
+    "title": "Uppgift 5.17 a) - s.88",
+    "prompt": "Lös uppgift 5.17 a)",
+    "disk_reward": 200
+  },
+  {
+    "slug": "uppgift-5-18",
+    "title": "Uppgift 5.18 - s.88",
+    "prompt": "Lös uppgift 5.18.",
+    "answer_format": "equation",
+    "expected_answer": "3^100"
+  },
+  {
+    "slug": "uppgift-5-19",
+    "title": "Uppgift 5.19 - s.91",
+    "prompt": "Lös uppgift 5.19."
+  },
+  {
+    "slug": "uppgift-5-20",
+    "title": "Uppgift 5.20 - s.91",
+    "prompt": "Är svaret Ja eller Nej?",
+    "options": [
+      {
+        "label": "Ja",
+        "is_correct": true
+      },
+      {
+        "label": "Nej",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-5-25",
+    "title": "Uppgift 5.25 - s.94",
+    "prompt": "Lös uppgift 5.25.",
+    "answer_format": "equation",
+    "disk_reward": 300,
+    "expected_answer": "C(22,19)-4*C(14,11)+6*C(6,3)"
+  },
+  {
+    "slug": "uppgift-5-26",
+    "title": "Uppgift 5.26 - s.94",
+    "prompt": "Lös uppgift 5.26.",
+    "answer_format": "equation",
+    "disk_reward": 300,
+    "expected_answer": "C(37,31)-C(7,1)*C(27,21)+C(7,2)*C(17,11)-C(7,3)*C(7,1)"
+  },
+  {
+    "slug": "uppgift-5-29",
+    "title": "Uppgift 5.29 - s.94",
+    "prompt": "Lös uppgift 5.29.",
+    "answer_format": "equation",
+    "disk_reward": 300,
+    "expected_answer": "29!-(27!+3*26!)+(3*24!+2*23!)-2*21!"
+  },
+  {
+    "slug": "uppgift-5-45-a",
+    "title": "Uppgift 5.45 a) - s.103",
+    "prompt": "Lös uppgift 5.45 a)",
+    "answer_format": "equation",
+    "expected_answer": "C(44,39)"
+  },
+  {
+    "slug": "uppgift-5-45-b",
+    "title": "Uppgift 5.45 b) - s.103",
+    "prompt": "Lös uppgift 5.45 b)",
+    "answer_format": "equation",
+    "expected_answer": "C(39,34)"
+  }
 ]
