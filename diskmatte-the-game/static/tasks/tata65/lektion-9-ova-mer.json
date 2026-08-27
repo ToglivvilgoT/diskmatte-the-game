@@ -1,6 +1,121 @@
-// unused
 [
-  {"slug":"uppgift-7-25","title":"Uppgift 7.25","prompt":"Lös uppgift 7.25.","book_reference":"7.25"},
-  {"slug":"uppgift-8-5","title":"Uppgift 8.5","prompt":"Lös uppgift 8.5.","book_reference":"8.5"},
-  {"slug":"uppgift-8-7","title":"Uppgift 8.7","prompt":"Lös uppgift 8.7.","book_reference":"8.7"}
+  {
+    "slug": "uppgift-7-25-a",
+    "title": "Uppgift 7.25 a) - s.142",
+    "prompt": "Lös uppgift 7.25 a)"
+  },
+  {
+    "slug": "uppgift-7-25-b",
+    "title": "Uppgift 7.25 b) - s.142",
+    "prompt": "Lös uppgift 7.25 b)"
+  },
+  {
+    "slug": "uppgift-7-25-c",
+    "title": "Uppgift 7.25 c) - s.142",
+    "prompt": "Lös uppgift 7.25 c)"
+  },
+  {
+    "slug": "uppgift-8-5-a",
+    "title": "Uppgift 8.5 a) - s.156",
+    "disk_reward": 30,
+    "prompt": "Är det en funktion?",
+    "options": [
+      {
+        "label": "Ja",
+        "is_correct": true
+      },
+      {
+        "label": "Nej",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-8-5-b",
+    "title": "Uppgift 8.5 b) - s.156",
+    "disk_reward": 30,
+    "prompt": "Är det en funktion?",
+    "options": [
+      {
+        "label": "Ja",
+        "is_correct": false
+      },
+      {
+        "label": "Nej",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-8-5-c",
+    "title": "Uppgift 8.5 c) - s.156",
+    "disk_reward": 30,
+    "prompt": "Är det en funktion?",
+    "options": [
+      {
+        "label": "Ja",
+        "is_correct": true
+      },
+      {
+        "label": "Nej",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-8-5-d",
+    "title": "Uppgift 8.5 d) - s.156",
+    "disk_reward": 30,
+    "prompt": "Är det en funktion?",
+    "options": [
+      {
+        "label": "Ja",
+        "is_correct": false
+      },
+      {
+        "label": "Nej",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-8-5-e",
+    "title": "Uppgift 8.5 e) - s.156",
+    "disk_reward": 30,
+    "prompt": "Är det en funktion?",
+    "options": [
+      {
+        "label": "Ja",
+        "is_correct": true
+      },
+      {
+        "label": "Nej",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-8-7-a",
+    "title": "Uppgift 8.7 a) - s.159",
+    "disk_reward": 30,
+    "prompt": "Lös uppgift 8.7 a)"
+  },
+  {
+    "slug": "uppgift-8-7-b",
+    "title": "Uppgift 8.7 b) - s.159",
+    "disk_reward": 30,
+    "prompt": "Lös uppgift 8.7 b)"
+  },
+  {
+    "slug": "uppgift-8-7-c",
+    "title": "Uppgift 8.7 c) - s.159",
+    "disk_reward": 30,
+    "prompt": "Lös uppgift 8.7 c)"
+  },
+  {
+    "slug": "uppgift-8-7-d",
+    "title": "Uppgift 8.7 d) - s.159",
+    "disk_reward": 30,
+    "prompt": "Lös uppgift 8.7 d)"
+  }
 ]
