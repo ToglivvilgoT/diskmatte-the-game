@@ -1,5 +1,16 @@
-// unused
 [
-  {"slug":"uppgift-7-38","title":"Uppgift 7.38","prompt":"Lös uppgift 7.38.","book_reference":"7.38"},
-  {"slug":"uppgift-7-44","title":"Uppgift 7.44","prompt":"Lös uppgift 7.44.","book_reference":"7.44"}
+  {
+    "slug": "uppgift-7-38",
+    "title": "Uppgift 7.38 - s.150",
+    "disk_reward": 200,
+    "prompt": "Lös uppgift 7.38."
+  },
+  {
+    "slug": "uppgift-7-44",
+    "title": "Uppgift 7.44 - s.150",
+    "prompt": "Lös uppgift 7.44.",
+    "disk_reward": 200,
+    "answer_format": "equation",
+    "expected_answer": "200+40+8+1"
+  }
 ]

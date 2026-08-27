@@ -1,9 +1,65 @@
-// unused
 [
-  {"slug":"uppgift-7-9","title":"Uppgift 7.9","prompt":"Lös uppgift 7.9.","book_reference":"7.9"},
-  {"slug":"uppgift-7-10","title":"Uppgift 7.10","prompt":"Lös uppgift 7.10.","book_reference":"7.10"},
-  {"slug":"uppgift-7-36","title":"Uppgift 7.36","prompt":"Lös uppgift 7.36.","book_reference":"7.36"},
-  {"slug":"uppgift-7-14","title":"Uppgift 7.14","prompt":"Lös uppgift 7.14.","book_reference":"7.14"},
-  {"slug":"uppgift-7-15","title":"Uppgift 7.15","prompt":"Lös uppgift 7.15.","book_reference":"7.15"},
-  {"slug":"uppgift-7-17","title":"Uppgift 7.17","prompt":"Lös uppgift 7.17.","book_reference":"7.17"}
+  {
+    "slug": "uppgift-7-9",
+    "title": "Uppgift 7.9 - s.134",
+    "prompt": "Lös uppgift 7.9.",
+    "answer_format": "equation",
+    "expected_answer": "47"
+  },
+  {
+    "slug": "uppgift-7-10-a",
+    "title": "Uppgift 7.10 a) - s.134",
+    "prompt": "Lös uppgift 7.10 a)",
+    "answer_format": "equation",
+    "expected_answer": "113"
+  },
+  {
+    "slug": "uppgift-7-10-b",
+    "title": "Uppgift 7.10 b) - s.134",
+    "prompt": "Lös uppgift 7.10 b)",
+    "answer_format": "equation",
+    "expected_answer": "113"
+  },
+  {
+    "slug": "uppgift-7-36-a",
+    "title": "Uppgift 7.36 a) - s.149",
+    "prompt": "Lös uppgift 7.36 a)",
+    "answer_format": "equation",
+    "expected_answer": "37"
+  },
+  {
+    "slug": "uppgift-7-36-b",
+    "title": "Uppgift 7.36 b) - s.149",
+    "prompt": "Lös uppgift 7.36 b)",
+    "answer_format": "equation",
+    "expected_answer": "37"
+  },
+  {
+    "slug": "uppgift-7-36-c",
+    "title": "Uppgift 7.36 c) - s.149",
+    "prompt": "Lös uppgift 7.36 c)",
+    "answer_format": "equation",
+    "expected_answer": "70633"
+  },
+  {
+    "slug": "uppgift-7-14",
+    "title": "Uppgift 7.14 - s.138",
+    "prompt": "Lös uppgift 7.14.",
+    "answer_format": "equation",
+    "expected_answer": "12!"
+  },
+  {
+    "slug": "uppgift-7-15",
+    "title": "Uppgift 7.15 - s.138",
+    "prompt": "Lös uppgift 7.15.",
+    "answer_format": "equation",
+    "expected_answer": "12"
+  },
+  {
+    "slug": "uppgift-7-17",
+    "title": "Uppgift 7.17 - s.138",
+    "prompt": "Lös uppgift 7.17.",
+    "answer_format": "equation",
+    "expected_answer": "26"
+  }
 ]

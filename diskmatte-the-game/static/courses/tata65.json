@@ -57,9 +57,7 @@
     {
       "name": "Lektion 7 - öva mer",
       "slug": "lektion-7-ova-mer"
-    }
-  ],
-  "future_lessons_not_added_yet": [
+    },
     {
       "name": "Lektion 8",
       "slug": "lektion-8"
@@ -67,7 +65,9 @@
     {
       "name": "Lektion 8 - öva mer",
       "slug": "lektion-8-ova-mer"
-    },
+    }
+  ],
+  "future_lessons_not_added_yet": [
     {
       "name": "Lektion 9",
       "slug": "lektion-9"
