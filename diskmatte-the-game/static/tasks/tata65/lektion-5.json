@@ -1,12 +1,115 @@
-// unused
 [
-  {"slug":"uppgift-5-33","title":"Uppgift 5.33","prompt":"Lös uppgift 5.33.","book_reference":"5.33"},
-  {"slug":"uppgift-5-35","title":"Uppgift 5.35","prompt":"Lös uppgift 5.35.","book_reference":"5.35"},
-  {"slug":"uppgift-5-39","title":"Uppgift 5.39","prompt":"Lös uppgift 5.39.","book_reference":"5.39"},
-  {"slug":"uppgift-5-40","title":"Uppgift 5.40","prompt":"Lös uppgift 5.40.","book_reference":"5.40"},
-  {"slug":"uppgift-5-11","title":"Uppgift 5.11","prompt":"Lös uppgift 5.11.","book_reference":"5.11"},
-  {"slug":"uppgift-5-12","title":"Uppgift 5.12","prompt":"Lös uppgift 5.12.","book_reference":"5.12"},
-  {"slug":"uppgift-5-13","title":"Uppgift 5.13","prompt":"Lös uppgift 5.13.","book_reference":"5.13"},
-  {"slug":"uppgift-5-14","title":"Uppgift 5.14","prompt":"Lös uppgift 5.14.","book_reference":"5.14"},
-  {"slug":"uppgift-5-15","title":"Uppgift 5.15","prompt":"Lös uppgift 5.15.","book_reference":"5.15"}
+  {
+    "slug": "uppgift-5-33",
+    "title": "Uppgift 5.33 - s.102",
+    "prompt": "Lös uppgift 5.33.",
+    "answer_format": "equation",
+    "expected_answer": "3000001-(3*9^6+1)"
+  },
+  {
+    "slug": "uppgift-5-35",
+    "title": "Uppgift 5.35 - s.102",
+    "prompt": "Lös uppgift 5.35.",
+    "answer_format": "equation",
+    "expected_answer": "29!-23!-26!+22!"
+  },
+  {
+    "slug": "uppgift-5-39-a",
+    "title": "Uppgift 5.39 a) - s.102",
+    "prompt": "Lös uppgift 5.39 a)",
+    "answer_format": "equation",
+    "expected_answer": "9!/(4!*2!)"
+  },
+  {
+    "slug": "uppgift-5-39-b",
+    "title": "Uppgift 5.39 b) - s.102",
+    "prompt": "Lös uppgift 5.39 b)",
+    "answer_format": "equation",
+    "expected_answer": "5*4*7!/(4!*2!)"
+  },
+  {
+    "slug": "uppgift-5-39-c",
+    "title": "Uppgift 5.39 c) - s.102",
+    "prompt": "Lös uppgift 5.39 c)",
+    "answer_format": "equation",
+    "expected_answer": "(5!/2!)*C(6,4)"
+  },
+  {
+    "slug": "uppgift-5-39-d",
+    "title": "Uppgift 5.39 d) - s.102",
+    "prompt": "Lös uppgift 5.39 d)",
+    "answer_format": "equation",
+    "expected_answer": "5!/2!"
+  },
+  {
+    "slug": "uppgift-5-40",
+    "title": "Uppgift 5.40 - s.102",
+    "prompt": "Lös uppgift 5.40.",
+    "answer_format": "equation",
+    "expected_answer": "606"
+  },
+  {
+    "slug": "uppgift-5-11-a",
+    "title": "Uppgift 5.11 a) - s.83",
+    "prompt": "Lös uppgift 5.11 a)",
+    "answer_format": "equation",
+    "expected_answer": "C(7,4)"
+  },
+  {
+    "slug": "uppgift-5-11-b",
+    "title": "Uppgift 5.11 b) - s.83",
+    "prompt": "Lös uppgift 5.11 b)",
+    "answer_format": "equation",
+    "expected_answer": "C(9,7) + C(7,5) + C(5,3) + C(3,1)"
+  },
+  {
+    "slug": "uppgift-5-12-a",
+    "title": "Uppgift 5.12 - a) s.83",
+    "prompt": "Lös uppgift 5.12 a)",
+    "answer_format": "equation",
+    "expected_answer": "C(24,21)"
+  },
+  {
+    "slug": "uppgift-5-12-b",
+    "title": "Uppgift 5.12 - b) s.83",
+    "prompt": "Lös uppgift 5.12 b)",
+    "answer_format": "equation",
+    "expected_answer": "C(33,30)"
+  },
+  {
+    "slug": "uppgift-5-12-c",
+    "title": "Uppgift 5.12 - c) s.83",
+    "prompt": "Lös uppgift 5.12 c)",
+    "answer_format": "equation",
+    "expected_answer": "C(35,32) - C(9,6)"
+  },
+  {
+    "slug": "uppgift-5-13",
+    "title": "Uppgift 5.13 - s.83",
+    "prompt": "Lös uppgift 5.13.",
+    "answer_format": "equation",
+    "expected_answer": "C(13,10)*C(16,14)"
+  },
+  {
+    "slug": "uppgift-5-14-a",
+    "title": "Uppgift 5.14 a) - s.85",
+    "prompt": "Lös uppgift 5.14 a)"
+  },
+  {
+    "slug": "uppgift-5-14-b",
+    "title": "Uppgift 5.14 b) - s.85",
+    "prompt": "Lös uppgift 5.14 b)"
+  },
+  {
+    "slug": "uppgift-5-14-c",
+    "title": "Uppgift 5.14 c) - s.85",
+    "prompt": "Lös uppgift 5.14 c)"
+  },
+  {
+    "slug": "uppgift-5-15",
+    "title": "Uppgift 5.15 - s.85",
+    "prompt": "Lös uppgift 5.15.",
+    "answer_format": "equation",
+    "expected_answer": "84"
+  }
 ]

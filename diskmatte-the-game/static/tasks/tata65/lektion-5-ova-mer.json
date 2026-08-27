@@ -1,4 +1,16 @@
-// unused
 [
-  {"slug":"uppgift-5-41","title":"Uppgift 5.41","prompt":"Lös uppgift 5.41.","book_reference":"5.41"}
+  {
+    "slug": "uppgift-5-41-a",
+    "title": "Uppgift 5.41 a) - s.102",
+    "prompt": "Lös uppgift 5.41 a)",
+    "answer_format": "equation",
+    "expected_answer": "C(16,13)"
+  },
+  {
+    "slug": "uppgift-5-41-b",
+    "title": "Uppgift 5.41 b) - s.102",
+    "prompt": "Lös uppgift 5.41 b)",
+    "answer_format": "equation",
+    "expected_answer": "C(8,5)"
+  }
 ]
