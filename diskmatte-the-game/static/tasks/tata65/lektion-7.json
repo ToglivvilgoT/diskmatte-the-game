@@ -1,10 +1,135 @@
-// unused
 [
-  {"slug":"uppgift-7-1","title":"Uppgift 7.1","prompt":"Lös uppgift 7.1.","book_reference":"7.1"},
-  {"slug":"uppgift-7-3","title":"Uppgift 7.3","prompt":"Lös uppgift 7.3.","book_reference":"7.3"},
-  {"slug":"uppgift-7-4","title":"Uppgift 7.4","prompt":"Lös uppgift 7.4.","book_reference":"7.4"},
-  {"slug":"uppgift-7-5","title":"Uppgift 7.5","prompt":"Lös uppgift 7.5.","book_reference":"7.5"},
-  {"slug":"uppgift-7-33","title":"Uppgift 7.33","prompt":"Lös uppgift 7.33.","book_reference":"7.33"},
-  {"slug":"uppgift-7-41","title":"Uppgift 7.41","prompt":"Lös uppgift 7.41.","book_reference":"7.41"},
-  {"slug":"uppgift-7-43","title":"Uppgift 7.43","prompt":"Lös uppgift 7.43.","book_reference":"7.43"}
+  {
+    "slug": "uppgift-7-1-a",
+    "title": "Uppgift 7.1 a) - s.127",
+    "prompt": "Lös uppgift 7.1 a)"
+  },
+  {
+    "slug": "uppgift-7-1-b",
+    "title": "Uppgift 7.1 b) - s.127",
+    "prompt": "Lös uppgift 7.1 b)"
+  },
+  {
+    "slug": "uppgift-7-1-c",
+    "title": "Uppgift 7.1 c) - s.127",
+    "prompt": "Lös uppgift 7.1 c)"
+  },
+  {
+    "slug": "uppgift-7-3",
+    "title": "Uppgift 7.3 - s.127",
+    "disk_reward": 200,
+    "prompt": "Lös uppgift 7.3."
+  },
+  {
+    "slug": "uppgift-7-4",
+    "title": "Uppgift 7.4 - s.127",
+    "prompt": "Lös uppgift 7.4.",
+    "answer_format": "equation",
+    "expected_answer": "233"
+  },
+  {
+    "slug": "uppgift-7-5",
+    "title": "Uppgift 7.5 - s.127",
+    "prompt": "Lös uppgift 7.5.",
+    "answer_format": "equation",
+    "expected_answer": "520"
+  },
+  {
+    "slug": "uppgift-7-33",
+    "title": "Uppgift 7.33 - s.149",
+    "prompt": "Lös uppgift 7.33.",
+    "disk_reward": 200
+  },
+  {
+    "slug": "uppgift-7-41-a",
+    "title": "Uppgift 7.41 a) - s.150",
+    "prompt": "Lös uppgift 7.41 a)",
+    "disk_reward": 200
+  },
+  {
+    "slug": "uppgift-7-41-b",
+    "title": "Uppgift 7.41 b) - s.150",
+    "prompt": "Lös uppgift 7.41 b)",
+    "disk_reward": 300
+  },
+  {
+    "slug": "uppgift-7-43-a",
+    "title": "Uppgift 7.43 a) - s.150",
+    "prompt": "Lös uppgift 7.43 a)",
+    "disk_reward": 50,
+    "answer_format": "equation",
+    "expected_answer": "2*(13*9*7*3*5*4*2*2)"
+  },
+  {
+    "slug": "uppgift-7-43-b",
+    "title": "Uppgift 7.43 b) - s.150",
+    "prompt": "Lös uppgift 7.43 b)",
+    "disk_reward": 50,
+    "answer_format": "equation",
+    "expected_answer": "13*9*7*3*5*4*2*2"
+  },
+  {
+    "slug": "uppgift-7-43-c",
+    "title": "Uppgift 7.43 c) - s.150",
+    "prompt": "Lös uppgift 7.43 c)",
+    "disk_reward": 50,
+    "answer_format": "equation",
+    "expected_answer": "7*5*4*2*3*2"
+  },
+  {
+    "slug": "uppgift-7-43-d",
+    "title": "Uppgift 7.43 d) - s.150",
+    "prompt": "Lös uppgift 7.43 d)",
+    "disk_reward": 50,
+    "answer_format": "equation",
+    "expected_answer": "8*6*7*2*5*4*2"
+  },
+  {
+    "slug": "uppgift-7-43-e",
+    "title": "Uppgift 7.43 e) - s.150",
+    "prompt": "Lös uppgift 7.43 e)",
+    "disk_reward": 50,
+    "answer_format": "equation",
+    "expected_answer": "3*4*2*2*3"
+  },
+  {
+    "slug": "uppgift-7-43-f",
+    "title": "Uppgift 7.43 f) - s.150",
+    "prompt": "Lös uppgift 7.43 f)",
+    "disk_reward": 50,
+    "answer_format": "equation",
+    "expected_answer": "5*3*3*2*2"
+  },
+  {
+    "slug": "uppgift-7-43-g",
+    "title": "Uppgift 7.43 g) - s.150",
+    "prompt": "Lös uppgift 7.43 g)",
+    "disk_reward": 50,
+    "answer_format": "equation",
+    "expected_answer": "5*2*3*2"
+  },
+  {
+    "slug": "uppgift-7-43-h",
+    "title": "Uppgift 7.43 h) - s.150",
+    "prompt": "Lös uppgift 7.43 h)",
+    "disk_reward": 50,
+    "answer_format": "equation",
+    "expected_answer": "4*3*2*2"
+  },
+  {
+    "slug": "uppgift-7-43-i",
+    "title": "Uppgift 7.43 i) - s.150",
+    "prompt": "Lös uppgift 7.43 i)",
+    "answer_format": "equation",
+    "disk_reward": 50,
+    "expected_answer": "3*2*2"
+  },
+  {
+    "slug": "uppgift-7-43-j",
+    "title": "Uppgift 7.43 j) - s.150",
+    "prompt": "Lös uppgift 7.43 j)",
+    "answer_format": "equation",
+    "disk_reward": 50,
+    "expected_answer": "3*2*2"
+  }
 ]

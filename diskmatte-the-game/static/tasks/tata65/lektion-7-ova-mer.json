@@ -1,4 +1,8 @@
-// unused
 [
-  {"slug":"uppgift-7-6","title":"Uppgift 7.6","prompt":"Lös uppgift 7.6.","book_reference":"7.6"}
+  {
+    "slug": "uppgift-7-6",
+    "title": "Uppgift 7.6 - s.128",
+    "prompt": "Lös uppgift 7.6.",
+    "disk_reward": 300
+  }
 ]
