@@ -1,6 +1,27 @@
-// unused
 [
-  {"slug":"uppgift-8-18","title":"Uppgift 8.18","prompt":"Lös uppgift 8.18.","book_reference":"8.18"},
-  {"slug":"uppgift-8-21","title":"Uppgift 8.21","prompt":"Lös uppgift 8.21.","book_reference":"8.21"},
-  {"slug":"uppgift-8-24","title":"Uppgift 8.24","prompt":"Lös uppgift 8.24.","book_reference":"8.24"}
+  {
+    "slug": "uppgift-8-18",
+    "title": "Uppgift 8.18 - s.164",
+    "prompt": "Lös uppgift 8.18."
+  },
+  {
+    "slug": "uppgift-8-21-a",
+    "title": "Uppgift 8.21 a) - s.164",
+    "prompt": "Lös uppgift 8.21 a)"
+  },
+  {
+    "slug": "uppgift-8-21-b",
+    "title": "Uppgift 8.21 b) - s.164",
+    "prompt": "Lös uppgift 8.21 b)"
+  },
+  {
+    "slug": "uppgift-8-24-a",
+    "title": "Uppgift 8.24 a) - s.165",
+    "prompt": "Lös uppgift 8.24 a)"
+  },
+  {
+    "slug": "uppgift-8-24-b",
+    "title": "Uppgift 8.24 b) - s.165",
+    "prompt": "Lös uppgift 8.24 b)"
+  }
 ]

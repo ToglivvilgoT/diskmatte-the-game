@@ -1,10 +1,165 @@
-// unused
 [
-  {"slug":"uppgift-8-16","title":"Uppgift 8.16","prompt":"Lös uppgift 8.16.","book_reference":"8.16"},
-  {"slug":"uppgift-8-17","title":"Uppgift 8.17","prompt":"Lös uppgift 8.17.","book_reference":"8.17"},
-  {"slug":"uppgift-8-10","title":"Uppgift 8.10","prompt":"Lös uppgift 8.10.","book_reference":"8.10"},
-  {"slug":"uppgift-8-11","title":"Uppgift 8.11","prompt":"Lös uppgift 8.11.","book_reference":"8.11"},
-  {"slug":"uppgift-8-8","title":"Uppgift 8.8","prompt":"Lös uppgift 8.8.","book_reference":"8.8"},
-  {"slug":"uppgift-8-20","title":"Uppgift 8.20","prompt":"Lös uppgift 8.20.","book_reference":"8.20"},
-  {"slug":"uppgift-8-22","title":"Uppgift 8.22","prompt":"Lös uppgift 8.22.","book_reference":"8.22"}
+  {
+    "slug": "uppgift-8-16",
+    "title": "Uppgift 8.16 - s.164",
+    "prompt": "Lös uppgift 8.16."
+  },
+  {
+    "slug": "uppgift-8-17-a",
+    "title": "Uppgift 8.17 a) - s.164",
+    "disk_reward": 30,
+    "prompt": "Lös uppgift 8.17 a)"
+  },
+  {
+    "slug": "uppgift-8-17-b",
+    "title": "Uppgift 8.17 b) - s.164",
+    "disk_reward": 30,
+    "prompt": "Lös uppgift 8.17 b)"
+  },
+  {
+    "slug": "uppgift-8-17-c",
+    "title": "Uppgift 8.17 c) - s.164",
+    "disk_reward": 30,
+    "prompt": "Lös uppgift 8.17 c)"
+  },
+  {
+    "slug": "uppgift-8-17-d",
+    "title": "Uppgift 8.17 d) - s.164",
+    "disk_reward": 30,
+    "prompt": "Lös uppgift 8.17 d)"
+  },
+  {
+    "slug": "uppgift-8-17-e",
+    "title": "Uppgift 8.17 e) - s.164",
+    "disk_reward": 30,
+    "prompt": "Lös uppgift 8.17 e)"
+  },
+  {
+    "slug": "uppgift-8-10-a",
+    "title": "Uppgift 8.10 a) - s.162",
+    "prompt": "Är det en partiton?",
+    "disk_reward": 30,
+    "options": [
+      {
+        "label": "Partition",
+        "is_correct": true
+      },
+      {
+        "label": "Ej partition",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-8-10-b",
+    "title": "Uppgift 8.10 b) - s.162",
+    "prompt": "Är det en partiton?",
+    "disk_reward": 30,
+    "options": [
+      {
+        "label": "Partition",
+        "is_correct": false
+      },
+      {
+        "label": "Ej partition",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-8-10-c",
+    "title": "Uppgift 8.10 c) - s.162",
+    "prompt": "Är det en partiton?",
+    "disk_reward": 30,
+    "options": [
+      {
+        "label": "Partition",
+        "is_correct": false
+      },
+      {
+        "label": "Ej partition",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-8-10-d",
+    "title": "Uppgift 8.10 d) - s.162",
+    "prompt": "Är det en partiton?",
+    "disk_reward": 30,
+    "options": [
+      {
+        "label": "Partition",
+        "is_correct": false
+      },
+      {
+        "label": "Ej partition",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-8-10-e",
+    "title": "Uppgift 8.10 e) - s.162",
+    "prompt": "Är det en partiton?",
+    "disk_reward": 30,
+    "options": [
+      {
+        "label": "Partition",
+        "is_correct": false
+      },
+      {
+        "label": "Ej partition",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-8-11",
+    "title": "Uppgift 8.11 - s.162",
+    "prompt": "Lös uppgift 8.11."
+  },
+  {
+    "slug": "uppgift-8-8-a",
+    "title": "Uppgift 8.8 a) - s.162",
+    "disk_reward": 50,
+    "prompt": "Lös uppgift 8.8 a)"
+  },
+  {
+    "slug": "uppgift-8-8-b",
+    "title": "Uppgift 8.8 b) - s.162",
+    "disk_reward": 50,
+    "prompt": "Lös uppgift 8.8 b)"
+  },
+  {
+    "slug": "uppgift-8-20",
+    "title": "Uppgift 8.20 - s.164",
+    "prompt": "Är det en ekvivalensrelation?",
+    "options": [
+      {
+        "label": "Ja",
+        "is_correct": false
+      },
+      {
+        "label": "Nej",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-8-22-a",
+    "title": "Uppgift 8.22 a) - s.164",
+    "disk_reward": 200,
+    "prompt": "Lös uppgift 8.22 a)"
+  },
+  {
+    "slug": "uppgift-8-22-b",
+    "title": "Uppgift 8.22 b) - s.164",
+    "prompt": "Lös uppgift 8.22 b)"
+  },
+  {
+    "slug": "uppgift-8-22-c",
+    "title": "Uppgift 8.22 c) - s.164",
+    "prompt": "Lös uppgift 8.22 c)"
+  }
 ]
