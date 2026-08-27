@@ -1,10 +1,84 @@
-// unused
 [
-  {"slug":"uppgift-8-2","title":"Uppgift 8.2","prompt":"Lös uppgift 8.2.","book_reference":"8.2"},
-  {"slug":"uppgift-8-3","title":"Uppgift 8.3","prompt":"Lös uppgift 8.3.","book_reference":"8.3"},
-  {"slug":"uppgift-8-13","title":"Uppgift 8.13","prompt":"Lös uppgift 8.13.","book_reference":"8.13"},
-  {"slug":"uppgift-8-14","title":"Uppgift 8.14","prompt":"Lös uppgift 8.14.","book_reference":"8.14"},
-  {"slug":"uppgift-8-15a","title":"Uppgift 8.15a","prompt":"Lös uppgift 8.15a.","book_reference":"8.15a"},
-  {"slug":"uppgift-8-15b","title":"Uppgift 8.15b","prompt":"Lös uppgift 8.15b.","book_reference":"8.15b"},
-  {"slug":"uppgift-8-26","title":"Uppgift 8.26","prompt":"Lös uppgift 8.26.","book_reference":"8.26"}
+  {
+    "slug": "uppgift-8-2",
+    "title": "Uppgift 8.2 - s.155",
+    "prompt": "Lös uppgift 8.2."
+  },
+  {
+    "slug": "uppgift-8-3-a",
+    "title": "Uppgift 8.3 a) - s.155",
+    "prompt": "Lös uppgift 8.3 a)",
+    "answer_format": "equation",
+    "disk_reward": 30,
+    "expected_answer": "9"
+  },
+  {
+    "slug": "uppgift-8-3-b",
+    "title": "Uppgift 8.3 b) - s.155",
+    "prompt": "Lös uppgift 8.3 b)",
+    "answer_format": "equation",
+    "disk_reward": 30,
+    "expected_answer": "2^9"
+  },
+  {
+    "slug": "uppgift-8-3-c",
+    "title": "Uppgift 8.3 c) - s.155",
+    "prompt": "Lös uppgift 8.3 c)",
+    "answer_format": "equation",
+    "disk_reward": 30,
+    "expected_answer": "2^9"
+  },
+  {
+    "slug": "uppgift-8-3-d",
+    "title": "Uppgift 8.3 d) - s.155",
+    "prompt": "Lös uppgift 8.3 d)",
+    "answer_format": "equation",
+    "disk_reward": 30,
+    "expected_answer": "2^7"
+  },
+  {
+    "slug": "uppgift-8-3-e",
+    "title": "Uppgift 8.3 e) - s.155",
+    "prompt": "Lös uppgift 8.3 e)",
+    "answer_format": "equation",
+    "disk_reward": 30,
+    "expected_answer": "C(9,5)"
+  },
+  {
+    "slug": "uppgift-8-3-f",
+    "title": "Uppgift 8.3 f) - s.155",
+    "prompt": "Lös uppgift 8.3 f)",
+    "answer_format": "equation",
+    "disk_reward": 30,
+    "expected_answer": "C(9,7) + C(9,8) + C(9,9)"
+  },
+  {
+    "slug": "uppgift-8-13",
+    "title": "Uppgift 8.13 - s.163",
+    "prompt": "Lös uppgift 8.13.",
+    "answer_format": "equation",
+    "expected_answer": "4"
+  },
+  {
+    "slug": "uppgift-8-14",
+    "title": "Uppgift 8.14 - s.163",
+    "prompt": "Lös uppgift 8.14.",
+    "hint": "t.ex. {(1, 1), (2, 2), (3, 3)}"
+  },
+  {
+    "slug": "uppgift-8-15-a",
+    "title": "Uppgift 8.15 a) - s.164",
+    "prompt": "Lös uppgift 8.15 a)"
+  },
+  {
+    "slug": "uppgift-8-15-b",
+    "title": "Uppgift 8.15 b) - s.164",
+    "prompt": "Lös uppgift 8.15 b)"
+  },
+  {
+    "slug": "uppgift-8-26",
+    "title": "Uppgift 8.26 - s.165",
+    "prompt": "Lös uppgift 8.26.",
+    "disk_reward": 300
+  }
 ]
