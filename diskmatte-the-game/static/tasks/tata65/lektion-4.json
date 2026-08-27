@@ -4,6 +4,7 @@
     "title": "Uppgift 5.1 a) - s.74",
     "prompt": "Lös uppgift 5.1 a)",
     "disk_reward": 50,
+    "answer_format": "equation",
     "expected_answer": "960"
   },
   {
@@ -11,6 +12,7 @@
     "title": "Uppgift 5.1 b) - s.74",
     "prompt": "Lös uppgift 5.1 b)",
     "disk_reward": 50,
+    "answer_format": "equation",
     "expected_answer": "80"
   },
   {
@@ -22,45 +24,104 @@
     "expected_answer": "29^3"
   },
   {
-    "slug": "uppgift-5-4",
-    "title": "Uppgift 5.4",
-    "prompt": "Lös uppgift 5.4.",
-    "book_reference": "5.4"
+    "slug": "uppgift-5-4-a",
+    "title": "Uppgift 5.4 a) - s.76",
+    "prompt": "Lös uppgift 5.4 a)",
+    "disk_reward": 30,
+    "answer_format": "equation",
+    "expected_answer": "6!"
   },
   {
-    "slug": "uppgift-5-5",
-    "title": "Uppgift 5.5",
-    "prompt": "Lös uppgift 5.5.",
-    "book_reference": "5.5"
+    "slug": "uppgift-5-4-b",
+    "title": "Uppgift 5.4 b) - s.76",
+    "prompt": "Lös uppgift 5.4 b)",
+    "disk_reward": 30,
+    "answer_format": "equation",
+    "expected_answer": "5!"
+  },
+  {
+    "slug": "uppgift-5-4-c",
+    "title": "Uppgift 5.4 c) - s.76",
+    "prompt": "Lös uppgift 5.4 c)",
+    "disk_reward": 30,
+    "answer_format": "equation",
+    "expected_answer": "4!"
+  },
+  {
+    "slug": "uppgift-5-5-a",
+    "title": "Uppgift 5.5 a) - s.77",
+    "prompt": "Lös uppgift 5.5 a)",
+    "answer_format": "equation",
+    "expected_answer": "27!+26!-24!"
+  },
+  {
+    "slug": "uppgift-5-5-b",
+    "title": "Uppgift 5.5 b) - s.77",
+    "prompt": "Lös uppgift 5.5 b)",
+    "answer_format": "equation",
+    "expected_answer": "29!-(2*27!-26!)"
   },
   {
     "slug": "uppgift-5-7",
-    "title": "Uppgift 5.7",
+    "title": "Uppgift 5.7 - s.78",
     "prompt": "Lös uppgift 5.7.",
-    "book_reference": "5.7"
+    "answer_format": "equation",
+    "expected_answer": "9!/(2!*2!*2!)"
   },
   {
     "slug": "uppgift-5-9",
-    "title": "Uppgift 5.9",
+    "title": "Uppgift 5.9 - s.80",
     "prompt": "Lös uppgift 5.9.",
-    "book_reference": "5.9"
+    "answer_format": "equation",
+    "expected_answer": "(7!/(4!*2!))*C(8,4)"
   },
   {
-    "slug": "uppgift-5-10",
-    "title": "Uppgift 5.10",
-    "prompt": "Lös uppgift 5.10.",
-    "book_reference": "5.10"
+    "slug": "uppgift-5-10-a",
+    "title": "Uppgift 5.10 a) - s.80",
+    "prompt": "Lös uppgift 5.10 a)",
+    "answer_format": "equation",
+    "expected_answer": "10*9*8*7"
   },
   {
-    "slug": "uppgift-5-30",
-    "title": "Uppgift 5.30",
-    "prompt": "Lös uppgift 5.30.",
-    "book_reference": "5.30"
+    "slug": "uppgift-5-10-b",
+    "title": "Uppgift 5.10 b) - s.80",
+    "prompt": "Lös uppgift 5.10 b)",
+    "answer_format": "equation",
+    "expected_answer": "3*9*8*7"
+  },
+  {
+    "slug": "uppgift-5-10-c",
+    "title": "Uppgift 5.10 c) - s.80",
+    "prompt": "Lös uppgift 5.10 c)",
+    "answer_format": "equation",
+    "expected_answer": "4*3*7*6*5"
+  },
+  {
+    "slug": "uppgift-5-10-d",
+    "title": "Uppgift 5.10 d) - s.80",
+    "prompt": "Lös uppgift 5.10 d)",
+    "answer_format": "equation",
+    "expected_answer": "10*9*8*7-7*6*5*4"
+  },
+  {
+    "slug": "uppgift-5-30-a",
+    "title": "Uppgift 5.30 a) - s.102",
+    "prompt": "Lös uppgift 5.30 a)",
+    "answer_format": "equation",
+    "expected_answer": "40^25"
+  },
+  {
+    "slug": "uppgift-5-30-b",
+    "title": "Uppgift 5.30 b) - s.102",
+    "prompt": "Lös uppgift 5.30 b)",
+    "answer_format": "equation",
+    "expected_answer": "40^2*30^23"
   },
   {
     "slug": "uppgift-5-32",
-    "title": "Uppgift 5.32",
+    "title": "Uppgift 5.32 - s.102",
     "prompt": "Lös uppgift 5.32.",
-    "book_reference": "5.32"
+    "answer_format": "equation",
+    "expected_answer": "135"
   }
 ]
