@@ -1,11 +1,136 @@
-// unused
 [
-  {"slug":"uppgift-13-1","title":"Uppgift 13.1","prompt":"Lös uppgift 13.1.","book_reference":"13.1"},
-  {"slug":"uppgift-13-2","title":"Uppgift 13.2","prompt":"Lös uppgift 13.2.","book_reference":"13.2"},
-  {"slug":"uppgift-13-3","title":"Uppgift 13.3","prompt":"Lös uppgift 13.3.","book_reference":"13.3"},
-  {"slug":"uppgift-13-9","title":"Uppgift 13.9","prompt":"Lös uppgift 13.9.","book_reference":"13.9"},
-  {"slug":"uppgift-13-13","title":"Uppgift 13.13","prompt":"Lös uppgift 13.13.","book_reference":"13.13"},
-  {"slug":"uppgift-13-15","title":"Uppgift 13.15","prompt":"Lös uppgift 13.15.","book_reference":"13.15"},
-  {"slug":"uppgift-13-4","title":"Uppgift 13.4","prompt":"Lös uppgift 13.4.","book_reference":"13.4"},
-  {"slug":"uppgift-13-5","title":"Uppgift 13.5","prompt":"Lös uppgift 13.5.","book_reference":"13.5"}
+  {
+    "slug": "uppgift-13-1-a",
+    "title": "Uppgift 13.1 a) - s.251",
+    "disk_reward": 200,
+    "prompt": "Lös uppgift 13.1 a)"
+  },
+  {
+    "slug": "uppgift-13-1-b",
+    "title": "Uppgift 13.1 b) - s.251",
+    "disk_reward": 50,
+    "prompt": "Lös uppgift 13.1 b)"
+  },
+  {
+    "slug": "uppgift-13-1-c",
+    "title": "Uppgift 13.1 c) - s.251",
+    "disk_reward": 50,
+    "prompt": "Lös uppgift 13.1 c)"
+  },
+  {
+    "slug": "uppgift-13-1-d",
+    "title": "Uppgift 13.1 d) - s.251",
+    "disk_reward": 50,
+    "prompt": "Lös uppgift 13.1 d)"
+  },
+  {
+    "slug": "uppgift-13-2-a",
+    "title": "Uppgift 13.2 a) - s.251",
+    "disk_reward": 200,
+    "prompt": "Lös uppgift 13.2 a)"
+  },
+  {
+    "slug": "uppgift-13-2-b",
+    "title": "Uppgift 13.2 b) - s.251",
+    "disk_reward": 50,
+    "prompt": "Finns det några maximala element?",
+    "options": [
+      {
+        "label": "Ja",
+        "is_correct": true
+      },
+      {
+        "label": "Nej",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-13-2-c",
+    "title": "Uppgift 13.2 c) - s.251",
+    "disk_reward": 50,
+    "prompt": "Finns det några minimala element?",
+    "options": [
+      {
+        "label": "Ja",
+        "is_correct": false
+      },
+      {
+        "label": "Nej",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-13-2-d",
+    "title": "Uppgift 13.2 d) - s.251",
+    "disk_reward": 50,
+    "prompt": "Finns det några största element?",
+    "options": [
+      {
+        "label": "Ja",
+        "is_correct": false
+      },
+      {
+        "label": "Nej",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-13-2-e",
+    "title": "Uppgift 13.2 e) - s.251",
+    "disk_reward": 50,
+    "prompt": "Finns det några minsta element?",
+    "options": [
+      {
+        "label": "Ja",
+        "is_correct": false
+      },
+      {
+        "label": "Nej",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-13-3",
+    "title": "Uppgift 13.3 - s.251",
+    "prompt": "Lös uppgift 13.3.",
+    "disk_reward": 200
+  },
+  {
+    "slug": "uppgift-13-9",
+    "title": "Uppgift 13.9 - s.257",
+    "prompt": "Lös uppgift 13.9.",
+    "disk_reward": 200
+  },
+  {
+    "slug": "uppgift-13-13",
+    "title": "Uppgift 13.13 - s.258",
+    "prompt": "Lös uppgift 13.13.",
+    "disk_reward": 200
+  },
+  {
+    "slug": "uppgift-13-15-a",
+    "title": "Uppgift 13.15 a)- s.258",
+    "prompt": "Hur många partialordningar har x som ett minimalt element?",
+    "expected_answer": "2"
+  },
+  {
+    "slug": "uppgift-13-15-b",
+    "title": "Uppgift 13.15 b)- s.258",
+    "prompt": "Hur många partialordningar har x som ett minimalt element?",
+    "expected_answer": "10"
+  },
+  {
+    "slug": "uppgift-13-4",
+    "title": "Uppgift 13.4 - s.254",
+    "prompt": "Lös uppgift 13.4."
+  },
+  {
+    "slug": "uppgift-13-5",
+    "title": "Uppgift 13.5 - s.254",
+    "prompt": "Lös uppgift 13.5."
+  }
 ]

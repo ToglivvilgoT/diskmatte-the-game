@@ -1,5 +1,14 @@
-// unused
 [
-  {"slug":"uppgift-13-10","title":"Uppgift 13.10","prompt":"Lös uppgift 13.10.","book_reference":"13.10"},
-  {"slug":"uppgift-13-12","title":"Uppgift 13.12","prompt":"Lös uppgift 13.12.","book_reference":"13.12"}
+  {
+    "slug": "uppgift-13-10",
+    "title": "Uppgift 13.10 - s.258",
+    "disk_reward": 200,
+    "prompt": "Lös uppgift 13.10."
+  },
+  {
+    "slug": "uppgift-13-12",
+    "title": "Uppgift 13.12 - s.258",
+    "prompt": "Lös uppgift 13.12.",
+    "disk_reward": 200
+  }
 ]
