@@ -1,8 +1,439 @@
-// unused
 [
-  {"slug":"uppgift-13-6","title":"Uppgift 13.6","prompt":"Lös uppgift 13.6.","book_reference":"13.6"},
-  {"slug":"uppgift-13-7","title":"Uppgift 13.7","prompt":"Lös uppgift 13.7.","book_reference":"13.7"},
-  {"slug":"uppgift-13-8","title":"Uppgift 13.8","prompt":"Lös uppgift 13.8.","book_reference":"13.8"},
-  {"slug":"uppgift-13-16","title":"Uppgift 13.16","prompt":"Lös uppgift 13.16.","book_reference":"13.16"},
-  {"slug":"uppgift-13-17","title":"Uppgift 13.17","prompt":"Lös uppgift 13.17.","book_reference":"13.17"}
+  {
+    "slug": "uppgift-13-6-a",
+    "title": "Uppgift 13.6 a) - s.255",
+    "prompt": "På hur många sätt går det att sortera mängden topologiskt?",
+    "expected_answer": "3"
+  },
+  {
+    "slug": "uppgift-13-6-b",
+    "title": "Uppgift 13.6 b) - s.255",
+    "prompt": "Hur många riktade kanter måste läggas till?",
+    "expected_answer": "2"
+  },
+  {
+    "slug": "uppgift-13-7-a",
+    "title": "Uppgift 13.7 a) - s.257",
+    "disk_reward": 30,
+    "prompt": "Lös uppgift 13.7 a)"
+  },
+  {
+    "slug": "uppgift-13-7-b",
+    "title": "Uppgift 13.7 b) - s.257",
+    "disk_reward": 30,
+    "prompt": "Lös uppgift 13.7 b)"
+  },
+  {
+    "slug": "uppgift-13-7-c",
+    "title": "Uppgift 13.7 c) - s.257",
+    "disk_reward": 30,
+    "prompt": "Lös uppgift 13.7 c)"
+  },
+  {
+    "slug": "uppgift-13-7-d",
+    "title": "Uppgift 13.7 d) - s.257",
+    "disk_reward": 30,
+    "prompt": "Lös uppgift 13.7 d)"
+  },
+  {
+    "slug": "uppgift-13-7-e",
+    "title": "Uppgift 13.7 e) - s.257",
+    "disk_reward": 30,
+    "prompt": "Lös uppgift 13.7 e)"
+  },
+  {
+    "slug": "uppgift-13-8-a",
+    "title": "Uppgift 13.8 a) - s.257",
+    "disk_reward": 50,
+    "prompt": "Är po-mängden ett lattice?",
+    "options": [
+      {
+        "label": "Ja",
+        "is_correct": false
+      },
+      {
+        "label": "Nej",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-13-8-b",
+    "title": "Uppgift 13.8 b) - s.257",
+    "disk_reward": 50,
+    "prompt": "Lös uppgift 13.8 b)"
+  },
+  {
+    "slug": "uppgift-13-8-c",
+    "title": "Uppgift 13.8 c) - s.257",
+    "disk_reward": 50,
+    "prompt": "Lös uppgift 13.8 c)"
+  },
+  {
+    "slug": "uppgift-13-8-d",
+    "title": "Uppgift 13.8 d) - s.257",
+    "disk_reward": 50,
+    "prompt": "Lös uppgift 13.8 d)"
+  },
+  {
+    "slug": "uppgift-13-8-e",
+    "title": "Uppgift 13.8 e) - s.257",
+    "disk_reward": 50,
+    "prompt": "Hur många maximala element finns det?",
+    "expected_answer": "1000"
+  },
+  {
+    "slug": "uppgift-13-8-f",
+    "title": "Uppgift 13.8 f) - s.257",
+    "disk_reward": 50,
+    "prompt": "Lös uppgift 13.8 f)"
+  },
+  {
+    "slug": "uppgift-13-16-a",
+    "title": "Uppgift 13.16 a) - s.258",
+    "disk_reward": 200,
+    "prompt": "Lös uppgift 13.16 a)"
+  },
+  {
+    "slug": "uppgift-13-16-b",
+    "title": "Uppgift 13.16 b) - s.258",
+    "disk_reward": 200,
+    "prompt": "Lös uppgift 13.16 b)"
+  },
+  {
+    "slug": "uppgift-13-17-a",
+    "title": "Uppgift 13.17 a) - s.258",
+    "disk_reward": 30,
+    "prompt": "Lös uppgift 13.17 a)",
+    "options": [
+      {
+        "label": "a",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "is_correct": false
+      },
+      {
+        "label": "e",
+        "is_correct": false
+      },
+      {
+        "label": "v",
+        "is_correct": false
+      },
+      {
+        "label": "w",
+        "is_correct": false
+      },
+      {
+        "label": "x",
+        "is_correct": false
+      },
+      {
+        "label": "y",
+        "is_correct": false
+      },
+      {
+        "label": "z",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-13-17-b",
+    "title": "Uppgift 13.17 b) - s.258",
+    "disk_reward": 30,
+    "prompt": "Lös uppgift 13.17 b)",
+    "options": [
+      {
+        "label": "a",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "is_correct": false
+      },
+      {
+        "label": "e",
+        "is_correct": false
+      },
+      {
+        "label": "v",
+        "is_correct": false
+      },
+      {
+        "label": "w",
+        "is_correct": false
+      },
+      {
+        "label": "x",
+        "is_correct": false
+      },
+      {
+        "label": "y",
+        "is_correct": false
+      },
+      {
+        "label": "z",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-13-17-c",
+    "title": "Uppgift 13.17 c) - s.258",
+    "disk_reward": 30,
+    "prompt": "Lös uppgift 13.17 c)",
+    "options": [
+      {
+        "label": "a",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "is_correct": false
+      },
+      {
+        "label": "e",
+        "is_correct": false
+      },
+      {
+        "label": "v",
+        "is_correct": false
+      },
+      {
+        "label": "w",
+        "is_correct": false
+      },
+      {
+        "label": "x",
+        "is_correct": false
+      },
+      {
+        "label": "y",
+        "is_correct": false
+      },
+      {
+        "label": "z",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-13-17-d",
+    "title": "Uppgift 13.17 d) - s.258",
+    "disk_reward": 30,
+    "prompt": "Lös uppgift 13.17 d)",
+    "options": [
+      {
+        "label": "a",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "is_correct": false
+      },
+      {
+        "label": "e",
+        "is_correct": true
+      },
+      {
+        "label": "v",
+        "is_correct": false
+      },
+      {
+        "label": "w",
+        "is_correct": false
+      },
+      {
+        "label": "x",
+        "is_correct": false
+      },
+      {
+        "label": "y",
+        "is_correct": false
+      },
+      {
+        "label": "z",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-13-17-e",
+    "title": "Uppgift 13.17 e) - s.258",
+    "disk_reward": 30,
+    "prompt": "Lös uppgift 13.17 e)",
+    "options": [
+      {
+        "label": "a",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "is_correct": false
+      },
+      {
+        "label": "e",
+        "is_correct": false
+      },
+      {
+        "label": "v",
+        "is_correct": false
+      },
+      {
+        "label": "w",
+        "is_correct": false
+      },
+      {
+        "label": "x",
+        "is_correct": false
+      },
+      {
+        "label": "y",
+        "is_correct": false
+      },
+      {
+        "label": "z",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-13-17-f",
+    "title": "Uppgift 13.17 f) - s.258",
+    "disk_reward": 30,
+    "prompt": "Lös uppgift 13.17 f)",
+    "options": [
+      {
+        "label": "a",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "is_correct": false
+      },
+      {
+        "label": "e",
+        "is_correct": true
+      },
+      {
+        "label": "v",
+        "is_correct": false
+      },
+      {
+        "label": "w",
+        "is_correct": false
+      },
+      {
+        "label": "x",
+        "is_correct": false
+      },
+      {
+        "label": "y",
+        "is_correct": false
+      },
+      {
+        "label": "z",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-13-17-g",
+    "title": "Uppgift 13.17 g) - s.258",
+    "disk_reward": 30,
+    "prompt": "Lös uppgift 13.17 g)",
+    "options": [
+      {
+        "label": "a",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "is_correct": false
+      },
+      {
+        "label": "e",
+        "is_correct": false
+      },
+      {
+        "label": "v",
+        "is_correct": true
+      },
+      {
+        "label": "w",
+        "is_correct": false
+      },
+      {
+        "label": "x",
+        "is_correct": false
+      },
+      {
+        "label": "y",
+        "is_correct": false
+      },
+      {
+        "label": "z",
+        "is_correct": false
+      }
+    ]
+  }
 ]

@@ -1,4 +1,34 @@
-// unused
 [
-  {"slug":"uppgift-13-21","title":"Uppgift 13.21","prompt":"Lös uppgift 13.21.","book_reference":"13.21"}
+  {
+    "slug": "uppgift-13-21-a",
+    "title": "Uppgift 13.21 a) - s.258",
+    "disk_reward": 200,
+    "prompt": "Är det sant?",
+    "options": [
+      {
+        "label": "Sant",
+        "is_correct": false
+      },
+      {
+        "label": "Falskt",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-13-21-b",
+    "title": "Uppgift 13.21 b) - s.258",
+    "disk_reward": 200,
+    "prompt": "Är det sant?",
+    "options": [
+      {
+        "label": "Sant",
+        "is_correct": true
+      },
+      {
+        "label": "Falskt",
+        "is_correct": false
+      }
+    ]
+  }
 ]
