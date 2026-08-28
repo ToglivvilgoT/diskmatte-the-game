@@ -1,11 +1,134 @@
-// unused
 [
-  {"slug":"uppgift-9-1","title":"Uppgift 9.1","prompt":"Lös uppgift 9.1.","book_reference":"9.1"},
-  {"slug":"uppgift-9-2","title":"Uppgift 9.2","prompt":"Lös uppgift 9.2.","book_reference":"9.2"},
-  {"slug":"uppgift-9-4","title":"Uppgift 9.4","prompt":"Lös uppgift 9.4.","book_reference":"9.4"},
-  {"slug":"uppgift-9-3","title":"Uppgift 9.3","prompt":"Lös uppgift 9.3.","book_reference":"9.3"},
-  {"slug":"uppgift-9-5","title":"Uppgift 9.5","prompt":"Lös uppgift 9.5.","book_reference":"9.5"},
-  {"slug":"uppgift-9-16","title":"Uppgift 9.16","prompt":"Lös uppgift 9.16.","book_reference":"9.16"},
-  {"slug":"uppgift-9-6","title":"Uppgift 9.6","prompt":"Lös uppgift 9.6.","book_reference":"9.6"},
-  {"slug":"uppgift-9-8","title":"Uppgift 9.8","prompt":"Lös uppgift 9.8.","book_reference":"9.8"}
+  {
+    "slug": "uppgift-9-1-a",
+    "title": "Uppgift 9.1 a) - s.171",
+    "disk_reward": 50,
+    "prompt": "Är talen kongruenta modulo 13?",
+    "options": [
+      {
+        "label": "Ja",
+        "is_correct": true
+      },
+      {
+        "label": "Nej",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-9-1-b",
+    "title": "Uppgift 9.1 b) - s.171",
+    "disk_reward": 50,
+    "prompt": "Är talen kongruenta modulo 13?",
+    "options": [
+      {
+        "label": "Ja",
+        "is_correct": false
+      },
+      {
+        "label": "Nej",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-9-1-c",
+    "title": "Uppgift 9.1 c) - s.171",
+    "disk_reward": 50,
+    "prompt": "Är talen kongruenta modulo 13?",
+    "options": [
+      {
+        "label": "Ja",
+        "is_correct": true
+      },
+      {
+        "label": "Nej",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-9-2-a",
+    "title": "Uppgift 9.2 a) - s.171",
+    "prompt": "Lös uppgift 9.2 a)",
+    "expected_answer": "5"
+  },
+  {
+    "slug": "uppgift-9-2-b",
+    "title": "Uppgift 9.2 b) - s.171",
+    "prompt": "Lös uppgift 9.2 b)",
+    "expected_answer": "70"
+  },
+  {
+    "slug": "uppgift-9-2-c",
+    "title": "Uppgift 9.2 c) - s.171",
+    "prompt": "Lös uppgift 9.2 c)",
+    "expected_answer": "9"
+  },
+  {
+    "slug": "uppgift-9-4",
+    "title": "Uppgift 9.4 - s.171",
+    "prompt": "Lös uppgift 9.4."
+  },
+  {
+    "slug": "uppgift-9-3",
+    "title": "Uppgift 9.3 - s.171",
+    "prompt": "Lös uppgift 9.3.",
+    "expected_answer": "3"
+  },
+  {
+    "slug": "uppgift-9-5-1",
+    "title": "Uppgift 9.5 1) - s.171",
+    "prompt": "Vilken är den sista siffran?",
+    "expected_answer": "9"
+  },
+  {
+    "slug": "uppgift-9-5-2",
+    "title": "Uppgift 9.5 2) - s.171",
+    "prompt": "Vilken är den näst sista siffran?",
+    "expected_answer": "4"
+  },
+  {
+    "slug": "uppgift-9-16",
+    "title": "Uppgift 9.16 - s.185",
+    "prompt": "Lös uppgift 9.16.",
+    "expected_answer": "1"
+  },
+  {
+    "slug": "uppgift-9-6",
+    "title": "Uppgift 9.6 - s.175",
+    "prompt": "Lös uppgift 9.6.",
+    "options": [
+      {
+        "label": "x ≡ 0 mod 5",
+        "is_correct": false
+      },
+      {
+        "label": "x ≡ 1 mod 5",
+        "is_correct": false
+      },
+      {
+        "label": "x ≡ 2 mod 5",
+        "is_correct": false
+      },
+      {
+        "label": "x ≡ 3 mod 5",
+        "is_correct": true
+      },
+      {
+        "label": "x ≡ 4 mod 5",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-9-8-a",
+    "title": "Uppgift 9.8 a) - s.175",
+    "prompt": "Lös uppgift 9.8 a)"
+  },
+  {
+    "slug": "uppgift-9-8-b",
+    "title": "Uppgift 9.8 b) - s.175",
+    "prompt": "Lös uppgift 9.8 b)"
+  }
 ]

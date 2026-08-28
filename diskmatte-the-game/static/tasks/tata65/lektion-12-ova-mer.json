@@ -1,6 +1,43 @@
-// unused
 [
-  {"slug":"uppgift-9-17","title":"Uppgift 9.17","prompt":"Lös uppgift 9.17.","book_reference":"9.17"},
-  {"slug":"uppgift-9-18","title":"Uppgift 9.18","prompt":"Lös uppgift 9.18.","book_reference":"9.18"},
-  {"slug":"uppgift-9-19","title":"Uppgift 9.19","prompt":"Lös uppgift 9.19.","book_reference":"9.19"}
+  {
+    "slug": "uppgift-9-17",
+    "title": "Uppgift 9.17 - s.185",
+    "prompt": "Lös uppgift 9.17.",
+    "expected_answer": "2"
+  },
+  {
+    "slug": "uppgift-9-18",
+    "title": "Uppgift 9.18 - s.186",
+    "prompt": "Lös uppgift 9.18."
+  },
+  {
+    "slug": "uppgift-9-19-a",
+    "title": "Uppgift 9.19 a) - s.186",
+    "prompt": "Lös uppgift 9.19 a)"
+  },
+  {
+    "slug": "uppgift-9-19-b",
+    "title": "Uppgift 9.19 b) - s.186",
+    "prompt": "Lös uppgift 9.19 b)"
+  },
+  {
+    "slug": "uppgift-9-19-c",
+    "title": "Uppgift 9.19 c) - s.186",
+    "prompt": "Lös uppgift 9.19 c)"
+  },
+  {
+    "slug": "uppgift-9-19-d",
+    "title": "Uppgift 9.19 d) - s.186",
+    "prompt": "Lös uppgift 9.19 d)"
+  },
+  {
+    "slug": "uppgift-9-19-e",
+    "title": "Uppgift 9.19 e) - s.186",
+    "prompt": "Lös uppgift 9.19 e)"
+  },
+  {
+    "slug": "uppgift-9-19-f",
+    "title": "Uppgift 9.19 f) - s.186",
+    "prompt": "Lös uppgift 9.19 f)"
+  }
 ]
