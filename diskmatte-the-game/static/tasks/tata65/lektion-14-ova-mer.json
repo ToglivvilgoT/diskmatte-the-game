@@ -1,7 +1,25 @@
-// unused
 [
-  {"slug":"uppgift-11-14","title":"Uppgift 11.14","prompt":"Lös uppgift 11.14.","book_reference":"11.14"},
-  {"slug":"uppgift-11-15","title":"Uppgift 11.15","prompt":"Lös uppgift 11.15.","book_reference":"11.15"},
-  {"slug":"uppgift-11-22","title":"Uppgift 11.22","prompt":"Lös uppgift 11.22.","book_reference":"11.22"},
-  {"slug":"uppgift-11-24","title":"Uppgift 11.24","prompt":"Lös uppgift 11.24.","book_reference":"11.24"}
+  {
+    "slug": "uppgift-11-14",
+    "title": "Uppgift 11.14 - s.227",
+    "prompt": "Lös uppgift 11.14.",
+    "disk_reward": 200
+  },
+  {
+    "slug": "uppgift-11-15",
+    "title": "Uppgift 11.15 - s.228",
+    "prompt": "Lös uppgift 11.15.",
+    "expected_answer": "6"
+  },
+  {
+    "slug": "uppgift-11-22",
+    "title": "Uppgift 11.22 - s.228",
+    "disk_reward": 200,
+    "prompt": "Lös uppgift 11.22."
+  },
+  {
+    "slug": "uppgift-11-24",
+    "title": "Uppgift 11.24 - s.228",
+    "prompt": "Lös uppgift 11.24."
+  }
 ]
