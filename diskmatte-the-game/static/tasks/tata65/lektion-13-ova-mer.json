@@ -1,7 +1,42 @@
-// unused
 [
-  {"slug":"uppgift-10-6","title":"Uppgift 10.6","prompt":"Lös uppgift 10.6.","book_reference":"10.6"},
-  {"slug":"uppgift-10-10","title":"Uppgift 10.10","prompt":"Lös uppgift 10.10.","book_reference":"10.10"},
-  {"slug":"uppgift-10-13","title":"Uppgift 10.13","prompt":"Lös uppgift 10.13.","book_reference":"10.13"},
-  {"slug":"uppgift-10-19","title":"Uppgift 10.19","prompt":"Lös uppgift 10.19.","book_reference":"10.19"}
+  {
+    "slug": "uppgift-10-6-a",
+    "title": "Uppgift 10.6 a) - s.193",
+    "prompt": "Lös uppgift 10.6 a)"
+  },
+  {
+    "slug": "uppgift-10-6-b",
+    "title": "Uppgift 10.6 b) - s.193",
+    "prompt": "Lös uppgift 10.6 b)"
+  },
+  {
+    "slug": "uppgift-10-6-c",
+    "title": "Uppgift 10.6 c) - s.193",
+    "prompt": "Lös uppgift 10.6 c)"
+  },
+  {
+    "slug": "uppgift-10-10",
+    "title": "Uppgift 10.10 - s.197",
+    "prompt": "Lös uppgift 10.10."
+  },
+  {
+    "slug": "uppgift-10-13",
+    "title": "Uppgift 10.13 - s.197",
+    "prompt": "Lös uppgift 10.13."
+  },
+  {
+    "slug": "uppgift-10-19-a",
+    "title": "Uppgift 10.19 a) - s.204",
+    "prompt": "Lös uppgift 10.19 a)"
+  },
+  {
+    "slug": "uppgift-10-19-b",
+    "title": "Uppgift 10.19 b) - s.204",
+    "prompt": "Lös uppgift 10.19 b)"
+  },
+  {
+    "slug": "uppgift-10-19-c",
+    "title": "Uppgift 10.19 c) - s.204",
+    "prompt": "Lös uppgift 10.19 c)"
+  }
 ]

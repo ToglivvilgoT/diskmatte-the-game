@@ -1,12 +1,125 @@
-// unused
 [
-  {"slug":"uppgift-10-1","title":"Uppgift 10.1","prompt":"Lös uppgift 10.1.","book_reference":"10.1"},
-  {"slug":"uppgift-10-2","title":"Uppgift 10.2","prompt":"Lös uppgift 10.2.","book_reference":"10.2"},
-  {"slug":"uppgift-10-3","title":"Uppgift 10.3","prompt":"Lös uppgift 10.3.","book_reference":"10.3"},
-  {"slug":"uppgift-10-4","title":"Uppgift 10.4","prompt":"Lös uppgift 10.4.","book_reference":"10.4"},
-  {"slug":"uppgift-10-5","title":"Uppgift 10.5","prompt":"Lös uppgift 10.5.","book_reference":"10.5"},
-  {"slug":"uppgift-10-7","title":"Uppgift 10.7","prompt":"Lös uppgift 10.7.","book_reference":"10.7"},
-  {"slug":"uppgift-10-8","title":"Uppgift 10.8","prompt":"Lös uppgift 10.8.","book_reference":"10.8"},
-  {"slug":"uppgift-10-11","title":"Uppgift 10.11","prompt":"Lös uppgift 10.11.","book_reference":"10.11"},
-  {"slug":"uppgift-10-30","title":"Uppgift 10.30","prompt":"Lös uppgift 10.30.","book_reference":"10.30"}
+  {
+    "slug": "uppgift-10-1",
+    "title": "Uppgift 10.1 - s.193",
+    "prompt": "Finns det en graf som uppfyller villkoren?",
+    "disk_reward": 50,
+    "options": [
+      {
+        "label": "Ja",
+        "is_correct": false
+      },
+      {
+        "label": "Nej",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-10-2",
+    "title": "Uppgift 10.2 - s.193",
+    "prompt": "Lös uppgift 10.2."
+  },
+  {
+    "slug": "uppgift-10-3",
+    "title": "Uppgift 10.3 - s.193",
+    "prompt": "Mindes alla rätt?",
+    "options": [
+      {
+        "label": "Ja",
+        "is_correct": false
+      },
+      {
+        "label": "Nej",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-10-4-a",
+    "title": "Uppgift 10.4 a) - s.193",
+    "disk_reward": 50,
+    "prompt": "Lös uppgift a) 10.4."
+  },
+  {
+    "slug": "uppgift-10-4-b",
+    "title": "Uppgift 10.4 b) - s.193",
+    "disk_reward": 50,
+    "prompt": "Lös uppgift b) 10.4."
+  },
+  {
+    "slug": "uppgift-10-4-c",
+    "title": "Uppgift 10.4 c) - s.193",
+    "prompt": "Lös uppgift c) 10.4."
+  },
+  {
+    "slug": "uppgift-10-5-a",
+    "title": "Uppgift 10.5 a) - s.193",
+    "prompt": "Lös uppgift 10.5 a)",
+    "disk_reward": 50,
+    "expected_answer": "100"
+  },
+  {
+    "slug": "uppgift-10-5-b",
+    "title": "Uppgift 10.5 b) - s.193",
+    "prompt": "Lös uppgift 10.5 b)",
+    "disk_reward": 50,
+    "expected_answer": "90"
+  },
+  {
+    "slug": "uppgift-10-5-c",
+    "title": "Uppgift 10.5 c) - s.193",
+    "prompt": "Lös uppgift 10.5 c)",
+    "disk_reward": 50,
+    "expected_answer": "9"
+  },
+  {
+    "slug": "uppgift-10-7",
+    "title": "Uppgift 10.7 - s.195",
+    "disk_reward": 200,
+    "prompt": "Lös uppgift 10.7."
+  },
+  {
+    "slug": "uppgift-10-8",
+    "title": "Uppgift 10.8 - s.195",
+    "disk_reward": 200,
+    "prompt": "Är graferna isomorfa?",
+    "options": [
+      {
+        "label": "Ja",
+        "is_correct": true
+      },
+      {
+        "label": "Nej",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-10-11",
+    "title": "Uppgift 10.11 - s.197",
+    "prompt": "Går det att böja ståltråden till att bli en kub med sida 10 cm?",
+    "options": [
+      {
+        "label": "Ja",
+        "is_correct": false
+      },
+      {
+        "label": "Nej",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-10-30-1",
+    "title": "Uppgift 10.30 1) - s.207",
+    "prompt": "Hur många skakade Linnea hand med?",
+    "expected_answer": "3"
+  },
+  {
+    "slug": "uppgift-10-30-2",
+    "title": "Uppgift 10.30 2) - s.207",
+    "prompt": "Hur många skakade Linus hand med?",
+    "expected_answer": "3"
+  }
 ]

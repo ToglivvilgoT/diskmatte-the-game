@@ -1,0 +1,18 @@
+[
+  {
+    "slug": "uppgift-9-1-a",
+    "title": "Uppgift 9.1 a) - s.171",
+    "disk_reward": 50,
+    "prompt": "Är talen kongruenta modulo 13?",
+    "options": [
+      {
+        "label": "Ja",
+        "is_correct": true
+      },
+      {
+        "label": "Nej",
+        "is_correct": true
+      }
+    ]
+  }
+]
