@@ -1,10 +1,215 @@
-// unused
 [
-  {"slug":"uppgift-14-1","title":"Uppgift 14.1","prompt":"Lös uppgift 14.1.","book_reference":"14.1"},
-  {"slug":"uppgift-14-2a","title":"Uppgift 14.2a","prompt":"Lös uppgift 14.2a.","book_reference":"14.2a"},
-  {"slug":"uppgift-14-2b","title":"Uppgift 14.2b","prompt":"Lös uppgift 14.2b.","book_reference":"14.2b"},
-  {"slug":"uppgift-14-3a","title":"Uppgift 14.3a","prompt":"Lös uppgift 14.3a.","book_reference":"14.3a"},
-  {"slug":"uppgift-14-3b","title":"Uppgift 14.3b","prompt":"Lös uppgift 14.3b.","book_reference":"14.3b"},
-  {"slug":"uppgift-14-8","title":"Uppgift 14.8","prompt":"Lös uppgift 14.8.","book_reference":"14.8"},
-  {"slug":"uppgift-14-4","title":"Uppgift 14.4","prompt":"Lös uppgift 14.4.","book_reference":"14.4"}
+  {
+    "slug": "uppgift-14-1-a",
+    "title": "Uppgift 14.1 a) - s.265",
+    "disk_reward": 50,
+    "prompt": "Lös uppgift 14.1 a)",
+    "options": [
+      {
+        "label": "2n",
+        "is_correct": false
+      },
+      {
+        "label": "2^n",
+        "is_correct": true
+      },
+      {
+        "label": "2^(2n)",
+        "is_correct": false
+      },
+      {
+        "label": "2^(2^n)",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-14-1-b",
+    "title": "Uppgift 14.1 b) - s.265",
+    "disk_reward": 50,
+    "prompt": "Lös uppgift 14.1 b)",
+    "options": [
+      {
+        "label": "2n",
+        "is_correct": false
+      },
+      {
+        "label": "2^n",
+        "is_correct": false
+      },
+      {
+        "label": "2^(2n)",
+        "is_correct": false
+      },
+      {
+        "label": "2^(2^n)",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-14-1-c",
+    "title": "Uppgift 14.1 c) - s.265",
+    "disk_reward": 50,
+    "prompt": "Lös uppgift 14.1 c)",
+    "options": [
+      {
+        "label": "2n",
+        "is_correct": false
+      },
+      {
+        "label": "2^n",
+        "is_correct": true
+      },
+      {
+        "label": "2^(2n)",
+        "is_correct": false
+      },
+      {
+        "label": "2^(2^n)",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "slug": "uppgift-14-2-a",
+    "title": "Uppgift 14.2 a) - s.265",
+    "prompt": "Lös uppgift 14.2 a)"
+  },
+  {
+    "slug": "uppgift-14-2-b",
+    "title": "Uppgift 14.2 b) - s.265",
+    "prompt": "Lös uppgift 14.2 b)"
+  },
+  {
+    "slug": "uppgift-14-3-a",
+    "title": "Uppgift 14.3 a) - s.265",
+    "prompt": "Lös uppgift 14.3 a)"
+  },
+  {
+    "slug": "uppgift-14-3-b",
+    "title": "Uppgift 14.3 b) - s.265",
+    "disk_reward": 500,
+    "prompt": "Lös uppgift 14.3 b)"
+  },
+  {
+    "slug": "uppgift-14-8-a",
+    "title": "Uppgift 14.8 a) - s.274",
+    "prompt": "Lös uppgift 14.8 a)",
+    "disk_reward": 50,
+    "answer_format": "equation",
+    "expected_answer": "2^(2^5)"
+  },
+  {
+    "slug": "uppgift-14-8-b",
+    "title": "Uppgift 14.8 b) - s.274",
+    "prompt": "Lös uppgift 14.8 b)",
+    "disk_reward": 50,
+    "answer_format": "equation",
+    "expected_answer": "2^5"
+  },
+  {
+    "slug": "uppgift-14-8-c",
+    "title": "Uppgift 14.8 c) - s.274",
+    "prompt": "Lös uppgift 14.8 c)",
+    "disk_reward": 50,
+    "answer_format": "equation",
+    "expected_answer": "2^5"
+  },
+  {
+    "slug": "uppgift-14-8-d",
+    "title": "Uppgift 14.8 d) - s.274",
+    "prompt": "Lös uppgift 14.8 d)",
+    "disk_reward": 50,
+    "answer_format": "equation",
+    "expected_answer": "2^5"
+  },
+  {
+    "slug": "uppgift-14-8-e",
+    "title": "Uppgift 14.8 e) - s.274",
+    "prompt": "Lös uppgift 14.8 e)",
+    "disk_reward": 50,
+    "answer_format": "equation",
+    "expected_answer": "2^5"
+  },
+  {
+    "slug": "uppgift-14-8-f",
+    "title": "Uppgift 14.8 f) - s.274",
+    "prompt": "Lös uppgift 14.8 f)",
+    "disk_reward": 50,
+    "answer_format": "equation",
+    "expected_answer": "2^31"
+  },
+  {
+    "slug": "uppgift-14-8-g",
+    "title": "Uppgift 14.8 g) - s.274",
+    "prompt": "Lös uppgift 14.8 g)",
+    "disk_reward": 50,
+    "answer_format": "equation",
+    "expected_answer": "2^22"
+  },
+  {
+    "slug": "uppgift-14-8-h",
+    "title": "Uppgift 14.8 h) - s.274",
+    "prompt": "Lös uppgift 14.8 h)",
+    "disk_reward": 50,
+    "answer_format": "equation",
+    "expected_answer": "2^6"
+  },
+  {
+    "slug": "uppgift-14-4-a",
+    "title": "Uppgift 14.4 a) - s.269",
+    "prompt": "Lös uppgift 14.4 a)",
+    "disk_reward": 50,
+    "expected_answer": "15"
+  },
+  {
+    "slug": "uppgift-14-4-b",
+    "title": "Uppgift 14.4 b) - s.269",
+    "prompt": "Lös uppgift 14.4 b)",
+    "disk_reward": 50,
+    "expected_answer": "30"
+  },
+  {
+    "slug": "uppgift-14-4-c",
+    "title": "Uppgift 14.4 c) - s.269",
+    "prompt": "Lös uppgift 14.4 c)",
+    "disk_reward": 50,
+    "expected_answer": "30"
+  },
+  {
+    "slug": "uppgift-14-4-d",
+    "title": "Uppgift 14.4 d) - s.269",
+    "prompt": "Lös uppgift 14.4 d)",
+    "disk_reward": 50,
+    "expected_answer": "30"
+  },
+  {
+    "slug": "uppgift-14-4-e",
+    "title": "Uppgift 14.4 e) - s.269",
+    "prompt": "Lös uppgift 14.4 e)",
+    "disk_reward": 50,
+    "expected_answer": "1"
+  },
+  {
+    "slug": "uppgift-14-4-f",
+    "title": "Uppgift 14.4 f) - s.269",
+    "prompt": "Lös uppgift 14.4 f)",
+    "disk_reward": 50,
+    "expected_answer": "21"
+  },
+  {
+    "slug": "uppgift-14-4-g",
+    "title": "Uppgift 14.4 g) - s.269",
+    "prompt": "Lös uppgift 14.4 g)",
+    "disk_reward": 50,
+    "expected_answer": "1"
+  },
+  {
+    "slug": "uppgift-14-4-h",
+    "title": "Uppgift 14.4 h) - s.269",
+    "prompt": "Lös uppgift 14.4 h)",
+    "disk_reward": 50,
+    "expected_answer": "210"
+  }
 ]
