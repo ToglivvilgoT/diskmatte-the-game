@@ -1,6 +1,19 @@
-// unused
 [
-  {"slug":"uppgift-12-8","title":"Uppgift 12.8","prompt":"Lös uppgift 12.8.","book_reference":"12.8"},
-  {"slug":"uppgift-12-11d","title":"Uppgift 12.11d","prompt":"Lös uppgift 12.11d.","book_reference":"12.11d"},
-  {"slug":"uppgift-12-14","title":"Uppgift 12.14","prompt":"Lös uppgift 12.14.","book_reference":"12.14"}
+  {
+    "slug": "uppgift-12-8",
+    "title": "Uppgift 12.8 - s.141",
+    "disk_reward": 200,
+    "prompt": "Lös uppgift 12.8."
+  },
+  {
+    "slug": "uppgift-12-11-d",
+    "title": "Uppgift 12.11 d) - s.147",
+    "prompt": "Lös uppgift 12.11 d)"
+  },
+  {
+    "slug": "uppgift-12-14",
+    "title": "Uppgift 12.14 - s.148",
+    "disk_reward": 200,
+    "prompt": "Lös uppgift 12.14."
+  }
 ]
